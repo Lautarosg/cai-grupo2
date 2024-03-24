@@ -1,0 +1,11 @@
+C:\Users\maxim\OneDrive - Económicas - UBA\Documentos\UBA\6 año\CAI\Ejercicios\TPCAI\TPCAI\bin\Debug\TPCAI.exe.config
+C:\Users\maxim\OneDrive - Económicas - UBA\Documentos\UBA\6 año\CAI\Ejercicios\TPCAI\TPCAI\bin\Debug\TPCAI.exe
+C:\Users\maxim\OneDrive - Económicas - UBA\Documentos\UBA\6 año\CAI\Ejercicios\TPCAI\TPCAI\bin\Debug\TPCAI.pdb
+C:\Users\maxim\OneDrive - Económicas - UBA\Documentos\UBA\6 año\CAI\Ejercicios\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.AssemblyReference.cache
+C:\Users\maxim\OneDrive - Económicas - UBA\Documentos\UBA\6 año\CAI\Ejercicios\TPCAI\TPCAI\obj\Debug\TPCAI.Properties.Resources.resources
+C:\Users\maxim\OneDrive - Económicas - UBA\Documentos\UBA\6 año\CAI\Ejercicios\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.GenerateResource.cache
+C:\Users\maxim\OneDrive - Económicas - UBA\Documentos\UBA\6 año\CAI\Ejercicios\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.CoreCompileInputs.cache
+C:\Users\maxim\OneDrive - Económicas - UBA\Documentos\UBA\6 año\CAI\Ejercicios\TPCAI\TPCAI\obj\Debug\TPCAI.exe
+C:\Users\maxim\OneDrive - Económicas - UBA\Documentos\UBA\6 año\CAI\Ejercicios\TPCAI\TPCAI\obj\Debug\TPCAI.pdb
+C:\Users\maxim\OneDrive - Económicas - UBA\Documentos\UBA\6 año\CAI\Ejercicios\TPCAI\TPCAI\obj\Debug\TPCAI.FormInicio.resources
+C:\Users\maxim\OneDrive - Económicas - UBA\Documentos\UBA\6 año\CAI\Ejercicios\TPCAI\TPCAI\obj\Debug\TPCAI.FormRegistrar.resources
