@@ -146,5 +146,19 @@ namespace TPCAI
         {
 
         }
+
+        private void pbMostrarRegistrar_Click(object sender, EventArgs e)
+        {
+            pbOcultarRegistrar.BringToFront();
+            txtContraseñaRegistrar.PasswordChar = '\0';
+            txtVerificarRegistrar.PasswordChar = '\0';
+        }
+
+        private void pbOcultarRegistrar_Click_1(object sender, EventArgs e)
+        {
+            pbMostrarRegistrar.BringToFront();
+            txtContraseñaRegistrar.PasswordChar = '*';
+            txtVerificarRegistrar.PasswordChar = '*';
+        }
     }
 }

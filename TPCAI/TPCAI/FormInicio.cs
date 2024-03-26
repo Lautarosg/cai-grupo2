@@ -62,5 +62,22 @@ namespace TPCAI
                 Close();
             }
         }
+
+        private void pbMostrarInicio_Click(object sender, EventArgs e)
+        {
+            pbOcultarInicio.BringToFront();
+            txtContraseñaInicio.PasswordChar = '\0';
+        }
+
+        private void pbOcultarInicio_Click_1(object sender, EventArgs e)
+        {
+            pbMostrarInicio.BringToFront();
+            txtContraseñaInicio.PasswordChar = '*';
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
