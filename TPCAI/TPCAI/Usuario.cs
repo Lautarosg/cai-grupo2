@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,12 +22,13 @@ namespace TPCAI
         public int DNI { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public DateTime FechaCreacion { get; set; }
-        public DateTime FechaBaja { get; set; }
+        public DateTime? FechaBaja { get; set; }
         public bool Estado {  get; set; }
+        public int Rol {  get; set; }
 
 
 
-        public Usuario(string nombre, string apellido, string direccion, int telefono, string email, string nombreusuario, string contraseña, int dni, DateTime fechaNacimiento)
+        public Usuario(string nombre, string apellido, string direccion, int telefono, string email, string nombreusuario, string contraseña, int dni, DateTime fechaNacimiento, int rol)
         {
             Nombre = nombre;
             Apellido = apellido;
@@ -36,7 +38,11 @@ namespace TPCAI
             NombreUsuario = nombreusuario;
             Contraseña = contraseña;
             DNI = dni;
-            FechaNacimiento = DateTime.Now;
+            FechaNacimiento = fechaNacimiento;
+            FechaCreacion = DateTime.Now;
+            Rol = rol;
+
+
             
         }
     }
