@@ -48,6 +48,10 @@
             this.btnSalirRegistrar = new System.Windows.Forms.Button();
             this.lblErrorContraseñaRegistrar = new System.Windows.Forms.Label();
             this.lblVerificarContRegistrar = new System.Windows.Forms.Label();
+            this.pbMostrarRegistrar = new System.Windows.Forms.PictureBox();
+            this.pbOcultarRegistrar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostrarRegistrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultarRegistrar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInicioRegistra
@@ -231,11 +235,35 @@
             this.lblVerificarContRegistrar.Size = new System.Drawing.Size(0, 13);
             this.lblVerificarContRegistrar.TabIndex = 19;
             // 
+            // pbMostrarRegistrar
+            // 
+            this.pbMostrarRegistrar.Image = global::TPCAI.Properties.Resources.Visible;
+            this.pbMostrarRegistrar.Location = new System.Drawing.Point(350, 178);
+            this.pbMostrarRegistrar.Name = "pbMostrarRegistrar";
+            this.pbMostrarRegistrar.Size = new System.Drawing.Size(30, 20);
+            this.pbMostrarRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMostrarRegistrar.TabIndex = 20;
+            this.pbMostrarRegistrar.TabStop = false;
+            this.pbMostrarRegistrar.Click += new System.EventHandler(this.pbMostrarRegistrar_Click);
+            // 
+            // pbOcultarRegistrar
+            // 
+            this.pbOcultarRegistrar.Image = global::TPCAI.Properties.Resources.NotVisible;
+            this.pbOcultarRegistrar.Location = new System.Drawing.Point(350, 178);
+            this.pbOcultarRegistrar.Name = "pbOcultarRegistrar";
+            this.pbOcultarRegistrar.Size = new System.Drawing.Size(30, 20);
+            this.pbOcultarRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbOcultarRegistrar.TabIndex = 21;
+            this.pbOcultarRegistrar.TabStop = false;
+            this.pbOcultarRegistrar.Click += new System.EventHandler(this.pbOcultarRegistrar_Click_1);
+            // 
             // FormRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbMostrarRegistrar);
+            this.Controls.Add(this.pbOcultarRegistrar);
             this.Controls.Add(this.lblVerificarContRegistrar);
             this.Controls.Add(this.lblErrorContraseñaRegistrar);
             this.Controls.Add(this.btnSalirRegistrar);
@@ -259,6 +287,8 @@
             this.Name = "FormRegistrar";
             this.Text = "FormsRegistrar";
             this.Load += new System.EventHandler(this.FormsRegistrar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostrarRegistrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultarRegistrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +316,7 @@
         private System.Windows.Forms.Button btnSalirRegistrar;
         private System.Windows.Forms.Label lblErrorContraseñaRegistrar;
         private System.Windows.Forms.Label lblVerificarContRegistrar;
+        private System.Windows.Forms.PictureBox pbMostrarRegistrar;
+        private System.Windows.Forms.PictureBox pbOcultarRegistrar;
     }
 }

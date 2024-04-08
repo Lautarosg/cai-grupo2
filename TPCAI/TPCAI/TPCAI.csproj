@@ -58,14 +58,25 @@
     <Compile Include="FormRegistrar.Designer.cs">
       <DependentUpon>FormRegistrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoUsuario.Designer.cs">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="Utils\ValidadorUsuario.cs" />
     <Compile Include="ValidadorUtil.cs" />
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistrar.resx">
       <DependentUpon>FormRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +86,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,6 +100,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NotVisible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Visible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logo.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

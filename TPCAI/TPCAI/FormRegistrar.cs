@@ -38,19 +38,35 @@ namespace TPCAI
             string verificar = txtVerificarRegistrar.Text;
             string usuarioNuevo = txtUsuarioRegistrar.Text;
             string contraseñaNuevo = txtContraseñaRegistrar.Text;
+            bool check = false;
            
             if (validador.validarIguales(contraseña, verificar))
             {
                 lblVerificarContRegistrar.Text = "La contraseña debe ser la misma!";
+                check = false;
             }
             if (validador.validarVacio(usuarioNuevo))
             {
                 lblErrorUsuarioRegistrar.Text = "Debe ingresar un nombre de usuario";
+                check = false;
             }
             if (validador.validarVacio(contraseñaNuevo))
             {
                 lblErrorContraseñaRegistrar.Text = "Debe ingresar una contraseña";
+                check = false;
             }
+
+            if (check == false) {
+
+                var result = MessageBox.Show("Usuario Creado Exitosamente. \n¿Esta seguro que quiere continuar con el registro?", "Sale Aplicacion", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    NuevoUsuario formNuevoUsuario = new NuevoUsuario();
+                    formNuevoUsuario.Show();
+                }
+            }
+
 
         }
 
@@ -145,6 +161,20 @@ namespace TPCAI
         private void labe_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pbMostrarRegistrar_Click(object sender, EventArgs e)
+        {
+            pbOcultarRegistrar.BringToFront();
+            txtContraseñaRegistrar.PasswordChar = '\0';
+            txtVerificarRegistrar.PasswordChar = '\0';
+        }
+
+        private void pbOcultarRegistrar_Click_1(object sender, EventArgs e)
+        {
+            pbMostrarRegistrar.BringToFront();
+            txtContraseñaRegistrar.PasswordChar = '*';
+            txtVerificarRegistrar.PasswordChar = '*';
         }
     }
 }
