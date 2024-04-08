@@ -13,7 +13,7 @@ namespace TPCAI
 {
     public partial class FormRegistrar : Form
     {
-        const int minCarUsuario = 3;
+        const int minCarUsuario = 8;
         const int maxCarUsuario = 15;
         const int minCarContraseña = 8;
         public FormRegistrar()
@@ -75,7 +75,7 @@ namespace TPCAI
             string usuarioNuevo = txtUsuarioRegistrar.Text;
             
             ValidadorUtil validador = new ValidadorUtil();
-            
+        
             if (validador.validarVacio(usuarioNuevo))
             {
                 lblErrorUsuarioRegistrar.Text = "Debe ingresar un nombre de usuario";

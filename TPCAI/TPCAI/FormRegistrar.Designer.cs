@@ -1,4 +1,6 @@
-﻿namespace TPCAI
+﻿using System.Windows.Forms;
+
+namespace TPCAI
 {
     partial class FormRegistrar
     {
@@ -70,6 +72,7 @@
             this.txtUsuarioRegistrar.Size = new System.Drawing.Size(100, 20);
             this.txtUsuarioRegistrar.TabIndex = 1;
             this.txtUsuarioRegistrar.TextChanged += new System.EventHandler(this.txtUsuarioRegistrar_TextChanged);
+
             // 
             // txtContraseñaRegistrar
             // 
@@ -151,7 +154,7 @@
             this.lblMinUsuarioRegistrar.Name = "lblMinUsuarioRegistrar";
             this.lblMinUsuarioRegistrar.Size = new System.Drawing.Size(103, 13);
             this.lblMinUsuarioRegistrar.TabIndex = 10;
-            this.lblMinUsuarioRegistrar.Text = "más de 3 caracteres";
+            this.lblMinUsuarioRegistrar.Text = "más de 8 caracteres";
             // 
             // lblMaxUsuarioRegistrar
             // 
