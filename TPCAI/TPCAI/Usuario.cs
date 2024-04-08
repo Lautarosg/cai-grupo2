@@ -23,12 +23,13 @@ namespace TPCAI
         public DateTime FechaNacimiento { get; set; }
         public DateTime FechaCreacion { get; set; }
         public DateTime? FechaBaja { get; set; }
+        public DateTime FechaContraseña { get; set; }
         public bool Estado {  get; set; }
         public int Rol {  get; set; }
 
 
 
-        public Usuario(string nombre, string apellido, string direccion, int telefono, string email, string nombreusuario, string contraseña, int dni, DateTime fechaNacimiento, int rol)
+        public Usuario(string nombre, string apellido, string direccion, int telefono, string email, string nombreusuario, string contraseña, int dni, DateTime fechaNacimiento, int rol, DateTime fechacontraseña)
         {
             Nombre = nombre;
             Apellido = apellido;
@@ -41,6 +42,8 @@ namespace TPCAI
             FechaNacimiento = fechaNacimiento;
             FechaCreacion = DateTime.Now;
             Rol = rol;
+            FechaContraseña = fechacontraseña;
+            
 
 
             
