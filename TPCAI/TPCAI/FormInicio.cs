@@ -23,9 +23,7 @@ namespace TPCAI
 
         private void linkLabelRegistrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
-            FormRegistrar form = new FormRegistrar();
-            form.ShowDialog();
+            MessageBox.Show("En caso de no tener usuario, comunicarse con el administrador a admin@electrohogar.com", "Ayuda", MessageBoxButtons.OK);
         }
 
 

@@ -89,12 +89,12 @@
             // linkLblRegistrarInicio
             // 
             this.linkLblRegistrarInicio.AutoSize = true;
-            this.linkLblRegistrarInicio.Location = new System.Drawing.Point(20, 232);
+            this.linkLblRegistrarInicio.Location = new System.Drawing.Point(20, 407);
             this.linkLblRegistrarInicio.Name = "linkLblRegistrarInicio";
-            this.linkLblRegistrarInicio.Size = new System.Drawing.Size(161, 13);
+            this.linkLblRegistrarInicio.Size = new System.Drawing.Size(37, 13);
             this.linkLblRegistrarInicio.TabIndex = 6;
             this.linkLblRegistrarInicio.TabStop = true;
-            this.linkLblRegistrarInicio.Text = "No esta registrado? Hagalo aquí";
+            this.linkLblRegistrarInicio.Text = "Ayuda";
             this.linkLblRegistrarInicio.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegistrar_LinkClicked);
             // 
             // lblUsuarioInicio
