@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TPCAI
 {
-    internal  class ValidadorUtil
+    public  class ValidadorUtil
     {
         public bool validarVacio(string campo)
         {
