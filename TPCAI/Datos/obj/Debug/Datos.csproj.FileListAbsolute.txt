@@ -1,0 +1,6 @@
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Datos\bin\Debug\Datos.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Datos\bin\Debug\Datos.pdb
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Datos\obj\Debug\Datos.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Datos\obj\Debug\Datos.pdb
