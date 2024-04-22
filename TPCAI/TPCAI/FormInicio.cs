@@ -29,7 +29,39 @@ namespace TPCAI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            String usuario = txtUsuarioInicio.Text;
+            String password = txtContraseñaInicio.Text;
 
+            // Obtener el rol del user para saber a que menu redireccionar
+            //1= Vendedor 2=Supervisor 3=Administrador
+
+            /**  aca tendria que obtener el rol del usuario para saber que menu ingresar
+             * algo como
+             * "usuarioNegocio.ObtenerPerfil(idUsuario);"
+             **/
+            int rol = 3;  //lo harcodee en valor asi no pincha el programa y probar los menus
+
+            // Ir al formulario que corresponde
+            this.Hide();
+
+            if (rol == 3)
+            {
+                FormMenuAdmin formAdministrador = new FormMenuAdmin();
+                formAdministrador.ShowDialog();
+            }
+            else if (rol == 2)
+            {
+                FormMenuSupervisor formSupervisor = new FormMenuSupervisor();
+                formSupervisor.ShowDialog();
+            }
+            else
+            {
+                FormMenuVendedor formVendedor = new FormMenuVendedor();
+                formVendedor.ShowDialog();
+            }
+ 
+              
+            
         }
 
         private void TxtContraseña_TextChanged(object sender, EventArgs e)
