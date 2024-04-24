@@ -12,31 +12,23 @@ namespace Datos
     using TPCAI;
 
 
-    namespace YourNamespace
+    namespace Controller
     {
-        class Program
+        class Controller
         {
             public async Task<Usuario> CrearClienteAsync( UsuarioPostRequest usuarioPost)
             {
-                // Create an instance of HttpClient
-
-                // Create an instance of HttpClient
                 using (HttpClient client = new HttpClient())
                 {
-                    // Define the URL of the API endpoint
                     string apiUrl = "https://cai-tp.azurewebsites.net/api/Cliente/AgregarCliente";
 
-                    // Serialize your data object to JSON
                     string jsonString = JsonSerializer.Serialize(usuarioPost);
 
-                    // Create an instance of StringContent with your JSON payload
                     var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
 
                     try
                     {
-                        // Make the POST request
                         HttpResponseMessage response = await client.PostAsync(apiUrl, content);
-                        // Check if the request was successful
                         if (response.IsSuccessStatusCode)
                         {
                             string ResponseBody = await response.Content.ReadAsStringAsync();
@@ -59,6 +51,38 @@ namespace Datos
 
                 }
                 }
+            public async Task<Usuario> GetClientesAsync()
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string apiUrl = "https://cai-tp.azurewebsites.net/api/Cliente/AgregarCliente";
+
+
+                    try
+                    {
+                        HttpResponseMessage response = await client.GetAsync(apiUrl);
+                        if (response.IsSuccessStatusCode)
+                        {
+                            string ResponseBody = await response.Content.ReadAsStringAsync();
+                            Usuario ResponseData = JsonSerializer.Deserialize<Usuario>(ResponseBody);
+                            Console.WriteLine("POST request was successful.");
+                            return ResponseData;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"POST request failed with status code {response.StatusCode}.");
+                            return null;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        Console.WriteLine($"An error occurred: {ex.Message}");
+                        return null;
+                    }
+
+                }
             }
+        }
         }
     }

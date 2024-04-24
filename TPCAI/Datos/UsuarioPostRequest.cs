@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Datos.YourNamespace
+namespace Datos.Controller
 {
     public class UsuarioPostRequest
     {
