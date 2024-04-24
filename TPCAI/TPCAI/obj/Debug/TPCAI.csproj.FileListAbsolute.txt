@@ -97,3 +97,6 @@ C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Microsoft.Bcl.Asy
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Buffers.xml
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.Up2Date
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuAdmin.resources
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuSupervisor.resources
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuVendedor.resources
