@@ -46,7 +46,7 @@ namespace Datos
                     {
 
                         Console.WriteLine($"An error occurred: {ex.Message}");
-                        return null;
+                        return null; 
                     }
 
                 }
@@ -95,10 +95,18 @@ namespace Datos
                     string jsonString = JsonSerializer.Serialize(cambioContraseña);
 
                     var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+                    HttpMethod patchMethod = new HttpMethod("PATCH");
+
+                    // Create a new HttpRequestMessage with the PATCH method
+                    var request = new HttpRequestMessage(patchMethod, apiUrl)
+                    {
+                        Content = content
+                    };
 
                     try
                     {
-                        HttpResponseMessage response = await client.PostAsync(apiUrl, content);
+                        HttpResponseMessage response = await client.SendAsync(request);
+
                         if (response.IsSuccessStatusCode)
                         {
                             string ResponseBody = await response.Content.ReadAsStringAsync();
@@ -120,6 +128,7 @@ namespace Datos
                     }
 
                 }
+                
             }
         }
     }
