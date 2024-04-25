@@ -14,13 +14,13 @@ namespace Datos
 
     namespace Controller
     {
-        class Controller
+        class ControllerUsuario
         {
-            public async Task<Usuario> CrearClienteAsync( UsuarioPostRequest usuarioPost)
+            public async Task<UsuarioDTO> CrearusuarioAsync( UsuarioPostRequest usuarioPost)
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    string apiUrl = "https://cai-tp.azurewebsites.net/api/Cliente/AgregarCliente";
+                    string apiUrl = "https://cai-tp.azurewebsites.net/api/Usuario/Agregarusuario";
 
                     string jsonString = JsonSerializer.Serialize(usuarioPost);
 
@@ -32,7 +32,7 @@ namespace Datos
                         if (response.IsSuccessStatusCode)
                         {
                             string ResponseBody = await response.Content.ReadAsStringAsync();
-                            Usuario ResponseData = JsonSerializer.Deserialize<Usuario>(ResponseBody);
+                            UsuarioDTO ResponseData = JsonSerializer.Deserialize<UsuarioDTO>(ResponseBody);
                             Console.WriteLine("POST request was successful.");
                             return ResponseData;
                         }
@@ -50,21 +50,59 @@ namespace Datos
                     }
 
                 }
-                }
-            public async Task<Usuario> GetClientesAsync()
+            }
+            public async Task<UsuarioDTO> Login(Login login)
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    string apiUrl = "https://cai-tp.azurewebsites.net/api/Cliente/AgregarCliente";
+                    string apiUrl = "https://cai-tp.azurewebsites.net/api/Usuario/Agregarusuario";
 
+                    string jsonString = JsonSerializer.Serialize(login);
+
+                    var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
 
                     try
                     {
-                        HttpResponseMessage response = await client.GetAsync(apiUrl);
+                        HttpResponseMessage response = await client.PostAsync(apiUrl, content);
                         if (response.IsSuccessStatusCode)
                         {
                             string ResponseBody = await response.Content.ReadAsStringAsync();
-                            Usuario ResponseData = JsonSerializer.Deserialize<Usuario>(ResponseBody);
+                            UsuarioDTO ResponseData = JsonSerializer.Deserialize<UsuarioDTO>(ResponseBody);
+                            Console.WriteLine("POST request was successful.");
+                            return ResponseData;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"POST request failed with status code {response.StatusCode}.");
+                            return null;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        Console.WriteLine($"An error occurred: {ex.Message}");
+                        return null;
+                    }
+
+                }
+            }
+            public async Task<UsuarioDTO> cambiarContraseña(CambioContraseña cambioContraseña)
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string apiUrl = "https://cai-tp.azurewebsites.net/api/Usuario/CambiarContrase";
+
+                    string jsonString = JsonSerializer.Serialize(cambioContraseña);
+
+                    var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+
+                    try
+                    {
+                        HttpResponseMessage response = await client.PostAsync(apiUrl, content);
+                        if (response.IsSuccessStatusCode)
+                        {
+                            string ResponseBody = await response.Content.ReadAsStringAsync();
+                            UsuarioDTO ResponseData = JsonSerializer.Deserialize<UsuarioDTO>(ResponseBody);
                             Console.WriteLine("POST request was successful.");
                             return ResponseData;
                         }
@@ -84,5 +122,5 @@ namespace Datos
                 }
             }
         }
-        }
     }
+}
