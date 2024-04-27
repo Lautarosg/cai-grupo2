@@ -100,3 +100,42 @@ C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.Up2D
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuAdmin.resources
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuSupervisor.resources
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuVendedor.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\TPCAI.exe.config
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\TPCAI.exe
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\TPCAI.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\Datos.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\Negocio.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Text.Json.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Memory.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.ValueTuple.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Buffers.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\Datos.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\Datos.dll.config
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\Negocio.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\Negocio.dll.config
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Text.Json.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Memory.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.ValueTuple.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Buffers.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.AssemblyReference.cache
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.FormInicio.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuAdmin.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuSupervisor.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuVendedor.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoUsuario.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.Properties.Resources.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.GenerateResource.cache
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.CoreCompileInputs.cache
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.CopyComplete
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.exe
+C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.pdb

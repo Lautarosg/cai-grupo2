@@ -28,7 +28,7 @@ namespace TPCAI
         public int Rol {  get; set; }
 
 
-
+        
         public UsuarioDTO(string nombre, string apellido, string direccion, int telefono, string email, string nombreusuario, string contraseña, int dni, DateTime fechaNacimiento, int rol, DateTime fechacontraseña)
         {
             Nombre = nombre;
@@ -48,5 +48,8 @@ namespace TPCAI
 
             
         }
+       
+        
+
     }
 }

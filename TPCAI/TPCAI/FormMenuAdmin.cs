@@ -21,5 +21,21 @@ namespace TPCAI
         {
 
         }
+
+        private void buttonAltaSup_Click(object sender, EventArgs e)
+        {
+            FormNuevoUsuario formNuevoUsuario = new FormNuevoUsuario();
+            formNuevoUsuario.ShowDialog();
+            this.Hide();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormInicio formInicio = new FormInicio();
+            formInicio.ShowDialog();
+
+        }
     }
 }

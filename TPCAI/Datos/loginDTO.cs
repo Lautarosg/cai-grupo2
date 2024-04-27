@@ -11,7 +11,7 @@ namespace TPCAI
     public class Login
     {
 
-        //creo los constructores del usuario
+        //creo los constructores del usuario login
         public string NombreUsuario { get; set; }
         public string Contraseña { get; set; }
 

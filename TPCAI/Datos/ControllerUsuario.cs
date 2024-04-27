@@ -87,7 +87,7 @@ namespace Datos
 
                 }
             }
-            public async Task<UsuarioDTO> cambiarContraseña(CambioContraseña cambioContraseña)
+            public async Task<UsuarioDTO> CambiarContraseña(CambioContraseña cambioContraseña)
             {
                 using (HttpClient client = new HttpClient())
                 {
