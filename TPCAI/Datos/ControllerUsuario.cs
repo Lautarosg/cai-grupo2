@@ -3,6 +3,7 @@
 namespace Datos
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
     using System.Net.Http;
     using System.Text;
@@ -14,9 +15,9 @@ namespace Datos
 
     namespace Controller
     {
-        class ControllerUsuario
+        public class ControllerUsuario
         {
-            public async Task<UsuarioDTO> CrearusuarioAsync( UsuarioPostRequest usuarioPost)
+            public async Task<UsuarioDTO> CrearusuarioAsync(UsuarioPostRequest usuarioPost)
             {
                 using (HttpClient client = new HttpClient())
                 {
@@ -46,7 +47,7 @@ namespace Datos
                     {
 
                         Console.WriteLine($"An error occurred: {ex.Message}");
-                        return null; 
+                        return null;
                     }
 
                 }
@@ -128,7 +129,38 @@ namespace Datos
                     }
 
                 }
-                
+
+            }
+            public async Task<List<string>> TraerUsuariosActivos(string idusuario)
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string apiUrl = "https://cai-tp.azurewebsites.net/api/Usuario/TraerUsuariosActivos?id=" + idusuario;
+
+
+
+
+                    try
+                    {
+                        HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            string ResponseBody = await response.Content.ReadAsStringAsync();
+                            List<string> ResponseData = JsonSerializer.Deserialize<List<string>>(ResponseBody);
+                            return ResponseData;
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        return null;
+                    }
+                }
             }
         }
     }
