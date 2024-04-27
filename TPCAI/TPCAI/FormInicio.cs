@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Datos.Controller.ControllerUsuario;
 
 namespace TPCAI
 {
     public partial class FormInicio : Form
     {
+        
         public FormInicio()
         {
             InitializeComponent();
@@ -32,33 +35,50 @@ namespace TPCAI
             String usuario = txtUsuarioInicio.Text;
             String password = txtContraseñaInicio.Text;
 
+            //valido el usuario y password que ingreso
+            if (!(usuario.Length > 0 && password.Length > 0))
+            {
+                MessageBox.Show("Debe de ingresar un usuario y contraseña correcto");
+            }
+
+            //Busco el login en el swagger
+            NegocioUsuario usuarioNegocio = new NegocioUsuario();
+            //obtengo el id que corresponde a ese user para saber a que menu dirigirme
+            String idUsuario = usuarioNegocio.Login(usuario, password).Replace("\"", "");
+
             // Obtener el rol del user para saber a que menu redireccionar
             //1= Vendedor 2=Supervisor 3=Administrador
 
-            /**  aca tendria que obtener el rol del usuario para saber que menu ingresar
-             * algo como
-             * "usuarioNegocio.ObtenerPerfil(idUsuario);"
-             **/
-            int rol = 3;  //lo harcodee en valor asi no pincha el programa y probar los menus
-
-            // Ir al formulario que corresponde
-            this.Hide();
-
-            if (rol == 3)
+            
+            if (idUsuario != "null") 
             {
-                FormMenuAdmin formAdministrador = new FormMenuAdmin();
-                formAdministrador.ShowDialog();
-            }
-            else if (rol == 2)
-            {
-                FormMenuSupervisor formSupervisor = new FormMenuSupervisor();
-                formSupervisor.ShowDialog();
+                //Busco el perfil del usuario que se ingreso
+                int perfil = usuarioNegocio.ObtenerPerfil(idUsuario);
+
+                // Ir al formulario que corresponde
+                this.Hide();
+
+                if (perfil == 3)
+                {
+                    FormMenuAdmin formAdministrador = new FormMenuAdmin();
+                    formAdministrador.ShowDialog();
+                }
+                else if (perfil == 2)
+                {
+                    FormMenuSupervisor formSupervisor = new FormMenuSupervisor();
+                    formSupervisor.ShowDialog();
+                }
+                else if(perfil ==1)
+                {
+                    FormMenuVendedor formVendedor = new FormMenuVendedor();
+                    formVendedor.ShowDialog();
+                }
             }
             else
             {
-                FormMenuVendedor formVendedor = new FormMenuVendedor();
-                formVendedor.ShowDialog();
+                MessageBox.Show("Dato ingresado incorrecto");
             }
+            
  
               
             

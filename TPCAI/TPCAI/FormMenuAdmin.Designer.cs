@@ -31,10 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.buttonModVend = new System.Windows.Forms.Button();
-            this.buttonAltaVend = new System.Windows.Forms.Button();
-            this.buttonBajaVend = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.buttonModProd = new System.Windows.Forms.Button();
             this.buttonAltaProd = new System.Windows.Forms.Button();
@@ -52,11 +48,16 @@
             this.buttonModSup = new System.Windows.Forms.Button();
             this.buttonAltaSup = new System.Windows.Forms.Button();
             this.buttonBajaSup = new System.Windows.Forms.Button();
-            this.groupBox3.SuspendLayout();
+            this.buttonBajaVend = new System.Windows.Forms.Button();
+            this.buttonAltaVend = new System.Windows.Forms.Button();
+            this.buttonModVend = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -85,49 +86,6 @@
             this.label3.Size = new System.Drawing.Size(339, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Elija que opción sobre que perfil desea trabajar";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox3.Controls.Add(this.buttonModVend);
-            this.groupBox3.Controls.Add(this.buttonAltaVend);
-            this.groupBox3.Controls.Add(this.buttonBajaVend);
-            this.groupBox3.Location = new System.Drawing.Point(73, 272);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(608, 99);
-            this.groupBox3.TabIndex = 18;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Vendedor";
-            // 
-            // buttonModVend
-            // 
-            this.buttonModVend.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonModVend.Location = new System.Drawing.Point(440, 38);
-            this.buttonModVend.Name = "buttonModVend";
-            this.buttonModVend.Size = new System.Drawing.Size(114, 41);
-            this.buttonModVend.TabIndex = 21;
-            this.buttonModVend.Text = "Modificación";
-            this.buttonModVend.UseVisualStyleBackColor = true;
-            // 
-            // buttonAltaVend
-            // 
-            this.buttonAltaVend.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonAltaVend.Location = new System.Drawing.Point(113, 38);
-            this.buttonAltaVend.Name = "buttonAltaVend";
-            this.buttonAltaVend.Size = new System.Drawing.Size(114, 41);
-            this.buttonAltaVend.TabIndex = 19;
-            this.buttonAltaVend.Text = "Alta";
-            this.buttonAltaVend.UseVisualStyleBackColor = true;
-            // 
-            // buttonBajaVend
-            // 
-            this.buttonBajaVend.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonBajaVend.Location = new System.Drawing.Point(274, 38);
-            this.buttonBajaVend.Name = "buttonBajaVend";
-            this.buttonBajaVend.Size = new System.Drawing.Size(114, 41);
-            this.buttonBajaVend.TabIndex = 20;
-            this.buttonBajaVend.Text = "Baja";
-            this.buttonBajaVend.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -276,7 +234,7 @@
             this.groupBox2.Size = new System.Drawing.Size(607, 100);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Supervisor";
+            this.groupBox2.Text = "Usuarios";
             // 
             // buttonModSup
             // 
@@ -297,6 +255,7 @@
             this.buttonAltaSup.TabIndex = 22;
             this.buttonAltaSup.Text = "Alta";
             this.buttonAltaSup.UseVisualStyleBackColor = true;
+            this.buttonAltaSup.Click += new System.EventHandler(this.buttonAltaSup_Click);
             // 
             // buttonBajaSup
             // 
@@ -308,12 +267,66 @@
             this.buttonBajaSup.Text = "Baja";
             this.buttonBajaSup.UseVisualStyleBackColor = true;
             // 
+            // buttonBajaVend
+            // 
+            this.buttonBajaVend.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonBajaVend.Location = new System.Drawing.Point(274, 38);
+            this.buttonBajaVend.Name = "buttonBajaVend";
+            this.buttonBajaVend.Size = new System.Drawing.Size(114, 41);
+            this.buttonBajaVend.TabIndex = 20;
+            this.buttonBajaVend.Text = "Baja";
+            this.buttonBajaVend.UseVisualStyleBackColor = true;
+            // 
+            // buttonAltaVend
+            // 
+            this.buttonAltaVend.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonAltaVend.Location = new System.Drawing.Point(113, 38);
+            this.buttonAltaVend.Name = "buttonAltaVend";
+            this.buttonAltaVend.Size = new System.Drawing.Size(114, 41);
+            this.buttonAltaVend.TabIndex = 19;
+            this.buttonAltaVend.Text = "Alta";
+            this.buttonAltaVend.UseVisualStyleBackColor = true;
+            // 
+            // buttonModVend
+            // 
+            this.buttonModVend.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonModVend.Location = new System.Drawing.Point(440, 38);
+            this.buttonModVend.Name = "buttonModVend";
+            this.buttonModVend.Size = new System.Drawing.Size(114, 41);
+            this.buttonModVend.TabIndex = 21;
+            this.buttonModVend.Text = "Modificación";
+            this.buttonModVend.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox3.Controls.Add(this.buttonModVend);
+            this.groupBox3.Controls.Add(this.buttonAltaVend);
+            this.groupBox3.Controls.Add(this.buttonBajaVend);
+            this.groupBox3.Location = new System.Drawing.Point(73, 272);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(608, 99);
+            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Cliente";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(770, 764);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 77);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Cerrar Sesión";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormMenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1124, 870);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox6);
@@ -326,11 +339,11 @@
             this.Name = "FormMenuAdmin";
             this.Text = "Menú Admistrador";
             this.Load += new System.EventHandler(this.FormMenuAdmin_Load);
-            this.groupBox3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,10 +354,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button buttonModVend;
-        private System.Windows.Forms.Button buttonAltaVend;
-        private System.Windows.Forms.Button buttonBajaVend;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button buttonModProd;
         private System.Windows.Forms.Button buttonAltaProd;
@@ -362,5 +371,10 @@
         private System.Windows.Forms.Button buttonModSup;
         private System.Windows.Forms.Button buttonAltaSup;
         private System.Windows.Forms.Button buttonBajaSup;
+        private System.Windows.Forms.Button buttonBajaVend;
+        private System.Windows.Forms.Button buttonAltaVend;
+        private System.Windows.Forms.Button buttonModVend;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button1;
     }
 }

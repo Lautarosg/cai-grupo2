@@ -70,17 +70,11 @@
     <Compile Include="FormMenuVendedor.Designer.cs">
       <DependentUpon>FormMenuVendedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegistrar.cs">
+    <Compile Include="FormNuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegistrar.Designer.cs">
-      <DependentUpon>FormRegistrar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NuevoUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NuevoUsuario.Designer.cs">
-      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    <Compile Include="FormNuevoUsuario.Designer.cs">
+      <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,11 +93,8 @@
     <EmbeddedResource Include="FormMenuVendedor.resx">
       <DependentUpon>FormMenuVendedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRegistrar.resx">
-      <DependentUpon>FormRegistrar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NuevoUsuario.resx">
-      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="FormNuevoUsuario.resx">
+      <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

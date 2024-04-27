@@ -93,5 +93,17 @@ namespace TPCAI
             return fechaNacimiento;
         }
 
+        public static int ValidarPerfil(string perfil) 
+        {
+            if (!int.TryParse(perfil, out int host) || (host<1  && host > 3))
+            {
+                host = -1;
+            }
+
+            return host;
+
+        }
+
+
     }
 }

@@ -14,7 +14,7 @@ namespace Datos
 
     namespace Controller
     {
-        class ControllerUsuario
+        public class ControllerUsuario
         {
             public async Task<UsuarioDTO> CrearusuarioAsync( UsuarioPostRequest usuarioPost)
             {
@@ -86,7 +86,7 @@ namespace Datos
 
                 }
             }
-            public async Task<UsuarioDTO> cambiarContraseña(CambioContraseña cambioContraseña)
+            public async Task<UsuarioDTO> CambiarContraseña(CambioContraseña cambioContraseña)
             {
                 using (HttpClient client = new HttpClient())
                 {
