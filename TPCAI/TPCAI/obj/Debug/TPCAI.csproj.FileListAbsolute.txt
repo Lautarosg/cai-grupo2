@@ -48,8 +48,6 @@ C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\TPCAI.exe
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\TPCAI.pdb
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.AssemblyReference.cache
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormInicio.resources
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormRegistrar.resources
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.NuevoUsuario.resources
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.Properties.Resources.resources
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.GenerateResource.cache
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.CoreCompileInputs.cache
@@ -139,3 +137,4 @@ C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.CoreC
 C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.CopyComplete
 C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.exe
 C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.pdb
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoUsuario.resources
