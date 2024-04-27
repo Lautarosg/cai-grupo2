@@ -8,7 +8,7 @@ using System.Timers;
 
 namespace TPCAI
 {
-    public class UsuarioDTO
+    internal class UsuarioDTO
     {
 
         //creo los constructores del usuario
