@@ -35,6 +35,7 @@ namespace TPCAI
             String usuario = txtUsuarioInicio.Text;
             String password = txtContraseñaInicio.Text;
 
+            // Verificar si los campos están vacíos
             if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Por favor, ingrese un usuario y contraseña.");

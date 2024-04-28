@@ -90,6 +90,24 @@ namespace TPCAI
                 DateText = "\nFecha con formato incorrecto, porfavor ingrese dd/MM/yyyy \n";
             }
 
+            else
+            {
+                // Calcular la edad a partir de la fecha de nacimiento
+                int edad = DateTime.Today.Year - fechaNacimiento.Year;
+
+                // Ajustar la edad si aún no ha cumplido años este año
+                if (fechaNacimiento.Date > DateTime.Today.AddYears(-edad))
+                {
+                    edad--;
+                }
+
+                // Validar que la edad esté dentro del rango deseado
+                if (edad <= 18 || edad >= 100)
+                {
+                    DateText = "\nLa edad debe ser mayor de 18 años\n";
+                }
+            }
+
             return fechaNacimiento;
         }
 

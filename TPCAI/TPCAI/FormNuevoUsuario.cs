@@ -37,10 +37,19 @@ namespace TPCAI
             string nombre = ValidadorUsuario.ValidarNombre(textBoxNombre.Text);
             string apellido = ValidadorUsuario.ValidarNombre(textBoxApellido.Text);
             string dni = textBoxDNI.Text;
-            string direccion = textBoxDireccion.Text;
-            string email = textBoxEmail.Text;
+            string direccion = ValidadorUsuario.ValidarDireccion(textBoxDireccion.Text);
+            string email = ValidadorUsuario.ValidarEmail(textBoxEmail.Text);
             string FechaNacimiento = textBoxFechaNac.Text;
-            string telefono = textBoxTelefono.Text;
+            string telefono = ValidadorUsuario.ValidarTelefono(textBoxTelefono.Text);
+
+            /*
+            // Validar que no haya errores en las validaciones
+            if (nombre.Contains("Error") || apellido.Contains("Error") || dni == -1 || direccion.Contains("Error") || email.Contains("Error") || telefono.Contains("Error"))
+            {
+                // Mostrar mensaje de error con las validaciones fallidas
+                MessageBox.Show("Se encontraron errores en los datos ingresados. Por favor, verifique y corrija los campos indicados.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }*/
 
             //VALIDACION DE USER Y CONTRASEÑA
             ValidadorUtil validador = new ValidadorUtil();
@@ -202,6 +211,11 @@ namespace TPCAI
             pbMostrarRegistrar.BringToFront();
             txtContraseñaRegistrar.PasswordChar = '*';
             txtVerificarRegistrar.PasswordChar = '*';
+        }
+
+        private void textBoxDNI_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
