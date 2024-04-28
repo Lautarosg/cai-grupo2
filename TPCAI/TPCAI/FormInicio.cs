@@ -35,6 +35,12 @@ namespace TPCAI
             String usuario = txtUsuarioInicio.Text;
             String password = txtContraseñaInicio.Text;
 
+            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Por favor, ingrese un usuario y contraseña.");
+                return; // Salir del método para evitar continuar con el inicio de sesión
+            }
+
             //valido el usuario y password que ingreso
             if (!(usuario.Length > 0 && password.Length > 0))
             {
@@ -77,11 +83,7 @@ namespace TPCAI
             else
             {
                 MessageBox.Show("Dato ingresado incorrecto");
-            }
-            
- 
-              
-            
+            }            
         }
 
         private void TxtContraseña_TextChanged(object sender, EventArgs e)
@@ -106,7 +108,7 @@ namespace TPCAI
 
         private void btnSalirInicio_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Esta seguro que desea salir?", "sale aplicacion", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show("¿Está seguro que desea salir?", "Salir", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 Close();

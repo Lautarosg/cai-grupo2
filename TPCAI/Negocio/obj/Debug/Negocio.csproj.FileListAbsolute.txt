@@ -97,3 +97,23 @@ C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\Negocio\obj\Debug\Negocio.csproj.C
 C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\Negocio\obj\Debug\Negocio.dll
 C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Negocio.dll.config
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Text.Json.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Memory.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.ValueTuple.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Buffers.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Datos.dll.config
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Text.Json.xml
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Memory.xml
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.ValueTuple.xml
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Buffers.xml
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
