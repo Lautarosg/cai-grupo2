@@ -120,8 +120,8 @@ namespace TPCAI
                 if (DialogResult == DialogResult.OK) //si el user hace click en OK, vuelve al inicio
                 {
                     this.Hide();
-                    FormInicio formInicio = new FormInicio();
-                    formInicio.ShowDialog();
+                    FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
+                    formMenuAdmin.ShowDialog();
                     
                 }
 
