@@ -115,14 +115,14 @@ namespace TPCAI
 
                 NegocioUsuario.AgregarUsuario(SwaggerUser);
 
-                var result = MessageBox.Show("Usuario Creado Exitosamente.\n Porfavor, haga click en OK para volver a inicio", "Confirmación", MessageBoxButtons.OK);
+                var result = MessageBox.Show("Usuario Creado Exitosamente.\n Porfavor, haga click en OK para volver al menú", "Confirmación", MessageBoxButtons.OK);
 
-                if (DialogResult == DialogResult.OK) //si el user hace click en OK, vuelve al inicio
+                if (DialogResult == DialogResult.OK) //si el user hace click en OK, vuelve al menú 
                 {
                     this.Hide();
                     FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
                     formMenuAdmin.ShowDialog();
-                    
+
                 }
 
 
@@ -132,8 +132,8 @@ namespace TPCAI
         private void buttonVolverAtras_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormInicio formInicio = new FormInicio();
-            formInicio.ShowDialog();
+            FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
+            formMenuAdmin.ShowDialog();
         }
 
         private void txtUsuarioRegistrar_TextChanged(object sender, EventArgs e)
