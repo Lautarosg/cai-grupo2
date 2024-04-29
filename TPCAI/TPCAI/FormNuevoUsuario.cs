@@ -39,7 +39,7 @@ namespace TPCAI
             string dni = textBoxDNI.Text;
             string direccion = ValidadorUsuario.ValidarDireccion(textBoxDireccion.Text);
             string email = ValidadorUsuario.ValidarEmail(textBoxEmail.Text);
-            string FechaNacimiento = textBoxFechaNac.Text;
+            DateTime fechaNacimiento = dtpfechaNacimiento.Value;
             string telefono = ValidadorUsuario.ValidarTelefono(textBoxTelefono.Text);
 
             /*
@@ -90,7 +90,7 @@ namespace TPCAI
             errores += ValidadorUsuario.ValidarDireccion(direccion);
             errores += ValidadorUsuario.ValidarEmail(email);
             errores += ValidadorUsuario.ValidarTelefono(telefono);
-            errores += ValidadorUsuario.ValidarFechaNac(FechaNacimiento);
+            errores += ValidadorUsuario.ValidarFechaNac(fechaNacimiento);
 
             if (errores.Contains("error") || errores.Contains("-1") || check == true)
             {
@@ -98,22 +98,22 @@ namespace TPCAI
             }
             else
             {
-                //creo el nuevo usuario en el POST:/api/Usuario/AgregarUsuario
-                UserData SwaggerUser = new UserData();
-                SwaggerUser.IdUsuario = id;
-                SwaggerUser.Host = host;
+                //creo el nuevo usuario 
+                UsuarioPostRequest SwaggerUser = new UsuarioPostRequest(id,nombre,apellido,direccion,telefono,email,fechaNacimiento,usuarioNuevo,host, Convert.ToInt32(dni));
+                NegocioUsuario.AgregarUsuario(SwaggerUser, id);
+                /*
+                SwaggerUser.IdUsuario = "";
                 SwaggerUser.Nombre = nombre;
                 SwaggerUser.Apellido = apellido;
-                SwaggerUser.Dni = Convert.ToInt32(dni);
                 SwaggerUser.Direccion = direccion;
                 SwaggerUser.Telefono = telefono;
                 SwaggerUser.Email = email;
-                SwaggerUser.FechaNacimiento = FechaNacimiento;
+                SwaggerUser.FechaNacimiento = fechaNacimiento;
                 SwaggerUser.NombreUsuario = usuarioNuevo;
-                SwaggerUser.Contrasenia = contraseña;
+                SwaggerUser.Host = host;
+                SwaggerUser.Dni = Convert.ToInt32(dni);
+                */
 
-
-                NegocioUsuario.AgregarUsuario(SwaggerUser);
 
                 var result = MessageBox.Show("Usuario Creado Exitosamente.\n Porfavor, haga click en OK para volver al menú", "Confirmación", MessageBoxButtons.OK);
 
@@ -214,6 +214,16 @@ namespace TPCAI
         }
 
         private void textBoxDNI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPerfil_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

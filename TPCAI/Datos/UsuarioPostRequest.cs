@@ -56,10 +56,10 @@ namespace Datos.Controller
         public string Direccion { get => _direccion; set => _direccion = value; }
         public string Telefono { get => _telefono; set => _telefono = value; }
         public string Email { get => _email; set => _email = value; }
-        public DateTime FechaNacimiento { get => _fechaNacimiento; }
+        public DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
         public string NombreUsuario { get => _usuario; set => _usuario = value; }
-        public int Host { get => _host; }
-        public int Dni { get => _dni; }
+        public int Host { get => _host; set => _host = value; }
+        public int Dni { get => _dni; set => _dni = value; }
         public string Contraseña { get => _contrasenia; set => _contrasenia = value; }
 
         // Constructor para metodo de crearusuario
@@ -72,7 +72,7 @@ namespace Datos.Controller
             Direccion = direccion;
             Telefono = telefono;
             Email = email;
-            _fechaNacimiento = fechaNacimiento;
+            FechaNacimiento = fechaNacimiento;
             NombreUsuario = usuario;
             _host = host;
             _dni = dni;

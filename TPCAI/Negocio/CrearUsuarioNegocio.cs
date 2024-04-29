@@ -10,13 +10,14 @@ namespace Negocio
     public class CrearUsuarioNegocio
     {
         private ControllerUsuario controllerUsuario;
+        private String idAdmin = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
 
         public CrearUsuarioNegocio()
         {
             controllerUsuario = new ControllerUsuario();
         }
 
-        public async Task CrearUsuarioAsync(UsuarioPostRequest usuario, string idAdmin, string idUsuario)
+        public async Task CrearUsuarioAsync(UsuarioPostRequest usuario, string idUsuario)
         {
             List<string> usuarios = await controllerUsuario.TraerUsuariosActivos(idAdmin);
 

@@ -82,16 +82,17 @@ namespace TPCAI
             return direccion;
         }
 
-        public static DateTime ValidarFechaNac(string DateText)
+        public static DateTime ValidarFechaNac(DateTime fechaNacimiento)
         {
+           /*
             if (!DateTime.TryParseExact(DateText, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime fechaNacimiento))
             
             {
                 DateText = "\nFecha con formato incorrecto, porfavor ingrese dd/MM/yyyy \n";
             }
-
+           
             else
-            {
+            {*/
                 // Calcular la edad a partir de la fecha de nacimiento
                 int edad = DateTime.Today.Year - fechaNacimiento.Year;
 
@@ -104,9 +105,9 @@ namespace TPCAI
                 // Validar que la edad esté dentro del rango deseado
                 if (edad <= 18 || edad >= 100)
                 {
-                    DateText = "\nLa edad debe ser mayor de 18 años\n";
+                    //DateText = "\nLa edad debe ser mayor de 18 años\n";
                 }
-            }
+            //}
 
             return fechaNacimiento;
         }

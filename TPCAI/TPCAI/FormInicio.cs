@@ -30,7 +30,7 @@ namespace TPCAI
         }
 
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
             String usuario = txtUsuarioInicio.Text;
             String password = txtContraseñaInicio.Text;
@@ -48,34 +48,39 @@ namespace TPCAI
                 MessageBox.Show("Debe de ingresar un usuario y contraseña correcto");
             }
 
-            //Busco el login en el swagger
+            // Creo un int rol que tome el valor del usuario que inicia sesion
             NegocioUsuario usuarioNegocio = new NegocioUsuario();
-            //obtengo el id que corresponde a ese user para saber a que menu dirigirme
-            String idUsuario = usuarioNegocio.Login(usuario, password).Replace("\"", "");
-
+            int rol = await usuarioNegocio.Login(usuario, password);
+            if(rol == 0)
+            {
+                MessageBox.Show("no se encontro rol");
+            }
+            else
+            {
+                // si es -1 hay error con webservice, sino da el numero de rol
+                MessageBox.Show(rol.ToString());
+            }
+            
             // Obtener el rol del user para saber a que menu redireccionar
             //1= Vendedor 2=Supervisor 3=Administrador
-
-            
-            if (idUsuario != "null") 
+           
+            if (rol != -1 || rol != 0) 
             {
-                //Busco el perfil del usuario que se ingreso
-                int perfil = usuarioNegocio.ObtenerPerfil(idUsuario);
 
                 // Ir al formulario que corresponde
                 this.Hide();
 
-                if (perfil == 3)
+                if (rol == 3)
                 {
                     FormMenuAdmin formAdministrador = new FormMenuAdmin();
                     formAdministrador.ShowDialog();
                 }
-                else if (perfil == 2)
+                else if (rol == 2)
                 {
                     FormMenuSupervisor formSupervisor = new FormMenuSupervisor();
                     formSupervisor.ShowDialog();
                 }
-                else if(perfil ==1)
+                else if(rol ==1)
                 {
                     FormMenuVendedor formVendedor = new FormMenuVendedor();
                     formVendedor.ShowDialog();
@@ -85,6 +90,7 @@ namespace TPCAI
             {
                 MessageBox.Show("Dato ingresado incorrecto");
             }            
+           
         }
 
         private void TxtContraseña_TextChanged(object sender, EventArgs e)

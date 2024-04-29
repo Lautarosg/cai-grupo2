@@ -1,6 +1,4 @@
-﻿
-
-namespace Datos
+﻿namespace Datos
 {
     using System;
     using System.Collections.Generic;
@@ -56,7 +54,7 @@ namespace Datos
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    string apiUrl = "https://cai-tp.azurewebsites.net/api/Usuario/Agregarusuario";
+                    string apiUrl = "https://cai-tp.azurewebsites.net/api/Usuario/Login";
 
                     string jsonString = JsonSerializer.Serialize(login);
 
