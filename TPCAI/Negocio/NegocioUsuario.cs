@@ -30,9 +30,13 @@ namespace Negocio
             controllerUsuario.AgregarUsuario(usuario);
         }
 
-        public int LoginUsuario(string usuario, string contraseña)
+        public void LoginUsuario(string usuario, string contraseña)
         {
-            int rol = 0;
+            Login usuarioDatos = new Login(usuario, contraseña);
+            controllerUsuario.Login(usuarioDatos);
+
+            //implementar logica para encontrar el rol del usuario de Login
+            /*int rol = 0;
             Login usuarioDatos = new Login(usuario, contraseña);
             UsuarioDTO responseData = controllerUsuario.Login(usuarioDatos);
             if (responseData != null)
@@ -46,6 +50,7 @@ namespace Negocio
                 rol = -1;
             }
             return rol; 
+            */
         }
     }
 }

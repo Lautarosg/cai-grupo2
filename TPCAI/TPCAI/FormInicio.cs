@@ -50,8 +50,10 @@ namespace TPCAI
 
             // Creo un int rol que tome el valor del usuario que inicia sesion
             NegocioUsuario usuarioNegocio = new NegocioUsuario();
-            int rol = usuarioNegocio.LoginUsuario(usuario, password);
-
+            usuarioNegocio.LoginUsuario(usuario, password);
+            
+            // implementar logica dependiendo el rol encontrado del Login
+            int rol = 3;
             if (rol == -1)
             {
                 MessageBox.Show("no se encontro el usuario");
@@ -132,14 +134,7 @@ namespace TPCAI
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-        }
+    }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-                FormMenuAdmin formAdministrador = new FormMenuAdmin();
-                formAdministrador.ShowDialog();
-        }
     }
 }

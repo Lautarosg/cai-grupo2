@@ -40,7 +40,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbMostrarInicio = new System.Windows.Forms.PictureBox();
             this.pbOcultarInicio = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrarInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultarInicio)).BeginInit();
@@ -181,22 +180,11 @@
             this.pbOcultarInicio.TabStop = false;
             this.pbOcultarInicio.Click += new System.EventHandler(this.pbOcultarInicio_Click_1);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(899, 439);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 43);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "AñadirUsuario";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pbMostrarInicio);
             this.Controls.Add(this.pbOcultarInicio);
             this.Controls.Add(this.pictureBox1);
@@ -235,7 +223,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pbMostrarInicio;
         private System.Windows.Forms.PictureBox pbOcultarInicio;
-        private System.Windows.Forms.Button button1;
     }
 }
 
