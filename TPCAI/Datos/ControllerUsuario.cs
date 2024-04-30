@@ -6,6 +6,7 @@
     using System.Net.Http;
     using System.Text;
     using System.Text.Json;
+    using System.Text.Json.Serialization;
     using System.Threading.Tasks;
     using System.Web.Helpers;
     using TPCAI;
@@ -13,8 +14,10 @@
 
     namespace Controller
     {
+        /*
         public class ControllerUsuario
         {
+            
             public async Task<UsuarioDTO> CrearusuarioAsync(UsuarioPostRequest usuarioPost)
             {
                 using (HttpClient client = new HttpClient())
@@ -50,6 +53,7 @@
 
                 }
             }
+            
             public async Task<UsuarioDTO> Login(Login login)
             {
                 using (HttpClient client = new HttpClient())
@@ -161,5 +165,7 @@
                 }
             }
         }
+        */
     }
+
 }

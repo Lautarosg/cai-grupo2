@@ -50,6 +50,10 @@
       <Project>{6d10d32c-abb6-4865-a87d-dbe5c8a2e34e}</Project>
       <Name>Datos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Persistencia\Persistencia.csproj">
+      <Project>{10ecffa4-7f3e-40ab-b1dd-317f548ccc09}</Project>
+      <Name>Persistencia</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

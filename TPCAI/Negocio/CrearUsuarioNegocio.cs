@@ -6,7 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Negocio
-{
+{ 
+    /*
     public class CrearUsuarioNegocio
     {
         private ControllerUsuario controllerUsuario;
@@ -32,4 +33,5 @@ namespace Negocio
             }
         }
     }
+    */
 }

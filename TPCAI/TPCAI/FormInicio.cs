@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Datos.Controller.ControllerUsuario;
+
 
 namespace TPCAI
 {
     public partial class FormInicio : Form
     {
-        
+
         public FormInicio()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace TPCAI
         }
 
 
-        private async void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             String usuario = txtUsuarioInicio.Text;
             String password = txtContraseñaInicio.Text;
@@ -50,17 +50,12 @@ namespace TPCAI
 
             // Creo un int rol que tome el valor del usuario que inicia sesion
             NegocioUsuario usuarioNegocio = new NegocioUsuario();
-            int rol = await usuarioNegocio.Login(usuario, password);
-            if(rol == 0)
+            int rol = usuarioNegocio.LoginUsuario(usuario, password);
+
+            if (rol == -1)
             {
-                MessageBox.Show("no se encontro rol");
+                MessageBox.Show("no se encontro el usuario");
             }
-            else
-            {
-                // si es -1 hay error con webservice, sino da el numero de rol
-                MessageBox.Show(rol.ToString());
-            }
-            
             // Obtener el rol del user para saber a que menu redireccionar
             //1= Vendedor 2=Supervisor 3=Administrador
            
@@ -137,6 +132,14 @@ namespace TPCAI
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+                FormMenuAdmin formAdministrador = new FormMenuAdmin();
+                formAdministrador.ShowDialog();
         }
     }
 }

@@ -77,8 +77,6 @@ namespace TPCAI
                 check = false;
             }
 
-          
-            
 
             //VALIDACION DE DATOS DEL USER
             //Uso un contador de errores para mostrar en pantalla en caso de que haya
@@ -100,20 +98,8 @@ namespace TPCAI
             {
                 //creo el nuevo usuario 
                 UsuarioPostRequest SwaggerUser = new UsuarioPostRequest(id,nombre,apellido,direccion,telefono,email,fechaNacimiento,usuarioNuevo,host, Convert.ToInt32(dni));
-                NegocioUsuario.AgregarUsuario(SwaggerUser, id);
-                /*
-                SwaggerUser.IdUsuario = "";
-                SwaggerUser.Nombre = nombre;
-                SwaggerUser.Apellido = apellido;
-                SwaggerUser.Direccion = direccion;
-                SwaggerUser.Telefono = telefono;
-                SwaggerUser.Email = email;
-                SwaggerUser.FechaNacimiento = fechaNacimiento;
-                SwaggerUser.NombreUsuario = usuarioNuevo;
-                SwaggerUser.Host = host;
-                SwaggerUser.Dni = Convert.ToInt32(dni);
-                */
-
+                NegocioUsuario negocioUsuario = new NegocioUsuario();
+                negocioUsuario.AgregarUsuario(SwaggerUser);
 
                 var result = MessageBox.Show("Usuario Creado Exitosamente.\n Porfavor, haga click en OK para volver al menú", "Confirmación", MessageBoxButtons.OK);
 
