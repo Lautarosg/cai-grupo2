@@ -37,7 +37,7 @@ namespace TPCAI
         public static int ValidarDNI(string Text)
         {
             
-            if (Text.Length < 7 || Text.Length > 8)
+            if (Text.Length < 7 || Text.Length > 8 || Text == null)
             {
                 Text = "DNI incorrecto";
                
@@ -123,6 +123,27 @@ namespace TPCAI
 
         }
 
+        public static string ValidarTextBaja(string txt)
+        {
+            
+            bool txtValido;
+            do
+            {
+                
+                // Chequear que el nombre tenga más de 2 caracteres y solo contenga letras
+                txtValido = txt.Length > 2 && Regex.IsMatch(txt, @"^[a-zA-Z]+$");
+                if (!txtValido)
+                {
+                    Console.WriteLine("Nombre inválido");
+                }
+            } while (!txtValido);
 
+            // Convertir la primera letra a mayúscula y las demas a minúscula
+            txt = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txt.ToLower());
+
+            return txt;
+        }
+
+        
     }
 }

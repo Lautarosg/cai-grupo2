@@ -16,6 +16,10 @@ using Persistencia;
 using TPCAI;
 using System.Collections.Generic;
 using Microsoft.Win32;
+using System.Net;
+using System.Net.Http;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 
 namespace Negocio
@@ -51,6 +55,17 @@ namespace Negocio
             }
             return rol; 
             */
+        }
+                
+             
+        public void BajaUsuario(string idUsuario)
+        {
+            ControladorUsuario.BajaUsuario(idUsuario);
+        }
+
+        public void BuscoUsuarioporID(string idUsuario)
+        {
+            controllerUsuario.BuscoUsuarioporID(idUsuario);
         }
     }
 }

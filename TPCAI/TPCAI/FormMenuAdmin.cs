@@ -37,5 +37,12 @@ namespace TPCAI
             formInicio.ShowDialog();
 
         }
+
+        private void buttonBajaSup_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormBajaUsuario formBajaUsuario = new FormBajaUsuario();
+            formBajaUsuario.ShowDialog();
+        }
     }
 }
