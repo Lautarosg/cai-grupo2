@@ -22,14 +22,6 @@ namespace TPCAI
 
         }
 
-        private void buttonAltaSup_Click(object sender, EventArgs e)
-        {
-            FormNuevoUsuario formNuevoUsuario = new FormNuevoUsuario();
-            formNuevoUsuario.ShowDialog();
-            this.Hide();
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -41,8 +33,8 @@ namespace TPCAI
         private void buttonBajaSup_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormBajaUsuario formBajaUsuario = new FormBajaUsuario();
-            formBajaUsuario.ShowDialog();
+            FormMenuUsuario formMenuUsuario = new FormMenuUsuario();
+            formMenuUsuario.ShowDialog();
         }
     }
 }

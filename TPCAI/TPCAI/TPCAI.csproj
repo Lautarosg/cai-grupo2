@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormBajaUsuario.cs">
+    <Compile Include="FormMenuUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBajaUsuario.Designer.cs">
-      <DependentUpon>FormBajaUsuario.cs</DependentUpon>
+    <Compile Include="FormMenuUsuario.Designer.cs">
+      <DependentUpon>FormMenuUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
@@ -87,8 +87,8 @@
     <Compile Include="Usuario.cs" />
     <Compile Include="Utils\ValidadorUsuario.cs" />
     <Compile Include="Utils\ValidadorUtil.cs" />
-    <EmbeddedResource Include="FormBajaUsuario.resx">
-      <DependentUpon>FormBajaUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="FormMenuUsuario.resx">
+      <DependentUpon>FormMenuUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>

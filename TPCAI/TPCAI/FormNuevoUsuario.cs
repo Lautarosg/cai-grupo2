@@ -118,8 +118,8 @@ namespace TPCAI
         private void buttonVolverAtras_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
-            formMenuAdmin.ShowDialog();
+            FormMenuUsuario formMenuUsuario = new FormMenuUsuario();
+            formMenuUsuario.ShowDialog();
         }
 
         private void txtUsuarioRegistrar_TextChanged(object sender, EventArgs e)

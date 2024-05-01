@@ -12,6 +12,7 @@ namespace TPCAI
     {
 
         //creo los constructores del usuario
+        public Guid Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Direccion { get; set; }
@@ -42,11 +43,7 @@ namespace TPCAI
             FechaNacimiento = fechaNacimiento;
             FechaCreacion = DateTime.Now;
             Rol = rol;
-            FechaContraseña = fechacontraseña;
-            
-
-
-            
+            FechaContraseña = fechacontraseña;   
         }
        
         

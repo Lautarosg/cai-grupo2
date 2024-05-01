@@ -58,7 +58,7 @@ namespace Negocio
         }
                 
              
-        public void BajaUsuario(string idUsuario)
+        public void BajaUsuario(String idUsuario)
         {
             ControladorUsuario.BajaUsuario(idUsuario);
         }
@@ -67,6 +67,12 @@ namespace Negocio
         {
             controllerUsuario.BuscoUsuarioporID(idUsuario);
         }
+
+        public List<UsuarioDTO> listarUsuarios()
+        {
+            return controllerUsuario.ListarUsuarios(idAdmin); 
+        }
+
     }
 }
 

@@ -77,8 +77,6 @@ namespace Persistencia
         }
 
 
-        
-
         public static void BajaUsuario(string idUsuario)
         {
             String IdUsuarioMaster = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
@@ -136,7 +134,35 @@ namespace Persistencia
             return usuario;
         }
 
+        public List<UsuarioDTO> ListarUsuarios(string idAdmin)
+        {
 
+            String path = "/api/Usuario/TraerUsuariosActivos?id=" + idAdmin;
+
+            List<UsuarioDTO> usuarios = new List<UsuarioDTO>();
+
+            try
+            {
+                HttpResponseMessage response = WebHelper.Get(path);
+                if (response.IsSuccessStatusCode)
+                {
+                    var contentStream = response.Content.ReadAsStringAsync().Result;
+                    List<UsuarioDTO> listadoUsuarios = JsonConvert.DeserializeObject<List<UsuarioDTO>>(contentStream);
+                    Console.WriteLine("Listar usuarios successful");
+                    return listadoUsuarios;
+                }
+                else
+                {
+                    Console.WriteLine($"Listar clientes Error: {response.StatusCode} - {response.ReasonPhrase}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+            return usuarios;
+
+        }
 
     }
 
