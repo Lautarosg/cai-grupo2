@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TPCAI
 {
@@ -57,6 +58,17 @@ namespace TPCAI
                 retorno = false;
             }
             return retorno;
+        }
+        public void ValidarInfoButton(String txtIngresado, String txtValidado, PictureBox pbError, PictureBox pbValidado)
+        {
+            if (txtIngresado != txtValidado)
+            {
+                pbError.BringToFront();
+            }
+            else
+            {
+                pbValidado.BringToFront();
+            }
         }
     }
 }

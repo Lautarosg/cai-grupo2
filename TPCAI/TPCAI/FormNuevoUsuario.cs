@@ -18,7 +18,9 @@ namespace TPCAI
         const int minCarUsuario = 8;
         const int maxCarUsuario = 15;
         const int minCarContraseña = 8;
-       
+
+        ValidadorUtil validadorUtil = new ValidadorUtil();
+
         public FormNuevoUsuario()
         {
             InitializeComponent();
@@ -33,13 +35,13 @@ namespace TPCAI
         private void buttonConfirmarNuevoUser_Click(object sender, EventArgs e)
         {
             string id = Guid.NewGuid().ToString();
-            int host = ValidadorUsuario.ValidarPerfil(textBoxPerfil.Text);
+            int host = ValidadorUsuario.ValidarPerfil(cbPerfilUsuario.Text);
             string nombre = ValidadorUsuario.ValidarNombre(textBoxNombre.Text);
             string apellido = ValidadorUsuario.ValidarNombre(textBoxApellido.Text);
             string dni = textBoxDNI.Text;
             string direccion = ValidadorUsuario.ValidarDireccion(textBoxDireccion.Text);
             string email = ValidadorUsuario.ValidarEmail(textBoxEmail.Text);
-            DateTime fechaNacimiento = dtpfechaNacimiento.Value;
+            DateTime fechaNac = dtpfechaNacimiento.Value;
             string telefono = ValidadorUsuario.ValidarTelefono(textBoxTelefono.Text);
 
             /*
@@ -52,7 +54,6 @@ namespace TPCAI
             }*/
 
             //VALIDACION DE USER Y CONTRASEÑA
-            ValidadorUtil validador = new ValidadorUtil();
             string contraseña = txtContraseñaRegistrar.Text;
             string verificar = txtVerificarRegistrar.Text;
             string usuarioNuevo = txtUsuarioRegistrar.Text;
@@ -60,18 +61,18 @@ namespace TPCAI
             bool check = false;
 
          
-            if (validador.validarIguales(contraseña, verificar))
+            if (validadorUtil.validarIguales(contraseña, verificar))
             {
                 lblVerificarContRegistrar.Text = "La contraseña debe ser la misma!";
                 check = false;
             }
-            if (validador.validarVacio(usuarioNuevo))
+            if (validadorUtil.validarVacio(usuarioNuevo))
             {
                 lblErrorUsuarioRegistrar.Text = "Debe ingresar un nombre de usuario";
                 check = false;
 
             }
-            if (validador.validarVacio(contraseñaNuevo))
+            if (validadorUtil.validarVacio(contraseñaNuevo))
             {
                 lblErrorContraseñaRegistrar.Text = "Debe ingresar una contraseña";
                 check = false;
@@ -88,7 +89,7 @@ namespace TPCAI
             errores += ValidadorUsuario.ValidarDireccion(direccion);
             errores += ValidadorUsuario.ValidarEmail(email);
             errores += ValidadorUsuario.ValidarTelefono(telefono);
-            errores += ValidadorUsuario.ValidarFechaNac(fechaNacimiento);
+            errores += ValidadorUsuario.ValidarFechaNac(fechaNac);
 
             if (errores.Contains("error") || errores.Contains("-1") || check == true)
             {
@@ -97,7 +98,7 @@ namespace TPCAI
             else
             {
                 //creo el nuevo usuario 
-                UsuarioPostRequest SwaggerUser = new UsuarioPostRequest(id,nombre,apellido,direccion,telefono,email,fechaNacimiento,usuarioNuevo,host, Convert.ToInt32(dni));
+                UsuarioPostRequest SwaggerUser = new UsuarioPostRequest(id,nombre,apellido,direccion,telefono,email, fechaNac, usuarioNuevo,host, Convert.ToInt32(dni));
                 NegocioUsuario negocioUsuario = new NegocioUsuario();
                 negocioUsuario.AgregarUsuario(SwaggerUser);
 
@@ -125,14 +126,14 @@ namespace TPCAI
         private void txtUsuarioRegistrar_TextChanged(object sender, EventArgs e)
         {
             string usuarioNuevo = txtUsuarioRegistrar.Text;
-
-            ValidadorUtil validador = new ValidadorUtil();
-
-            if (validador.validarVacio(usuarioNuevo))
+            string nombreUsuario = textBoxNombre.Text;
+            string apellidoUsuario = textBoxApellido.Text;
+           
+            if (validadorUtil.validarVacio(usuarioNuevo))
             {
                 lblErrorUsuarioRegistrar.Text = "Debe ingresar un nombre de usuario";
             }
-            if (validador.validarVacio(usuarioNuevo) || validador.validarMin(usuarioNuevo, minCarUsuario))
+            if (validadorUtil.validarVacio(usuarioNuevo) || validadorUtil.validarMin(usuarioNuevo, minCarUsuario))
             {
                 lblMinUsuarioRegistrar.ForeColor = Color.Red;
             }
@@ -140,13 +141,29 @@ namespace TPCAI
             {
                 lblMinUsuarioRegistrar.ForeColor = Color.Green;
             }
-            if (validador.validarMax(usuarioNuevo, maxCarUsuario))
+            if (validadorUtil.validarMax(usuarioNuevo, maxCarUsuario))
             {
                 lblMaxUsuarioRegistrar.ForeColor = Color.Red;
             }
             else
             {
                 lblMaxUsuarioRegistrar.ForeColor = Color.Green;
+            }
+            if (usuarioNuevo.Contains(nombreUsuario))
+            {
+                lblNomUsuarioRegistrar.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblNomUsuarioRegistrar.ForeColor = Color.Green;
+            }
+            if (usuarioNuevo.Contains(apellidoUsuario))
+            {
+                lblApeUsuarioRegistrar.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblApeUsuarioRegistrar.ForeColor = Color.Green;
             }
             lblErrorUsuarioRegistrar.Text = "";
         }
@@ -159,13 +176,13 @@ namespace TPCAI
         private void txtContraseñaRegistrar_TextChanged(object sender, EventArgs e)
         {
             string contraseñaNuevo = txtContraseñaRegistrar.Text;
-            ValidadorUtil validador = new ValidadorUtil();
+            
 
-            if (validador.validarVacio(contraseñaNuevo))
+            if (validadorUtil.validarVacio(contraseñaNuevo))
             {
                 lblErrorContraseñaRegistrar.Text = "Debe ingresar una contraseña";
             }
-            if (validador.validarMin(contraseñaNuevo, minCarContraseña))
+            if (validadorUtil.validarMin(contraseñaNuevo, minCarContraseña))
             {
                 lblMinContraseñaRegistrar.ForeColor = Color.Red;
             }
@@ -173,7 +190,7 @@ namespace TPCAI
             {
                 lblMinContraseñaRegistrar.ForeColor = Color.Green;
             }
-            if (validador.validarMay(contraseñaNuevo))
+            if (validadorUtil.validarMay(contraseñaNuevo))
             {
                 lblMayContraseñaRegistrar.ForeColor = Color.Red;
             }
@@ -199,17 +216,73 @@ namespace TPCAI
             txtVerificarRegistrar.PasswordChar = '*';
         }
 
+        private void textBoxNombre_TextChanged(object sender, EventArgs e)
+        {
+            validadorUtil.ValidarInfoButton(textBoxNombre.Text.ToLower(), ValidadorUsuario.ValidarNombre(textBoxNombre.Text), pbNombreError, pbNombre);
+        }
+
+        private void textBoxApellido_TextChanged(object sender, EventArgs e)
+        {
+            validadorUtil.ValidarInfoButton(textBoxApellido.Text.ToLower(), ValidadorUsuario.ValidarApellido(textBoxApellido.Text), pbApellidoError, pbApellido);
+        }
+
         private void textBoxDNI_TextChanged(object sender, EventArgs e)
         {
-
+            validadorUtil.ValidarInfoButton(textBoxDNI.Text, ValidadorUsuario.ValidarDNI(textBoxDNI.Text).ToString(), pbDNIError, pbDNI);
         }
 
-        private void textBoxPerfil_TextChanged(object sender, EventArgs e)
+        private void textBoxDireccion_TextChanged(object sender, EventArgs e)
+        {
+            validadorUtil.ValidarInfoButton(textBoxDireccion.Text, ValidadorUsuario.ValidarDireccion(textBoxDireccion.Text), pbDireccionError, pbDireccion);
+        }
+
+        private void textBoxEmail_TextChanged(object sender, EventArgs e)
+        {
+            validadorUtil.ValidarInfoButton(textBoxEmail.Text, ValidadorUsuario.ValidarEmail(textBoxEmail.Text), pbEmailError, pbEmail);
+        }
+
+        private void textBoxTelefono_TextChanged(object sender, EventArgs e)
+        {
+            validadorUtil.ValidarInfoButton(textBoxTelefono.Text, ValidadorUsuario.ValidarTelefono(textBoxTelefono.Text), pbTelefonoError, pbTelefono);
+        }
+
+        private void dtpfechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+            validadorUtil.ValidarInfoButton(dtpfechaNacimiento.Value.ToString(), ValidadorUsuario.ValidarFechaNac(dtpfechaNacimiento.Value).ToString(), pbNacimientoError, pbNacimiento);
+        }
+
+        private void lblUsuarioRegistrar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void pbNomUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbNomUsuarioError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblInstruccionesRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMaxUsuarioRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNomUsuarioRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbNombre_Click(object sender, EventArgs e)
         {
 
         }

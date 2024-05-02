@@ -14,7 +14,7 @@ namespace TPCAI
     {
         public static string ValidarNombre(string Text)
         {
-            string nombre = Text.ToLower();
+            string nombre = Text.ToLower(); 
 
             if (string.IsNullOrEmpty(nombre) || nombre.Length < 3 || nombre.Length > 50 || !Regex.IsMatch(nombre, @"^[a-zA-Z]+$"))
             {
@@ -84,15 +84,16 @@ namespace TPCAI
 
         public static DateTime ValidarFechaNac(DateTime fechaNacimiento)
         {
-           /*
-            if (!DateTime.TryParseExact(DateText, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime fechaNacimiento))
-            
+            /*
+             if (!DateTime.TryParseExact(DateText, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime fechaNac))
+                
+             {
+                 DateText = "\nFecha con formato incorrecto, porfavor ingrese dd/MM/yyyy \n";
+             }
+
+             else
+            */
             {
-                DateText = "\nFecha con formato incorrecto, porfavor ingrese dd/MM/yyyy \n";
-            }
-           
-            else
-            {*/
                 // Calcular la edad a partir de la fecha de nacimiento
                 int edad = DateTime.Today.Year - fechaNacimiento.Year;
 
@@ -105,22 +106,33 @@ namespace TPCAI
                 // Validar que la edad esté dentro del rango deseado
                 if (edad <= 18 || edad >= 100)
                 {
-                    //DateText = "\nLa edad debe ser mayor de 18 años\n";
+                    fechaNacimiento = Convert.ToDateTime("01/01/1800");
                 }
-            //}
-
+    
+            }
             return fechaNacimiento;
         }
 
         public static int ValidarPerfil(string perfil) 
         {
-            if (!int.TryParse(perfil, out int host) || (host<1  && host > 3))
+            int valor;
+            if (perfil.Contains("1"))
             {
-                host = -1;
+                valor = 1;
             }
-
-            return host;
-
+            else if (perfil.Contains("2"))
+            {
+                valor = 2;
+            }
+            else if(perfil.Contains("3"))
+            {
+                valor = 3;
+            }
+            else
+            {
+                valor = -1;
+            }
+            return valor;
         }
 
         public static string ValidarTextBaja(string txt)
