@@ -65,7 +65,7 @@ namespace Negocio
 
         public void BuscoUsuarioporID(string idUsuario)
         {
-            controllerUsuario.BuscoUsuarioporID(idUsuario);
+            controllerUsuario.BuscoUsuarioporID(idUsuario, idAdmin);
         }
 
         public List<UsuarioDTO> listarUsuarios()

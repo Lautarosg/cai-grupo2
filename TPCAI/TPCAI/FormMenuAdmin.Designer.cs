@@ -40,17 +40,15 @@
             this.buttonStockCritico = new System.Windows.Forms.Button();
             this.buttonVtaProv = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonModProv = new System.Windows.Forms.Button();
-            this.buttonAltaProv = new System.Windows.Forms.Button();
-            this.buttonBajaProv = new System.Windows.Forms.Button();
+            this.btnAdminProv = new System.Windows.Forms.Button();
             this.textBoxProdCritico = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonBajaSup = new System.Windows.Forms.Button();
-            this.buttonBajaVend = new System.Windows.Forms.Button();
             this.buttonAltaVend = new System.Windows.Forms.Button();
-            this.buttonModVend = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonModVend = new System.Windows.Forms.Button();
+            this.buttonBajaVend = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -95,9 +93,9 @@
             this.groupBox5.Controls.Add(this.buttonAltaProd);
             this.groupBox5.Controls.Add(this.buttonBajaProd);
             this.groupBox5.Location = new System.Drawing.Point(48, 368);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(405, 62);
             this.groupBox5.TabIndex = 20;
             this.groupBox5.TabStop = false;
@@ -107,7 +105,7 @@
             // 
             this.buttonModProd.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonModProd.Location = new System.Drawing.Point(291, 22);
-            this.buttonModProd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonModProd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonModProd.Name = "buttonModProd";
             this.buttonModProd.Size = new System.Drawing.Size(76, 27);
             this.buttonModProd.TabIndex = 27;
@@ -118,7 +116,7 @@
             // 
             this.buttonAltaProd.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonAltaProd.Location = new System.Drawing.Point(73, 22);
-            this.buttonAltaProd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAltaProd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAltaProd.Name = "buttonAltaProd";
             this.buttonAltaProd.Size = new System.Drawing.Size(76, 27);
             this.buttonAltaProd.TabIndex = 25;
@@ -129,7 +127,7 @@
             // 
             this.buttonBajaProd.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonBajaProd.Location = new System.Drawing.Point(180, 22);
-            this.buttonBajaProd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBajaProd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBajaProd.Name = "buttonBajaProd";
             this.buttonBajaProd.Size = new System.Drawing.Size(76, 27);
             this.buttonBajaProd.TabIndex = 26;
@@ -143,9 +141,9 @@
             this.groupBox6.Controls.Add(this.buttonStockCritico);
             this.groupBox6.Controls.Add(this.buttonVtaProv);
             this.groupBox6.Location = new System.Drawing.Point(48, 460);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(406, 63);
             this.groupBox6.TabIndex = 21;
             this.groupBox6.TabStop = false;
@@ -155,7 +153,7 @@
             // 
             this.buttonMasVendido.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonMasVendido.Location = new System.Drawing.Point(291, 23);
-            this.buttonMasVendido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMasVendido.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMasVendido.Name = "buttonMasVendido";
             this.buttonMasVendido.Size = new System.Drawing.Size(76, 27);
             this.buttonMasVendido.TabIndex = 30;
@@ -166,7 +164,7 @@
             // 
             this.buttonStockCritico.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonStockCritico.Location = new System.Drawing.Point(73, 23);
-            this.buttonStockCritico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonStockCritico.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStockCritico.Name = "buttonStockCritico";
             this.buttonStockCritico.Size = new System.Drawing.Size(76, 27);
             this.buttonStockCritico.TabIndex = 28;
@@ -177,7 +175,7 @@
             // 
             this.buttonVtaProv.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonVtaProv.Location = new System.Drawing.Point(180, 19);
-            this.buttonVtaProv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonVtaProv.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVtaProv.Name = "buttonVtaProv";
             this.buttonVtaProv.Size = new System.Drawing.Size(76, 36);
             this.buttonVtaProv.TabIndex = 29;
@@ -187,55 +185,32 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox1.Controls.Add(this.buttonModProv);
-            this.groupBox1.Controls.Add(this.buttonAltaProv);
-            this.groupBox1.Controls.Add(this.buttonBajaProv);
+            this.groupBox1.Controls.Add(this.btnAdminProv);
             this.groupBox1.Location = new System.Drawing.Point(48, 272);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(405, 67);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proveedor";
             // 
-            // buttonModProv
+            // btnAdminProv
             // 
-            this.buttonModProv.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonModProv.Location = new System.Drawing.Point(294, 28);
-            this.buttonModProv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonModProv.Name = "buttonModProv";
-            this.buttonModProv.Size = new System.Drawing.Size(76, 27);
-            this.buttonModProv.TabIndex = 21;
-            this.buttonModProv.Text = "Modificación";
-            this.buttonModProv.UseVisualStyleBackColor = true;
-            // 
-            // buttonAltaProv
-            // 
-            this.buttonAltaProv.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonAltaProv.Location = new System.Drawing.Point(76, 28);
-            this.buttonAltaProv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonAltaProv.Name = "buttonAltaProv";
-            this.buttonAltaProv.Size = new System.Drawing.Size(76, 27);
-            this.buttonAltaProv.TabIndex = 19;
-            this.buttonAltaProv.Text = "Alta";
-            this.buttonAltaProv.UseVisualStyleBackColor = true;
-            // 
-            // buttonBajaProv
-            // 
-            this.buttonBajaProv.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonBajaProv.Location = new System.Drawing.Point(183, 28);
-            this.buttonBajaProv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonBajaProv.Name = "buttonBajaProv";
-            this.buttonBajaProv.Size = new System.Drawing.Size(76, 27);
-            this.buttonBajaProv.TabIndex = 20;
-            this.buttonBajaProv.Text = "Baja";
-            this.buttonBajaProv.UseVisualStyleBackColor = true;
+            this.btnAdminProv.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAdminProv.Location = new System.Drawing.Point(52, 25);
+            this.btnAdminProv.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdminProv.Name = "btnAdminProv";
+            this.btnAdminProv.Size = new System.Drawing.Size(119, 38);
+            this.btnAdminProv.TabIndex = 19;
+            this.btnAdminProv.Text = "Administrar Proveedores";
+            this.btnAdminProv.UseVisualStyleBackColor = true;
+            this.btnAdminProv.Click += new System.EventHandler(this.btnAdminProv_Click);
             // 
             // textBoxProdCritico
             // 
             this.textBoxProdCritico.Location = new System.Drawing.Point(139, 16);
-            this.textBoxProdCritico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxProdCritico.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxProdCritico.Name = "textBoxProdCritico";
             this.textBoxProdCritico.Size = new System.Drawing.Size(34, 20);
             this.textBoxProdCritico.TabIndex = 2;
@@ -245,9 +220,9 @@
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox2.Controls.Add(this.buttonBajaSup);
             this.groupBox2.Location = new System.Drawing.Point(49, 82);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(405, 65);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
@@ -257,7 +232,7 @@
             // 
             this.buttonBajaSup.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonBajaSup.Location = new System.Drawing.Point(51, 17);
-            this.buttonBajaSup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBajaSup.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBajaSup.Name = "buttonBajaSup";
             this.buttonBajaSup.Size = new System.Drawing.Size(113, 44);
             this.buttonBajaSup.TabIndex = 23;
@@ -265,38 +240,16 @@
             this.buttonBajaSup.UseVisualStyleBackColor = true;
             this.buttonBajaSup.Click += new System.EventHandler(this.buttonBajaSup_Click);
             // 
-            // buttonBajaVend
-            // 
-            this.buttonBajaVend.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonBajaVend.Location = new System.Drawing.Point(183, 25);
-            this.buttonBajaVend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonBajaVend.Name = "buttonBajaVend";
-            this.buttonBajaVend.Size = new System.Drawing.Size(76, 27);
-            this.buttonBajaVend.TabIndex = 20;
-            this.buttonBajaVend.Text = "Baja";
-            this.buttonBajaVend.UseVisualStyleBackColor = true;
-            // 
             // buttonAltaVend
             // 
             this.buttonAltaVend.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonAltaVend.Location = new System.Drawing.Point(75, 25);
-            this.buttonAltaVend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAltaVend.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAltaVend.Name = "buttonAltaVend";
             this.buttonAltaVend.Size = new System.Drawing.Size(76, 27);
             this.buttonAltaVend.TabIndex = 19;
             this.buttonAltaVend.Text = "Alta";
             this.buttonAltaVend.UseVisualStyleBackColor = true;
-            // 
-            // buttonModVend
-            // 
-            this.buttonModVend.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonModVend.Location = new System.Drawing.Point(293, 25);
-            this.buttonModVend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonModVend.Name = "buttonModVend";
-            this.buttonModVend.Size = new System.Drawing.Size(76, 27);
-            this.buttonModVend.TabIndex = 21;
-            this.buttonModVend.Text = "Modificación";
-            this.buttonModVend.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -305,9 +258,9 @@
             this.groupBox3.Controls.Add(this.buttonAltaVend);
             this.groupBox3.Controls.Add(this.buttonBajaVend);
             this.groupBox3.Location = new System.Drawing.Point(49, 177);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(405, 64);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
@@ -316,13 +269,35 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(513, 497);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 50);
             this.button1.TabIndex = 24;
             this.button1.Text = "Cerrar Sesión";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonModVend
+            // 
+            this.buttonModVend.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonModVend.Location = new System.Drawing.Point(293, 25);
+            this.buttonModVend.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonModVend.Name = "buttonModVend";
+            this.buttonModVend.Size = new System.Drawing.Size(76, 27);
+            this.buttonModVend.TabIndex = 21;
+            this.buttonModVend.Text = "Modificación";
+            this.buttonModVend.UseVisualStyleBackColor = true;
+            // 
+            // buttonBajaVend
+            // 
+            this.buttonBajaVend.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonBajaVend.Location = new System.Drawing.Point(183, 25);
+            this.buttonBajaVend.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBajaVend.Name = "buttonBajaVend";
+            this.buttonBajaVend.Size = new System.Drawing.Size(76, 27);
+            this.buttonBajaVend.TabIndex = 20;
+            this.buttonBajaVend.Text = "Baja";
+            this.buttonBajaVend.UseVisualStyleBackColor = true;
             // 
             // FormMenuAdmin
             // 
@@ -340,7 +315,7 @@
             this.Controls.Add(this.textBoxProdCritico);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMenuAdmin";
             this.Text = "Menú Admistrador";
             this.Load += new System.EventHandler(this.FormMenuAdmin_Load);
@@ -368,16 +343,14 @@
         private System.Windows.Forms.Button buttonStockCritico;
         private System.Windows.Forms.Button buttonVtaProv;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button buttonModProv;
-        private System.Windows.Forms.Button buttonAltaProv;
-        private System.Windows.Forms.Button buttonBajaProv;
+        private System.Windows.Forms.Button btnAdminProv;
         private System.Windows.Forms.TextBox textBoxProdCritico;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonBajaSup;
-        private System.Windows.Forms.Button buttonBajaVend;
         private System.Windows.Forms.Button buttonAltaVend;
-        private System.Windows.Forms.Button buttonModVend;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonModVend;
+        private System.Windows.Forms.Button buttonBajaVend;
     }
 }

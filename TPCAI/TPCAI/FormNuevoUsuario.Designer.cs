@@ -640,7 +640,7 @@
             this.cbPerfilUsuario.FormattingEnabled = true;
             this.cbPerfilUsuario.Items.AddRange(new object[] {
             "1 - Vendedor",
-            "2 - Proveedor",
+            "2 - Supervisor",
             "3 - Admin"});
             this.cbPerfilUsuario.Location = new System.Drawing.Point(382, 150);
             this.cbPerfilUsuario.Name = "cbPerfilUsuario";

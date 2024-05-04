@@ -34,7 +34,7 @@ namespace TPCAI
         //son las validaciones del ingreso de un nuevo usuario en el login
         private void buttonConfirmarNuevoUser_Click(object sender, EventArgs e)
         {
-            string id = Guid.NewGuid().ToString();
+            String idAdmin = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
             int host = ValidadorUsuario.ValidarPerfil(cbPerfilUsuario.Text);
             string nombre = ValidadorUsuario.ValidarNombre(textBoxNombre.Text);
             string apellido = ValidadorUsuario.ValidarNombre(textBoxApellido.Text);
@@ -98,7 +98,7 @@ namespace TPCAI
             else
             {
                 //creo el nuevo usuario 
-                UsuarioPostRequest SwaggerUser = new UsuarioPostRequest(id,nombre,apellido,direccion,telefono,email, fechaNac, usuarioNuevo,host, Convert.ToInt32(dni));
+                UsuarioPostRequest SwaggerUser = new UsuarioPostRequest(idAdmin,nombre,apellido,direccion,telefono,email, fechaNac, usuarioNuevo,host, Convert.ToInt32(dni));
                 NegocioUsuario negocioUsuario = new NegocioUsuario();
                 negocioUsuario.AgregarUsuario(SwaggerUser);
 
@@ -119,7 +119,7 @@ namespace TPCAI
         private void buttonVolverAtras_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormMenuUsuario formMenuUsuario = new FormMenuUsuario();
+            FormAdminUsuario formMenuUsuario = new FormAdminUsuario();
             formMenuUsuario.ShowDialog();
         }
 

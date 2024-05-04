@@ -155,7 +155,16 @@ namespace TPCAI
 
             return txt;
         }
+        public static string ValidarCUIT(string CUIT)
+        {
 
-        
+            if (string.IsNullOrEmpty(CUIT) || CUIT.Length < 10 || CUIT.Length > 11)
+            {
+                CUIT = "\nError! CUIT no puede ser vacios, menos de 10 caracterses ni mas de 11 caracteres\n";
+            }
+            return CUIT;
+        }
+
+
     }
 }

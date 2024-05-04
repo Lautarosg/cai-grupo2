@@ -213,4 +213,6 @@ C:\Users\Myrna\Desktop\CAI 2024\nuevo 17\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.Copy
 C:\Users\Myrna\Desktop\CAI 2024\nuevo 17\TPCAI\TPCAI\obj\Debug\TPCAI.exe
 C:\Users\Myrna\Desktop\CAI 2024\nuevo 17\TPCAI\TPCAI\obj\Debug\TPCAI.pdb
 C:\Users\Myrna\Desktop\CAI 2024\nuevo 17\TPCAI\TPCAI\obj\Debug\TPCAI.FormBajaUsuario.resources
-C:\Users\maxim\Source\Repos\Lautarosg\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuUsuario.resources
+C:\Users\maxim\Source\Repos\Lautarosg\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormAdminProveedor.resources
+C:\Users\maxim\Source\Repos\Lautarosg\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormAdminUsuario.resources
+C:\Users\maxim\Source\Repos\Lautarosg\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoProveedor.resources

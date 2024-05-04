@@ -1,6 +1,6 @@
 ﻿namespace TPCAI
 {
-    partial class FormMenuUsuario
+    partial class FormAdminUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -57,6 +57,7 @@
             this.txtUsuarioSeleccionado.Name = "txtUsuarioSeleccionado";
             this.txtUsuarioSeleccionado.Size = new System.Drawing.Size(157, 20);
             this.txtUsuarioSeleccionado.TabIndex = 4;
+            this.txtUsuarioSeleccionado.TextChanged += new System.EventHandler(this.txtUsuarioSeleccionado_TextChanged);
             // 
             // button1
             // 
@@ -130,7 +131,7 @@
             this.btnAltaUsuario.UseVisualStyleBackColor = true;
             this.btnAltaUsuario.Click += new System.EventHandler(this.btnAltaUsuario_Click);
             // 
-            // FormMenuUsuario
+            // FormAdminUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,7 +146,7 @@
             this.Controls.Add(this.txtUsuarioSeleccionado);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FormMenuUsuario";
+            this.Name = "FormAdminUsuario";
             this.Text = "Administrar Usuarios";
             this.Load += new System.EventHandler(this.FormMenuUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).EndInit();

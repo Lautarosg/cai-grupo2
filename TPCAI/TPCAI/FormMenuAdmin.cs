@@ -33,8 +33,15 @@ namespace TPCAI
         private void buttonBajaSup_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormMenuUsuario formMenuUsuario = new FormMenuUsuario();
+            FormAdminUsuario formMenuUsuario = new FormAdminUsuario();
             formMenuUsuario.ShowDialog();
+        }
+
+        private void btnAdminProv_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAdminProveedor formProveedor = new FormAdminProveedor();
+            formProveedor.ShowDialog();
         }
     }
 }

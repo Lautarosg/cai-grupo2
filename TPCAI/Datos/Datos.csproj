@@ -89,6 +89,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="loginDTO.cs" />
+    <Compile Include="ProveedorDTO.cs" />
+    <Compile Include="ProveedorPostRequest.cs" />
     <Compile Include="UsuarioDTO.cs" />
     <Compile Include="UsuarioPostRequest.cs" />
   </ItemGroup>

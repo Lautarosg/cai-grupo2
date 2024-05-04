@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormMenuUsuario.cs">
+    <Compile Include="FormAdminProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenuUsuario.Designer.cs">
-      <DependentUpon>FormMenuUsuario.cs</DependentUpon>
+    <Compile Include="FormAdminProveedor.Designer.cs">
+      <DependentUpon>FormAdminProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdminUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminUsuario.Designer.cs">
+      <DependentUpon>FormAdminUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
@@ -76,6 +82,12 @@
     <Compile Include="FormMenuVendedor.Designer.cs">
       <DependentUpon>FormMenuVendedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNuevoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoProveedor.Designer.cs">
+      <DependentUpon>FormNuevoProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,8 +99,11 @@
     <Compile Include="Usuario.cs" />
     <Compile Include="Utils\ValidadorUsuario.cs" />
     <Compile Include="Utils\ValidadorUtil.cs" />
-    <EmbeddedResource Include="FormMenuUsuario.resx">
-      <DependentUpon>FormMenuUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="FormAdminProveedor.resx">
+      <DependentUpon>FormAdminProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminUsuario.resx">
+      <DependentUpon>FormAdminUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
@@ -102,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuVendedor.resx">
       <DependentUpon>FormMenuVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoProveedor.resx">
+      <DependentUpon>FormNuevoProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoUsuario.resx">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>

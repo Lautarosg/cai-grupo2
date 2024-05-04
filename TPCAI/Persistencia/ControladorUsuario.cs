@@ -100,14 +100,11 @@ namespace Persistencia
             }
         }
 
-        public string ListaUsuarios()
+        public string ListaUsuarios(String idAdmin)
         {
-            // Trae todos los usuarios activos del master ID
-            String IdUsuarioMaster = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
-            
 
             string content = "";
-            HttpResponseMessage response = WebHelper.Get($"/api/Usuario/TraerUsuariosActivos?id={IdUsuarioMaster}");
+            HttpResponseMessage response = WebHelper.Get($"/api/Usuario/TraerUsuariosActivos?id={idAdmin}");
 
             if (!response.IsSuccessStatusCode)
             {
@@ -121,10 +118,10 @@ namespace Persistencia
         }
 
         
-        public JToken BuscoUsuarioporID(string id)
+        public JToken BuscoUsuarioporID(string id, String idAdmin)
         {
             // Busca en los usuarios activos a un usuario por el id
-            string content = ListaUsuarios();
+            string content = ListaUsuarios(idAdmin);
             // Analizar el contenido JSON
             JArray jsonArray = JArray.Parse(content);
             string idFinal = id.Trim('"');

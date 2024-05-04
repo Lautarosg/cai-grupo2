@@ -13,11 +13,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TPCAI
 {
-    public partial class FormMenuUsuario : Form
+    public partial class FormAdminUsuario : Form
     {
         NegocioUsuario negocioUsuario = new NegocioUsuario();
 
-        public FormMenuUsuario()
+        public FormAdminUsuario()
         {
             InitializeComponent();
         }
@@ -103,6 +103,11 @@ namespace TPCAI
         }
 
         private void dgvListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtUsuarioSeleccionado_TextChanged(object sender, EventArgs e)
         {
 
         }

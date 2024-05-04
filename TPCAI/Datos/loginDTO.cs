@@ -24,7 +24,7 @@ namespace TPCAI
             Contraseña = contraseña;
 
 
-            
+
         }
     }
     public class CambioContraseña
@@ -39,7 +39,7 @@ namespace TPCAI
 
 
 
-        public CambioContraseña(string nombreUsuario, string contraseña,string contraseñaNueva)
+        public CambioContraseña(string nombreUsuario, string contraseña, string contraseñaNueva)
         {
             NombreUsuario = nombreUsuario;
             Contraseña = contraseña;
