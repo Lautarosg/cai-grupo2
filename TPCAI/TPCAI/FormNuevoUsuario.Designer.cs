@@ -47,8 +47,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.buttonConfirmarNuevoUser = new System.Windows.Forms.Button();
             this.buttonVolverAtras = new System.Windows.Forms.Button();
-            this.pbMostrarRegistrar = new System.Windows.Forms.PictureBox();
-            this.pbOcultarRegistrar = new System.Windows.Forms.PictureBox();
             this.lblVerificarContRegistrar = new System.Windows.Forms.Label();
             this.lblErrorContraseñaRegistrar = new System.Windows.Forms.Label();
             this.lblMinContraseñaRegistrar = new System.Windows.Forms.Label();
@@ -66,40 +64,42 @@
             this.txtUsuarioRegistrar = new System.Windows.Forms.TextBox();
             this.dtpfechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.tpAyuda = new System.Windows.Forms.ToolTip(this.components);
-            this.pbTelefono = new System.Windows.Forms.PictureBox();
-            this.pbNombre = new System.Windows.Forms.PictureBox();
-            this.pbApellido = new System.Windows.Forms.PictureBox();
-            this.pbDNI = new System.Windows.Forms.PictureBox();
-            this.pbDireccion = new System.Windows.Forms.PictureBox();
-            this.pbEmail = new System.Windows.Forms.PictureBox();
-            this.pbNacimiento = new System.Windows.Forms.PictureBox();
+            this.lblNomUsuarioRegistrar = new System.Windows.Forms.Label();
+            this.lblApeUsuarioRegistrar = new System.Windows.Forms.Label();
+            this.cbPerfilUsuario = new System.Windows.Forms.ComboBox();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
+            this.pbNacimiento = new System.Windows.Forms.PictureBox();
+            this.pbEmail = new System.Windows.Forms.PictureBox();
+            this.pbDireccion = new System.Windows.Forms.PictureBox();
+            this.pbDNI = new System.Windows.Forms.PictureBox();
+            this.pbApellido = new System.Windows.Forms.PictureBox();
+            this.pbNombre = new System.Windows.Forms.PictureBox();
+            this.pbMostrarRegistrar = new System.Windows.Forms.PictureBox();
+            this.pbOcultarRegistrar = new System.Windows.Forms.PictureBox();
             this.pbNombreError = new System.Windows.Forms.PictureBox();
             this.pbApellidoError = new System.Windows.Forms.PictureBox();
             this.pbDNIError = new System.Windows.Forms.PictureBox();
             this.pbDireccionError = new System.Windows.Forms.PictureBox();
             this.pbEmailError = new System.Windows.Forms.PictureBox();
+            this.pbTelefono = new System.Windows.Forms.PictureBox();
             this.pbTelefonoError = new System.Windows.Forms.PictureBox();
             this.pbNacimientoError = new System.Windows.Forms.PictureBox();
             this.pbPerfilError = new System.Windows.Forms.PictureBox();
-            this.lblNomUsuarioRegistrar = new System.Windows.Forms.Label();
-            this.lblApeUsuarioRegistrar = new System.Windows.Forms.Label();
-            this.cbPerfilUsuario = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNacimiento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDireccion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDNI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbApellido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrarRegistrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultarRegistrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTelefono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNombre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbApellido)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDNI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDireccion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNacimiento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNombreError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbApellidoError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDNIError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDireccionError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmailError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTelefono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTelefonoError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNacimientoError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfilError)).BeginInit();
@@ -271,27 +271,6 @@
             this.buttonVolverAtras.UseVisualStyleBackColor = true;
             this.buttonVolverAtras.Click += new System.EventHandler(this.buttonVolverAtras_Click);
             // 
-            // pbMostrarRegistrar
-            // 
-            this.pbMostrarRegistrar.Image = global::TPCAI.Properties.Resources.Visible;
-            this.pbMostrarRegistrar.Location = new System.Drawing.Point(599, 116);
-            this.pbMostrarRegistrar.Name = "pbMostrarRegistrar";
-            this.pbMostrarRegistrar.Size = new System.Drawing.Size(30, 20);
-            this.pbMostrarRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMostrarRegistrar.TabIndex = 41;
-            this.pbMostrarRegistrar.TabStop = false;
-            // 
-            // pbOcultarRegistrar
-            // 
-            this.pbOcultarRegistrar.Image = global::TPCAI.Properties.Resources.NotVisible;
-            this.pbOcultarRegistrar.Location = new System.Drawing.Point(599, 116);
-            this.pbOcultarRegistrar.Name = "pbOcultarRegistrar";
-            this.pbOcultarRegistrar.Size = new System.Drawing.Size(30, 20);
-            this.pbOcultarRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbOcultarRegistrar.TabIndex = 42;
-            this.pbOcultarRegistrar.TabStop = false;
-            this.pbOcultarRegistrar.Click += new System.EventHandler(this.pbOcultarRegistrar_Click);
-            // 
             // lblVerificarContRegistrar
             // 
             this.lblVerificarContRegistrar.AutoSize = true;
@@ -434,16 +413,104 @@
             this.dtpfechaNacimiento.TabIndex = 45;
             this.dtpfechaNacimiento.ValueChanged += new System.EventHandler(this.dtpfechaNacimiento_ValueChanged);
             // 
-            // pbTelefono
+            // lblNomUsuarioRegistrar
             // 
-            this.pbTelefono.Image = ((System.Drawing.Image)(resources.GetObject("pbTelefono.Image")));
-            this.pbTelefono.Location = new System.Drawing.Point(481, 80);
-            this.pbTelefono.Name = "pbTelefono";
-            this.pbTelefono.Size = new System.Drawing.Size(19, 19);
-            this.pbTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbTelefono.TabIndex = 46;
-            this.pbTelefono.TabStop = false;
-            this.tpAyuda.SetToolTip(this.pbTelefono, "El Teléfono debe tener entre 8 y 11 numeros");
+            this.lblNomUsuarioRegistrar.AutoSize = true;
+            this.lblNomUsuarioRegistrar.Location = new System.Drawing.Point(237, 267);
+            this.lblNomUsuarioRegistrar.Name = "lblNomUsuarioRegistrar";
+            this.lblNomUsuarioRegistrar.Size = new System.Drawing.Size(196, 13);
+            this.lblNomUsuarioRegistrar.TabIndex = 64;
+            this.lblNomUsuarioRegistrar.Text = "No debe contener el nombre del usuario";
+            this.lblNomUsuarioRegistrar.Click += new System.EventHandler(this.lblNomUsuarioRegistrar_Click);
+            // 
+            // lblApeUsuarioRegistrar
+            // 
+            this.lblApeUsuarioRegistrar.AutoSize = true;
+            this.lblApeUsuarioRegistrar.Location = new System.Drawing.Point(240, 292);
+            this.lblApeUsuarioRegistrar.Name = "lblApeUsuarioRegistrar";
+            this.lblApeUsuarioRegistrar.Size = new System.Drawing.Size(207, 17);
+            this.lblApeUsuarioRegistrar.TabIndex = 65;
+            this.lblApeUsuarioRegistrar.Text = "No debe contener el apellido del usuario";
+            this.lblApeUsuarioRegistrar.UseCompatibleTextRendering = true;
+            // 
+            // cbPerfilUsuario
+            // 
+            this.cbPerfilUsuario.FormattingEnabled = true;
+            this.cbPerfilUsuario.Items.AddRange(new object[] {
+            "1 - Vendedor",
+            "2 - Supervisor",
+            "3 - Admin"});
+            this.cbPerfilUsuario.Location = new System.Drawing.Point(382, 150);
+            this.cbPerfilUsuario.Name = "cbPerfilUsuario";
+            this.cbPerfilUsuario.Size = new System.Drawing.Size(94, 21);
+            this.cbPerfilUsuario.TabIndex = 67;
+            // 
+            // pbPerfil
+            // 
+            this.pbPerfil.Image = ((System.Drawing.Image)(resources.GetObject("pbPerfil.Image")));
+            this.pbPerfil.Location = new System.Drawing.Point(481, 153);
+            this.pbPerfil.Name = "pbPerfil";
+            this.pbPerfil.Size = new System.Drawing.Size(19, 17);
+            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPerfil.TabIndex = 53;
+            this.pbPerfil.TabStop = false;
+            this.tpAyuda.SetToolTip(this.pbPerfil, "Posibles perfiles Habilitados: \r\n1 - Vendedor\r\n2 - Supervisor\r\n3 - Adminsitrador\r" +
+        "\n\r\nAsegurese de elegir el perfil correcto antes de crear el usuario!");
+            // 
+            // pbNacimiento
+            // 
+            this.pbNacimiento.Image = ((System.Drawing.Image)(resources.GetObject("pbNacimiento.Image")));
+            this.pbNacimiento.Location = new System.Drawing.Point(481, 114);
+            this.pbNacimiento.Name = "pbNacimiento";
+            this.pbNacimiento.Size = new System.Drawing.Size(19, 17);
+            this.pbNacimiento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbNacimiento.TabIndex = 52;
+            this.pbNacimiento.TabStop = false;
+            this.tpAyuda.SetToolTip(this.pbNacimiento, "El usuario debe ser mayor de 18 años.");
+            // 
+            // pbEmail
+            // 
+            this.pbEmail.Image = ((System.Drawing.Image)(resources.GetObject("pbEmail.Image")));
+            this.pbEmail.Location = new System.Drawing.Point(481, 47);
+            this.pbEmail.Name = "pbEmail";
+            this.pbEmail.Size = new System.Drawing.Size(19, 18);
+            this.pbEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbEmail.TabIndex = 51;
+            this.pbEmail.TabStop = false;
+            this.tpAyuda.SetToolTip(this.pbEmail, "El mail debe contener un formato valido ( tener @ y terminar con .com)\r\n");
+            // 
+            // pbDireccion
+            // 
+            this.pbDireccion.Image = ((System.Drawing.Image)(resources.GetObject("pbDireccion.Image")));
+            this.pbDireccion.Location = new System.Drawing.Point(227, 146);
+            this.pbDireccion.Name = "pbDireccion";
+            this.pbDireccion.Size = new System.Drawing.Size(19, 17);
+            this.pbDireccion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDireccion.TabIndex = 50;
+            this.pbDireccion.TabStop = false;
+            this.tpAyuda.SetToolTip(this.pbDireccion, "La direccion puede contener entre 3 y 255 caracteres.\r\n\r\n");
+            // 
+            // pbDNI
+            // 
+            this.pbDNI.Image = ((System.Drawing.Image)(resources.GetObject("pbDNI.Image")));
+            this.pbDNI.Location = new System.Drawing.Point(227, 114);
+            this.pbDNI.Name = "pbDNI";
+            this.pbDNI.Size = new System.Drawing.Size(19, 17);
+            this.pbDNI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDNI.TabIndex = 49;
+            this.pbDNI.TabStop = false;
+            this.tpAyuda.SetToolTip(this.pbDNI, "El documento debe tener 7 u 8 caracteres. \r\n");
+            // 
+            // pbApellido
+            // 
+            this.pbApellido.Image = ((System.Drawing.Image)(resources.GetObject("pbApellido.Image")));
+            this.pbApellido.Location = new System.Drawing.Point(227, 81);
+            this.pbApellido.Name = "pbApellido";
+            this.pbApellido.Size = new System.Drawing.Size(19, 18);
+            this.pbApellido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbApellido.TabIndex = 48;
+            this.pbApellido.TabStop = false;
+            this.tpAyuda.SetToolTip(this.pbApellido, "El apellido debe tener entre 3 y 50 caracteres. \r\n");
             // 
             // pbNombre
             // 
@@ -458,72 +525,26 @@
         "eciales!");
             this.pbNombre.Click += new System.EventHandler(this.pbNombre_Click);
             // 
-            // pbApellido
+            // pbMostrarRegistrar
             // 
-            this.pbApellido.Image = ((System.Drawing.Image)(resources.GetObject("pbApellido.Image")));
-            this.pbApellido.Location = new System.Drawing.Point(227, 81);
-            this.pbApellido.Name = "pbApellido";
-            this.pbApellido.Size = new System.Drawing.Size(19, 18);
-            this.pbApellido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbApellido.TabIndex = 48;
-            this.pbApellido.TabStop = false;
-            this.tpAyuda.SetToolTip(this.pbApellido, "El apellido debe tener entre 3 y 50 caracteres. \r\n");
+            this.pbMostrarRegistrar.Image = global::TPCAI.Properties.Resources.Visible;
+            this.pbMostrarRegistrar.Location = new System.Drawing.Point(599, 116);
+            this.pbMostrarRegistrar.Name = "pbMostrarRegistrar";
+            this.pbMostrarRegistrar.Size = new System.Drawing.Size(30, 20);
+            this.pbMostrarRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMostrarRegistrar.TabIndex = 41;
+            this.pbMostrarRegistrar.TabStop = false;
             // 
-            // pbDNI
+            // pbOcultarRegistrar
             // 
-            this.pbDNI.Image = ((System.Drawing.Image)(resources.GetObject("pbDNI.Image")));
-            this.pbDNI.Location = new System.Drawing.Point(227, 114);
-            this.pbDNI.Name = "pbDNI";
-            this.pbDNI.Size = new System.Drawing.Size(19, 17);
-            this.pbDNI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbDNI.TabIndex = 49;
-            this.pbDNI.TabStop = false;
-            this.tpAyuda.SetToolTip(this.pbDNI, "El documento debe tener 7 u 8 caracteres. \r\n");
-            // 
-            // pbDireccion
-            // 
-            this.pbDireccion.Image = ((System.Drawing.Image)(resources.GetObject("pbDireccion.Image")));
-            this.pbDireccion.Location = new System.Drawing.Point(227, 146);
-            this.pbDireccion.Name = "pbDireccion";
-            this.pbDireccion.Size = new System.Drawing.Size(19, 17);
-            this.pbDireccion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbDireccion.TabIndex = 50;
-            this.pbDireccion.TabStop = false;
-            this.tpAyuda.SetToolTip(this.pbDireccion, "La direccion puede contener entre 3 y 255 caracteres.\r\n\r\n");
-            // 
-            // pbEmail
-            // 
-            this.pbEmail.Image = ((System.Drawing.Image)(resources.GetObject("pbEmail.Image")));
-            this.pbEmail.Location = new System.Drawing.Point(481, 47);
-            this.pbEmail.Name = "pbEmail";
-            this.pbEmail.Size = new System.Drawing.Size(19, 18);
-            this.pbEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbEmail.TabIndex = 51;
-            this.pbEmail.TabStop = false;
-            this.tpAyuda.SetToolTip(this.pbEmail, "El mail debe contener un formato valido ( tener @ y terminar con .com)\r\n");
-            // 
-            // pbNacimiento
-            // 
-            this.pbNacimiento.Image = ((System.Drawing.Image)(resources.GetObject("pbNacimiento.Image")));
-            this.pbNacimiento.Location = new System.Drawing.Point(481, 114);
-            this.pbNacimiento.Name = "pbNacimiento";
-            this.pbNacimiento.Size = new System.Drawing.Size(19, 17);
-            this.pbNacimiento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbNacimiento.TabIndex = 52;
-            this.pbNacimiento.TabStop = false;
-            this.tpAyuda.SetToolTip(this.pbNacimiento, "El usuario debe ser mayor de 18 años.");
-            // 
-            // pbPerfil
-            // 
-            this.pbPerfil.Image = ((System.Drawing.Image)(resources.GetObject("pbPerfil.Image")));
-            this.pbPerfil.Location = new System.Drawing.Point(481, 153);
-            this.pbPerfil.Name = "pbPerfil";
-            this.pbPerfil.Size = new System.Drawing.Size(19, 17);
-            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPerfil.TabIndex = 53;
-            this.pbPerfil.TabStop = false;
-            this.tpAyuda.SetToolTip(this.pbPerfil, "Posibles perfiles Habilitados: \r\n1 - Vendedor\r\n2 - Supervisor\r\n3 - Adminsitrador\r" +
-        "\n\r\nAsegurese de elegir el perfil correcto antes de crear el usuario!");
+            this.pbOcultarRegistrar.Image = global::TPCAI.Properties.Resources.NotVisible;
+            this.pbOcultarRegistrar.Location = new System.Drawing.Point(599, 116);
+            this.pbOcultarRegistrar.Name = "pbOcultarRegistrar";
+            this.pbOcultarRegistrar.Size = new System.Drawing.Size(30, 20);
+            this.pbOcultarRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbOcultarRegistrar.TabIndex = 42;
+            this.pbOcultarRegistrar.TabStop = false;
+            this.pbOcultarRegistrar.Click += new System.EventHandler(this.pbOcultarRegistrar_Click);
             // 
             // pbNombreError
             // 
@@ -581,6 +602,17 @@
             this.pbEmailError.TabStop = false;
             this.tpAyuda.SetToolTip(this.pbEmailError, "El mail debe contener un formato valido ( tener @ y terminar con .com)\r\n");
             // 
+            // pbTelefono
+            // 
+            this.pbTelefono.Image = ((System.Drawing.Image)(resources.GetObject("pbTelefono.Image")));
+            this.pbTelefono.Location = new System.Drawing.Point(481, 80);
+            this.pbTelefono.Name = "pbTelefono";
+            this.pbTelefono.Size = new System.Drawing.Size(19, 19);
+            this.pbTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbTelefono.TabIndex = 46;
+            this.pbTelefono.TabStop = false;
+            this.tpAyuda.SetToolTip(this.pbTelefono, "El Teléfono debe tener entre 8 y 11 numeros");
+            // 
             // pbTelefonoError
             // 
             this.pbTelefonoError.Image = ((System.Drawing.Image)(resources.GetObject("pbTelefonoError.Image")));
@@ -614,38 +646,6 @@
             this.pbPerfilError.TabStop = false;
             this.tpAyuda.SetToolTip(this.pbPerfilError, "Posibles perfiles Habilitados: \r\n1 - Vendedor\r\n2 - Supervisor\r\n3 - Adminsitrador\r" +
         "\n\r\nAsegurese de elegir el perfil correcto antes de crear el usuario!");
-            // 
-            // lblNomUsuarioRegistrar
-            // 
-            this.lblNomUsuarioRegistrar.AutoSize = true;
-            this.lblNomUsuarioRegistrar.Location = new System.Drawing.Point(237, 267);
-            this.lblNomUsuarioRegistrar.Name = "lblNomUsuarioRegistrar";
-            this.lblNomUsuarioRegistrar.Size = new System.Drawing.Size(196, 13);
-            this.lblNomUsuarioRegistrar.TabIndex = 64;
-            this.lblNomUsuarioRegistrar.Text = "No debe contener el nombre del usuario";
-            this.lblNomUsuarioRegistrar.Click += new System.EventHandler(this.lblNomUsuarioRegistrar_Click);
-            // 
-            // lblApeUsuarioRegistrar
-            // 
-            this.lblApeUsuarioRegistrar.AutoSize = true;
-            this.lblApeUsuarioRegistrar.Location = new System.Drawing.Point(240, 292);
-            this.lblApeUsuarioRegistrar.Name = "lblApeUsuarioRegistrar";
-            this.lblApeUsuarioRegistrar.Size = new System.Drawing.Size(207, 17);
-            this.lblApeUsuarioRegistrar.TabIndex = 65;
-            this.lblApeUsuarioRegistrar.Text = "No debe contener el apellido del usuario";
-            this.lblApeUsuarioRegistrar.UseCompatibleTextRendering = true;
-            // 
-            // cbPerfilUsuario
-            // 
-            this.cbPerfilUsuario.FormattingEnabled = true;
-            this.cbPerfilUsuario.Items.AddRange(new object[] {
-            "1 - Vendedor",
-            "2 - Supervisor",
-            "3 - Admin"});
-            this.cbPerfilUsuario.Location = new System.Drawing.Point(382, 150);
-            this.cbPerfilUsuario.Name = "cbPerfilUsuario";
-            this.cbPerfilUsuario.Size = new System.Drawing.Size(94, 21);
-            this.cbPerfilUsuario.TabIndex = 67;
             // 
             // FormNuevoUsuario
             // 
@@ -710,21 +710,21 @@
             this.Name = "FormNuevoUsuario";
             this.Text = "Nuevo Usuario";
             this.Load += new System.EventHandler(this.NuevoUsuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNacimiento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDireccion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDNI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbApellido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrarRegistrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultarRegistrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTelefono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNombre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbApellido)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDNI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDireccion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNacimiento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNombreError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbApellidoError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDNIError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDireccionError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmailError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTelefono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTelefonoError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNacimientoError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfilError)).EndInit();

@@ -136,26 +136,8 @@ C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.CopyC
 C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.exe
 C:\Users\Myrna\Desktop\CAI 2024\nuevo11\TPCAI\TPCAI\obj\Debug\TPCAI.pdb
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoUsuario.resources
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Text.Json.dll
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Memory.dll
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.ValueTuple.dll
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Text.Encodings.Web.dll
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Buffers.dll
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Datos.dll.config
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Negocio.dll.config
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Text.Json.xml
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Memory.xml
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.ValueTuple.xml
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Text.Encodings.Web.xml
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Buffers.xml
-C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuAdmin.resources
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuSupervisor.resources
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuVendedor.resources
@@ -216,3 +198,12 @@ C:\Users\Myrna\Desktop\CAI 2024\nuevo 17\TPCAI\TPCAI\obj\Debug\TPCAI.FormBajaUsu
 C:\Users\maxim\Source\Repos\Lautarosg\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormAdminProveedor.resources
 C:\Users\maxim\Source\Repos\Lautarosg\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormAdminUsuario.resources
 C:\Users\maxim\Source\Repos\Lautarosg\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoProveedor.resources
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Persistencia.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Persistencia.pdb
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Persistencia.dll.config
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormAdminProveedor.resources
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormAdminUsuario.resources
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoProveedor.resources
+C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoProducto.resources

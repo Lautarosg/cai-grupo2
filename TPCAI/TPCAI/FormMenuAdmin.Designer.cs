@@ -46,9 +46,9 @@
             this.buttonBajaSup = new System.Windows.Forms.Button();
             this.buttonAltaVend = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.buttonModVend = new System.Windows.Forms.Button();
             this.buttonBajaVend = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -122,6 +122,7 @@
             this.buttonAltaProd.TabIndex = 25;
             this.buttonAltaProd.Text = "Alta";
             this.buttonAltaProd.UseVisualStyleBackColor = true;
+            this.buttonAltaProd.Click += new System.EventHandler(this.buttonAltaProd_Click);
             // 
             // buttonBajaProd
             // 
@@ -266,17 +267,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(513, 497);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 50);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Cerrar Sesión";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // buttonModVend
             // 
             this.buttonModVend.FlatStyle = System.Windows.Forms.FlatStyle.System;
@@ -298,6 +288,17 @@
             this.buttonBajaVend.TabIndex = 20;
             this.buttonBajaVend.Text = "Baja";
             this.buttonBajaVend.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(513, 497);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 50);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Cerrar Sesión";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormMenuAdmin
             // 

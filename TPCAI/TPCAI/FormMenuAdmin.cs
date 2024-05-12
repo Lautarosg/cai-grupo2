@@ -43,5 +43,12 @@ namespace TPCAI
             FormAdminProveedor formProveedor = new FormAdminProveedor();
             formProveedor.ShowDialog();
         }
+
+        private void buttonAltaProd_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormNuevoProducto formNuevoProducto = new FormNuevoProducto();
+            formNuevoProducto.ShowDialog();
+        }
     }
 }

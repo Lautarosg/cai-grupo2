@@ -1,6 +1,6 @@
 ﻿namespace TPCAI
 {
-    partial class FormNuevoProveedor
+    partial class FormNuevoProducto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoProveedor));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoProducto));
             this.cbPerfilUsuario = new System.Windows.Forms.ComboBox();
-            this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.pbEmail = new System.Windows.Forms.PictureBox();
             this.pbDNI = new System.Windows.Forms.PictureBox();
             this.pbApellido = new System.Windows.Forms.PictureBox();
             this.pbNombre = new System.Windows.Forms.PictureBox();
             this.lblVerificarContRegistrar = new System.Windows.Forms.Label();
             this.buttonVolverAtras = new System.Windows.Forms.Button();
-            this.btnConfirmarProveedor = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.btnConfirmarProducto = new System.Windows.Forms.Button();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCUIT = new System.Windows.Forms.TextBox();
-            this.lblCUIT = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.lblStock = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.pbNombreError = new System.Windows.Forms.PictureBox();
             this.pbApellidoError = new System.Windows.Forms.PictureBox();
             this.pbDNIError = new System.Windows.Forms.PictureBox();
             this.pbEmailError = new System.Windows.Forms.PictureBox();
-            this.pbPerfilError = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDNI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbApellido)).BeginInit();
@@ -62,30 +57,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbApellidoError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDNIError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmailError)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPerfilError)).BeginInit();
             this.SuspendLayout();
             // 
             // cbPerfilUsuario
             // 
             this.cbPerfilUsuario.FormattingEnabled = true;
             this.cbPerfilUsuario.Items.AddRange(new object[] {
-            "1 - Vendedor",
-            "2 - Supervisor",
-            "3 - Admin"});
-            this.cbPerfilUsuario.Location = new System.Drawing.Point(117, 124);
+            "1 - Audio",
+            "2 - Celulares",
+            "3 - Electro Hogar",
+            "4 - Informática",
+            "5 - Smart TV"});
+            this.cbPerfilUsuario.Location = new System.Drawing.Point(117, 45);
             this.cbPerfilUsuario.Name = "cbPerfilUsuario";
             this.cbPerfilUsuario.Size = new System.Drawing.Size(94, 21);
             this.cbPerfilUsuario.TabIndex = 121;
-            // 
-            // pbPerfil
-            // 
-            this.pbPerfil.Image = ((System.Drawing.Image)(resources.GetObject("pbPerfil.Image")));
-            this.pbPerfil.Location = new System.Drawing.Point(222, 128);
-            this.pbPerfil.Name = "pbPerfil";
-            this.pbPerfil.Size = new System.Drawing.Size(19, 17);
-            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPerfil.TabIndex = 110;
-            this.pbPerfil.TabStop = false;
+            this.cbPerfilUsuario.SelectedIndexChanged += new System.EventHandler(this.cbPerfilUsuario_SelectedIndexChanged);
             // 
             // pbEmail
             // 
@@ -146,27 +133,26 @@
             this.buttonVolverAtras.UseVisualStyleBackColor = true;
             this.buttonVolverAtras.Click += new System.EventHandler(this.buttonVolverAtras_Click);
             // 
-            // btnConfirmarProveedor
+            // btnConfirmarProducto
             // 
-            this.btnConfirmarProveedor.Location = new System.Drawing.Point(20, 175);
-            this.btnConfirmarProveedor.Margin = new System.Windows.Forms.Padding(2);
-            this.btnConfirmarProveedor.Name = "btnConfirmarProveedor";
-            this.btnConfirmarProveedor.Size = new System.Drawing.Size(93, 33);
-            this.btnConfirmarProveedor.TabIndex = 83;
-            this.btnConfirmarProveedor.Text = "Confirmar";
-            this.btnConfirmarProveedor.UseVisualStyleBackColor = true;
-            this.btnConfirmarProveedor.Click += new System.EventHandler(this.btnConfirmarProveedor_Click);
+            this.btnConfirmarProducto.Location = new System.Drawing.Point(222, 176);
+            this.btnConfirmarProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfirmarProducto.Name = "btnConfirmarProducto";
+            this.btnConfirmarProducto.Size = new System.Drawing.Size(93, 33);
+            this.btnConfirmarProducto.TabIndex = 83;
+            this.btnConfirmarProducto.Text = "Confirmar";
+            this.btnConfirmarProducto.UseVisualStyleBackColor = true;
+            this.btnConfirmarProducto.Click += new System.EventHandler(this.btnConfirmarProducto_Click);
             // 
-            // label9
+            // lblCategoria
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 124);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 13);
-            this.label9.TabIndex = 82;
-            this.label9.Text = "Categorias";
-            
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(17, 49);
+            this.lblCategoria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(54, 13);
+            this.lblCategoria.TabIndex = 82;
+            this.lblCategoria.Text = "Categoría";
             // 
             // label7
             // 
@@ -174,85 +160,66 @@
             this.label7.Location = new System.Drawing.Point(9, 14);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 13);
+            this.label7.Size = new System.Drawing.Size(98, 13);
             this.label7.TabIndex = 80;
-            this.label7.Text = "Datos del Proveedor";
+            this.label7.Text = "Datos del Producto";
             // 
-            // txtEmail
+            // txtPrecio
             // 
-            this.txtEmail.Location = new System.Drawing.Point(377, 47);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(94, 20);
-            this.txtEmail.TabIndex = 79;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtPrecio.Location = new System.Drawing.Point(377, 47);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(94, 20);
+            this.txtPrecio.TabIndex = 79;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
-            // label6
+            // lblPrecio
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(277, 49);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 78;
-            this.label6.Text = "Email";
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(277, 49);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lblPrecio.TabIndex = 78;
+            this.lblPrecio.Text = "Precio";
             // 
-            // txtCUIT
+            // txtStock
             // 
-            this.txtCUIT.Location = new System.Drawing.Point(377, 85);
-            this.txtCUIT.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCUIT.Name = "txtCUIT";
-            this.txtCUIT.Size = new System.Drawing.Size(94, 20);
-            this.txtCUIT.TabIndex = 73;
-            this.txtCUIT.TextChanged += new System.EventHandler(this.txtCUIT_TextChanged);
+            this.txtStock.Location = new System.Drawing.Point(377, 85);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(94, 20);
+            this.txtStock.TabIndex = 73;
+            this.txtStock.TextChanged += new System.EventHandler(this.txtCUIT_TextChanged);
             // 
-            // lblCUIT
+            // lblStock
             // 
-            this.lblCUIT.AutoSize = true;
-            this.lblCUIT.Location = new System.Drawing.Point(277, 88);
-            this.lblCUIT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCUIT.Name = "lblCUIT";
-            this.lblCUIT.Size = new System.Drawing.Size(32, 13);
-            this.lblCUIT.TabIndex = 72;
-            this.lblCUIT.Text = "CUIT";
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Location = new System.Drawing.Point(117, 81);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(94, 20);
-            this.txtApellido.TabIndex = 71;
-            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 83);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 70;
-            this.label2.Text = "Apellido";
+            this.lblStock.AutoSize = true;
+            this.lblStock.Location = new System.Drawing.Point(277, 88);
+            this.lblStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(35, 13);
+            this.lblStock.TabIndex = 72;
+            this.lblStock.Text = "Stock";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(117, 45);
+            this.txtNombre.Location = new System.Drawing.Point(117, 85);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(94, 20);
-            this.txtNombre.TabIndex = 69;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.TabIndex = 71;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 47);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "Nombre";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(17, 84);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 68;
+            this.lblNombre.Text = "Nombre";
             // 
             // pbNombreError
             // 
@@ -294,49 +261,34 @@
             this.pbEmailError.TabIndex = 115;
             this.pbEmailError.TabStop = false;
             // 
-            // pbPerfilError
-            // 
-            this.pbPerfilError.Image = ((System.Drawing.Image)(resources.GetObject("pbPerfilError.Image")));
-            this.pbPerfilError.Location = new System.Drawing.Point(222, 128);
-            this.pbPerfilError.Name = "pbPerfilError";
-            this.pbPerfilError.Size = new System.Drawing.Size(19, 17);
-            this.pbPerfilError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPerfilError.TabIndex = 118;
-            this.pbPerfilError.TabStop = false;
-            // 
-            // FormNuevoProveedor
+            // FormNuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 271);
             this.Controls.Add(this.cbPerfilUsuario);
-            this.Controls.Add(this.pbPerfil);
             this.Controls.Add(this.pbEmail);
             this.Controls.Add(this.pbDNI);
             this.Controls.Add(this.pbApellido);
             this.Controls.Add(this.pbNombre);
             this.Controls.Add(this.lblVerificarContRegistrar);
             this.Controls.Add(this.buttonVolverAtras);
-            this.Controls.Add(this.btnConfirmarProveedor);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnConfirmarProducto);
+            this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtCUIT);
-            this.Controls.Add(this.lblCUIT);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.lblPrecio);
+            this.Controls.Add(this.txtStock);
+            this.Controls.Add(this.lblStock);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pbNombreError);
             this.Controls.Add(this.pbApellidoError);
             this.Controls.Add(this.pbDNIError);
             this.Controls.Add(this.pbEmailError);
-            this.Controls.Add(this.pbPerfilError);
-            this.Name = "FormNuevoProveedor";
-            this.Text = "Alta de Proveedor";
+            this.Name = "FormNuevoProducto";
+            this.Text = "Agregar Producto";
             this.Load += new System.EventHandler(this.FormNuevoProveedor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDNI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbApellido)).EndInit();
@@ -345,7 +297,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbApellidoError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDNIError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmailError)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPerfilError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,28 +305,24 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cbPerfilUsuario;
-        private System.Windows.Forms.PictureBox pbPerfil;
         private System.Windows.Forms.PictureBox pbEmail;
         private System.Windows.Forms.PictureBox pbDNI;
         private System.Windows.Forms.PictureBox pbApellido;
         private System.Windows.Forms.PictureBox pbNombre;
         private System.Windows.Forms.Label lblVerificarContRegistrar;
         private System.Windows.Forms.Button buttonVolverAtras;
-        private System.Windows.Forms.Button btnConfirmarProveedor;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnConfirmarProducto;
+        private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCUIT;
-        private System.Windows.Forms.Label lblCUIT;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.PictureBox pbNombreError;
         private System.Windows.Forms.PictureBox pbApellidoError;
         private System.Windows.Forms.PictureBox pbDNIError;
         private System.Windows.Forms.PictureBox pbEmailError;
-        private System.Windows.Forms.PictureBox pbPerfilError;
     }
 }
