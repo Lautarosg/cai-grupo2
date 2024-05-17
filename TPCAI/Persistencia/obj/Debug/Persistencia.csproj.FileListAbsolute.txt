@@ -37,3 +37,16 @@ C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Persistencia\obj\Debug\Persistencia
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Persistencia\obj\Debug\Persiste.7F7D6998.Up2Date
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\bin\Debug\Persistencia.dll.config
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\bin\Debug\Datos.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\bin\Debug\Datos.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\bin\Debug\Datos.dll.config
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\obj\Debug\Persistencia.csproj.AssemblyReference.cache
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Persistencia\obj\Debug\Persistencia.pdb

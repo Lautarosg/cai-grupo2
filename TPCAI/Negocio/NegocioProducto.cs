@@ -3,9 +3,12 @@ using Persistencia;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using TPCAI;
+
+
 
 namespace Negocio
 {
@@ -19,5 +22,10 @@ namespace Negocio
             controladorProducto.AgregarProducto(producto);
         }
 
+        //Tuve que corregir la opcion que usaba {} con esta recomendada por c#
+        //asi funciona la compilacion
+        public static int VerStock(string nombreProducto) => ControladorProducto.VerStock(nombreProducto);
+
     }
+
 }
