@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.NetworkInformation;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using TPCAI;
@@ -44,12 +45,44 @@ namespace Persistencia
             }
         }
 
-        //metodo para ver el stock critico
+        //Lista todos los productos en el swagger TraerProductos
+        public List<ProductoDTO> ListaTodosProductos(string idAdmin)
+        {
+            string path = "/api/Producto/TraerProductos";
+            List<ProductoDTO> producto = new List<ProductoDTO>();
+
+            try
+            {
+                HttpResponseMessage response = WebHelper.Get(path);
+                if (response.IsSuccessStatusCode)
+                {
+                    var contentStream = response.Content.ReadAsStringAsync().Result;
+                    List<ProductoDTO> listadoProductos = JsonConvert.DeserializeObject<List<ProductoDTO>>(contentStream);
+                    Console.WriteLine("Listar producto successful");
+                    return listadoProductos;
+                }
+                else
+                {
+                    Console.WriteLine($"Listar producto Error: {response.StatusCode} - {response.ReasonPhrase}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+            return producto;
+
+        }
+
+
+
+
+        //metodo para ver el stock critico - Estoy viendo porque no lista aun
 
         public static string ListaProductos()
         {
             // Trae todos los productos
-            string path = "/api/Producto/AgregarProducto";
+            string path = "/api/Producto/TraerProductos";
             string content = "";
             HttpResponseMessage response = WebHelper.Get(path);
             if (!response.IsSuccessStatusCode)

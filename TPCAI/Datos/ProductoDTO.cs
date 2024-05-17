@@ -17,12 +17,12 @@ namespace TPCAI
     public class ProductoDTO
     {
         private Guid Id { get; set; }
-        private Guid IdCategoria { get; set; }
-        private string Nombre { get; set; }
+        public Guid IdCategoria { get; set; }
+        public string Nombre { get; set; }
         private DateTime FechaAlta { get; set; }
         private DateTime? FechaBaja { get; set; }
         private double Precio { get; set; }
-        private int Stock { get; set; }
+        public int Stock { get; set; }
         private Guid IdUsuario { get; set; }
         private Guid IdProveedor { get; set; }
         public ProductoDTO(Guid id, Guid idCategoria, string nombre, DateTime fechaAlta, double precio, int stock, Guid idUsuario, Guid idProveedor)

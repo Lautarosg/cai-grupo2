@@ -51,6 +51,7 @@
             this.listaStockCritico.Name = "listaStockCritico";
             this.listaStockCritico.Size = new System.Drawing.Size(599, 264);
             this.listaStockCritico.TabIndex = 1;
+            this.listaStockCritico.SelectedIndexChanged += new System.EventHandler(this.listaStockCritico_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -83,6 +84,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormVerStockCritico";
             this.Text = "Reporte de Stock Crítico";
+            this.Load += new System.EventHandler(this.FormVerStockCritico_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
