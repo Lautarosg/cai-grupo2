@@ -168,8 +168,9 @@
             this.buttonVtaProv.Name = "buttonVtaProv";
             this.buttonVtaProv.Size = new System.Drawing.Size(114, 55);
             this.buttonVtaProv.TabIndex = 29;
-            this.buttonVtaProv.Text = "Ventas Porveedor";
+            this.buttonVtaProv.Text = "Ventas Por vendedor";
             this.buttonVtaProv.UseVisualStyleBackColor = true;
+            this.buttonVtaProv.Click += new System.EventHandler(this.buttonVtaProv_Click);
             // 
             // groupBox1
             // 

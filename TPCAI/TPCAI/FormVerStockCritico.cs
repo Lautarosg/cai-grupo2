@@ -21,6 +21,8 @@ namespace TPCAI
         public FormVerStockCritico()
         {
             InitializeComponent();
+
+
         }
 
         private void FormVerStockCritico_Load(object sender, EventArgs e)
@@ -104,25 +106,6 @@ namespace TPCAI
                     MessageBox.Show(mensaje);
                 }
 
-                /*
-                foreach (var categoriaProductos in productosAgrupados)
-                {
-                    int idCategoria = categoriaProductos.Key;
-                    string mensaje = $"Productos en stock crítico de categoría {idCategoria}:\n";
-
-                    
-
-                    foreach (var producto in categoriaProductos.Value)
-                    {
-                        mensaje += $"  Nombre: {producto.Nombre}, Stock: {producto.Stock}\n";
-
-                        // Agregar a ListBox
-                        listaStockCritico.Items.Add($"Categoría {idCategoria}: {producto.Nombre}, Stock: {producto.Stock}");
-                    }
-
-                    mensaje += "\n";
-                    MessageBox.Show(mensaje);
-                }*/
             }
             else
             {

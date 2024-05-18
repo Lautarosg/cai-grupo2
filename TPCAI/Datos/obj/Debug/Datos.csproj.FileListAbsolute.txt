@@ -260,3 +260,40 @@ C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Datos\obj\Debug\Datos.csproj.CoreC
 C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Datos\obj\Debug\Datos.dll
 C:\Users\Myrna\Desktop\CAI 2024\nuevo19\TPCAI\Datos\obj\Debug\Datos.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\Datos.dll.config
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\Datos.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\Datos.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Buffers.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Memory.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Text.Json.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.ValueTuple.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Web.Helpers.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Web.Razor.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Web.WebPages.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Buffers.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Memory.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Text.Json.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.ValueTuple.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Web.Helpers.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Web.Razor.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Web.WebPages.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\obj\Debug\Datos.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\Datos\obj\Debug\Datos.pdb
