@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -100,6 +103,18 @@
     <Compile Include="FormNuevoProducto.Designer.cs">
       <DependentUpon>FormNuevoProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVentasPorVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentasPorVendedor.Designer.cs">
+      <DependentUpon>FormVentasPorVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVerStockCritico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerStockCritico.Designer.cs">
+      <DependentUpon>FormVerStockCritico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
@@ -133,6 +148,12 @@
     <EmbeddedResource Include="FormNuevoProducto.resx">
       <DependentUpon>FormNuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormVentasPorVendedor.resx">
+      <DependentUpon>FormVentasPorVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVerStockCritico.resx">
+      <DependentUpon>FormVerStockCritico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -143,6 +164,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

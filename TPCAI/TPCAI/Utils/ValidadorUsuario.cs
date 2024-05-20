@@ -165,6 +165,27 @@ namespace TPCAI
             return CUIT;
         }
 
+        public bool ValidarPrecio(double precio)
+        {
+            // Verificar que el precio sea mayor a 0
+            if (precio <= 0)
+            {
+                Console.WriteLine("El precio debe ser mayor a 0.");
+                return false;
+            }
+
+            // Convertir el precio a cadena y verificar su longitud
+            string precioString = precio.ToString();
+
+            // La longitud del string incluye los dígitos antes y después del punto decimal
+            if (precioString.Length > 10)
+            {
+                Console.WriteLine("El precio es muy grande");
+                return false;
+            }
+
+            return true;
+        }
 
     }
 }

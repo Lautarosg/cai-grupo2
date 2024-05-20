@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoProducto));
-            this.cbPerfilUsuario = new System.Windows.Forms.ComboBox();
-            this.pbEmail = new System.Windows.Forms.PictureBox();
-            this.pbDNI = new System.Windows.Forms.PictureBox();
-            this.pbApellido = new System.Windows.Forms.PictureBox();
+            this.cbCategoriaProducto = new System.Windows.Forms.ComboBox();
+            this.pbPrecio = new System.Windows.Forms.PictureBox();
+            this.pbStock = new System.Windows.Forms.PictureBox();
             this.pbNombre = new System.Windows.Forms.PictureBox();
             this.lblVerificarContRegistrar = new System.Windows.Forms.Label();
             this.buttonVolverAtras = new System.Windows.Forms.Button();
@@ -46,72 +45,59 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbNombreError = new System.Windows.Forms.PictureBox();
-            this.pbApellidoError = new System.Windows.Forms.PictureBox();
-            this.pbDNIError = new System.Windows.Forms.PictureBox();
-            this.pbEmailError = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDNI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbApellido)).BeginInit();
+            this.pbStockError = new System.Windows.Forms.PictureBox();
+            this.pbPrecioError = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNombreError)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbApellidoError)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDNIError)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmailError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStockError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrecioError)).BeginInit();
             this.SuspendLayout();
             // 
-            // cbPerfilUsuario
+            // cbCategoriaProducto
             // 
-            this.cbPerfilUsuario.FormattingEnabled = true;
-            this.cbPerfilUsuario.Items.AddRange(new object[] {
+            this.cbCategoriaProducto.FormattingEnabled = true;
+            this.cbCategoriaProducto.Items.AddRange(new object[] {
             "1 - Audio",
             "2 - Celulares",
             "3 - Electro Hogar",
             "4 - Informática",
             "5 - Smart TV"});
-            this.cbPerfilUsuario.Location = new System.Drawing.Point(117, 45);
-            this.cbPerfilUsuario.Name = "cbPerfilUsuario";
-            this.cbPerfilUsuario.Size = new System.Drawing.Size(94, 21);
-            this.cbPerfilUsuario.TabIndex = 121;
-            this.cbPerfilUsuario.SelectedIndexChanged += new System.EventHandler(this.cbPerfilUsuario_SelectedIndexChanged);
+            this.cbCategoriaProducto.Location = new System.Drawing.Point(117, 45);
+            this.cbCategoriaProducto.Name = "cbCategoriaProducto";
+            this.cbCategoriaProducto.Size = new System.Drawing.Size(94, 21);
+            this.cbCategoriaProducto.TabIndex = 121;
+            this.cbCategoriaProducto.SelectedIndexChanged += new System.EventHandler(this.cbCategoriaProducto_SelectedIndexChanged);
             // 
-            // pbEmail
+            // pbPrecio
             // 
-            this.pbEmail.Image = ((System.Drawing.Image)(resources.GetObject("pbEmail.Image")));
-            this.pbEmail.Location = new System.Drawing.Point(476, 49);
-            this.pbEmail.Name = "pbEmail";
-            this.pbEmail.Size = new System.Drawing.Size(19, 18);
-            this.pbEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbEmail.TabIndex = 108;
-            this.pbEmail.TabStop = false;
+            this.pbPrecio.Image = ((System.Drawing.Image)(resources.GetObject("pbPrecio.Image")));
+            this.pbPrecio.Location = new System.Drawing.Point(476, 50);
+            this.pbPrecio.Name = "pbPrecio";
+            this.pbPrecio.Size = new System.Drawing.Size(19, 17);
+            this.pbPrecio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPrecio.TabIndex = 108;
+            this.pbPrecio.TabStop = false;
             // 
-            // pbDNI
+            // pbStock
             // 
-            this.pbDNI.Image = ((System.Drawing.Image)(resources.GetObject("pbDNI.Image")));
-            this.pbDNI.Location = new System.Drawing.Point(476, 88);
-            this.pbDNI.Name = "pbDNI";
-            this.pbDNI.Size = new System.Drawing.Size(19, 17);
-            this.pbDNI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbDNI.TabIndex = 106;
-            this.pbDNI.TabStop = false;
-            // 
-            // pbApellido
-            // 
-            this.pbApellido.Image = ((System.Drawing.Image)(resources.GetObject("pbApellido.Image")));
-            this.pbApellido.Location = new System.Drawing.Point(222, 83);
-            this.pbApellido.Name = "pbApellido";
-            this.pbApellido.Size = new System.Drawing.Size(19, 18);
-            this.pbApellido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbApellido.TabIndex = 105;
-            this.pbApellido.TabStop = false;
+            this.pbStock.Image = ((System.Drawing.Image)(resources.GetObject("pbStock.Image")));
+            this.pbStock.Location = new System.Drawing.Point(476, 88);
+            this.pbStock.Name = "pbStock";
+            this.pbStock.Size = new System.Drawing.Size(19, 17);
+            this.pbStock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbStock.TabIndex = 106;
+            this.pbStock.TabStop = false;
             // 
             // pbNombre
             // 
             this.pbNombre.Image = ((System.Drawing.Image)(resources.GetObject("pbNombre.Image")));
-            this.pbNombre.Location = new System.Drawing.Point(222, 45);
+            this.pbNombre.Location = new System.Drawing.Point(222, 88);
             this.pbNombre.Name = "pbNombre";
             this.pbNombre.Size = new System.Drawing.Size(19, 17);
             this.pbNombre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbNombre.TabIndex = 104;
+            this.pbNombre.TabIndex = 105;
             this.pbNombre.TabStop = false;
             // 
             // lblVerificarContRegistrar
@@ -171,7 +157,8 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(94, 20);
             this.txtPrecio.TabIndex = 79;
-            this.txtPrecio.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
+            this.txtPrecio.KeyPress += txtPrecio_KeyPress;
             // 
             // lblPrecio
             // 
@@ -190,7 +177,8 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(94, 20);
             this.txtStock.TabIndex = 73;
-            this.txtStock.TextChanged += new System.EventHandler(this.txtCUIT_TextChanged);
+            this.txtStock.TextChanged += new System.EventHandler(this.txtStock_TextChanged);
+            this.txtStock.KeyPress += txtStock_KeyPress;
             // 
             // lblStock
             // 
@@ -209,7 +197,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(94, 20);
             this.txtNombre.TabIndex = 71;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblNombre
             // 
@@ -224,52 +212,41 @@
             // pbNombreError
             // 
             this.pbNombreError.Image = ((System.Drawing.Image)(resources.GetObject("pbNombreError.Image")));
-            this.pbNombreError.Location = new System.Drawing.Point(222, 45);
+            this.pbNombreError.Location = new System.Drawing.Point(222, 88);
             this.pbNombreError.Name = "pbNombreError";
             this.pbNombreError.Size = new System.Drawing.Size(19, 17);
             this.pbNombreError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbNombreError.TabIndex = 111;
             this.pbNombreError.TabStop = false;
             // 
-            // pbApellidoError
+            // pbStockError
             // 
-            this.pbApellidoError.Image = ((System.Drawing.Image)(resources.GetObject("pbApellidoError.Image")));
-            this.pbApellidoError.Location = new System.Drawing.Point(222, 84);
-            this.pbApellidoError.Name = "pbApellidoError";
-            this.pbApellidoError.Size = new System.Drawing.Size(19, 17);
-            this.pbApellidoError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbApellidoError.TabIndex = 112;
-            this.pbApellidoError.TabStop = false;
+            this.pbStockError.Image = ((System.Drawing.Image)(resources.GetObject("pbStockError.Image")));
+            this.pbStockError.Location = new System.Drawing.Point(476, 88);
+            this.pbStockError.Name = "pbStockError";
+            this.pbStockError.Size = new System.Drawing.Size(19, 17);
+            this.pbStockError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbStockError.TabIndex = 113;
+            this.pbStockError.TabStop = false;
             // 
-            // pbDNIError
+            // pbPrecioError
             // 
-            this.pbDNIError.Image = ((System.Drawing.Image)(resources.GetObject("pbDNIError.Image")));
-            this.pbDNIError.Location = new System.Drawing.Point(476, 88);
-            this.pbDNIError.Name = "pbDNIError";
-            this.pbDNIError.Size = new System.Drawing.Size(19, 17);
-            this.pbDNIError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbDNIError.TabIndex = 113;
-            this.pbDNIError.TabStop = false;
-            // 
-            // pbEmailError
-            // 
-            this.pbEmailError.Image = ((System.Drawing.Image)(resources.GetObject("pbEmailError.Image")));
-            this.pbEmailError.Location = new System.Drawing.Point(476, 50);
-            this.pbEmailError.Name = "pbEmailError";
-            this.pbEmailError.Size = new System.Drawing.Size(19, 17);
-            this.pbEmailError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbEmailError.TabIndex = 115;
-            this.pbEmailError.TabStop = false;
+            this.pbPrecioError.Image = ((System.Drawing.Image)(resources.GetObject("pbPrecioError.Image")));
+            this.pbPrecioError.Location = new System.Drawing.Point(476, 50);
+            this.pbPrecioError.Name = "pbPrecioError";
+            this.pbPrecioError.Size = new System.Drawing.Size(19, 17);
+            this.pbPrecioError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPrecioError.TabIndex = 115;
+            this.pbPrecioError.TabStop = false;
             // 
             // FormNuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 271);
-            this.Controls.Add(this.cbPerfilUsuario);
-            this.Controls.Add(this.pbEmail);
-            this.Controls.Add(this.pbDNI);
-            this.Controls.Add(this.pbApellido);
+            this.Controls.Add(this.cbCategoriaProducto);
+            this.Controls.Add(this.pbPrecio);
+            this.Controls.Add(this.pbStock);
             this.Controls.Add(this.pbNombre);
             this.Controls.Add(this.lblVerificarContRegistrar);
             this.Controls.Add(this.buttonVolverAtras);
@@ -283,20 +260,17 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pbNombreError);
-            this.Controls.Add(this.pbApellidoError);
-            this.Controls.Add(this.pbDNIError);
-            this.Controls.Add(this.pbEmailError);
+            this.Controls.Add(this.pbStockError);
+            this.Controls.Add(this.pbPrecioError);
             this.Name = "FormNuevoProducto";
             this.Text = "Agregar Producto";
             this.Load += new System.EventHandler(this.FormNuevoProveedor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDNI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbApellido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNombreError)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbApellidoError)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDNIError)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmailError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStockError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrecioError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,10 +278,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cbPerfilUsuario;
-        private System.Windows.Forms.PictureBox pbEmail;
-        private System.Windows.Forms.PictureBox pbDNI;
-        private System.Windows.Forms.PictureBox pbApellido;
+        private System.Windows.Forms.ComboBox cbCategoriaProducto;
+        private System.Windows.Forms.PictureBox pbPrecio;
+        private System.Windows.Forms.PictureBox pbStock;
         private System.Windows.Forms.PictureBox pbNombre;
         private System.Windows.Forms.Label lblVerificarContRegistrar;
         private System.Windows.Forms.Button buttonVolverAtras;
@@ -321,8 +294,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.PictureBox pbNombreError;
-        private System.Windows.Forms.PictureBox pbApellidoError;
-        private System.Windows.Forms.PictureBox pbDNIError;
-        private System.Windows.Forms.PictureBox pbEmailError;
+        private System.Windows.Forms.PictureBox pbStockError;
+        private System.Windows.Forms.PictureBox pbPrecioError;
     }
 }

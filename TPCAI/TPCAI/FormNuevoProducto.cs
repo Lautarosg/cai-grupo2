@@ -11,12 +11,15 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TPCAI
 {
     public partial class FormNuevoProducto : Form
     {
         ValidadorUtil validadorUtil = new ValidadorUtil();
+
+        private int numeroSeleccionado;
         public FormNuevoProducto()
         {
             InitializeComponent();
@@ -35,21 +38,23 @@ namespace TPCAI
         private void buttonVolverAtras_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormAdminProveedor formProveedor = new FormAdminProveedor();
-            formProveedor.ShowDialog();
+            FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
+            formMenuAdmin.ShowDialog();
         }
 
         private void btnConfirmarProducto_Click(object sender, EventArgs e)
         {
             {
-                String idAdmin = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
-                string nombre = ValidadorUsuario.ValidarNombre(txtNombre.Text);
-                
-
+                String idUsuario = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
+                String nombre = ValidadorUsuario.ValidarNombre(txtNombre.Text);
+                int categoria = numeroSeleccionado;
+                String idProveedor = "";
+                double precio = Convert.ToDouble(txtPrecio.Text);
+                int stock = Convert.ToInt32(txtStock.Text);
 
                 //VALIDACION DE DATOS DEL USER
                 //Uso un contador de errores para mostrar en pantalla en caso de que haya
-                string errores = "";
+                String errores = "";
 
                 errores += ValidadorUsuario.ValidarNombre(nombre);               
                 
@@ -60,18 +65,18 @@ namespace TPCAI
                 }
                 else
                 {
-                   /* //creo el nuevo producto 
-                    ProductoPostRequest SwaggerProducto = new ProductoPostRequest(idAdmin, nombre);
+                    //creo el nuevo producto 
+                    ProductoPostRequest SwaggerProducto = new ProductoPostRequest(categoria, idUsuario, idProveedor, nombre, precio, stock);
                     NegocioProducto negocioProducto = new NegocioProducto();
                     negocioProducto.AgregarProducto(SwaggerProducto);
-                    */
-                    var result = MessageBox.Show("Producto Creado Exitosamente.\n Porfavor, haga click en OK para volver al menú", "Confirmación", MessageBoxButtons.OK);
+                    
+                    var result = MessageBox.Show("Producto Creado Exitosamente.\n Por favor, haga click en OK para volver al menú", "Confirmación", MessageBoxButtons.OK);
 
                     if (result == DialogResult.OK) //si el user hace click en OK, vuelve al menú 
                     {
                         this.Hide();
-                        FormAdminProveedor formAdminProveedor = new FormAdminProveedor();
-                        formAdminProveedor.ShowDialog();
+                        FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
+                        formMenuAdmin.ShowDialog();
                     }
 
 
@@ -80,23 +85,47 @@ namespace TPCAI
 
         }
 
-        private void txtApellido_TextChanged(object sender, EventArgs e)
+        private void txtNombre_TextChanged(object sender, EventArgs e)
         {
             validadorUtil.ValidarInfoButton(txtNombre.Text.ToLower(), ValidadorUsuario.ValidarNombre(txtNombre.Text), pbNombreError, pbNombre);
         }
-        private void txtNombre_TextChanged(object sender, EventArgs e)
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
-            validadorUtil.ValidarInfoButton(txtNombre.Text.ToLower(), ValidadorUsuario.ValidarApellido(txtNombre.Text), pbApellidoError, pbApellido);
+            validadorUtil.ValidarInfoButton(txtPrecio.Text.ToLower(), ValidadorUsuario.ValidarEmail(txtPrecio.Text), pbPrecioError, pbPrecio);
         }
 
-        private void txtEmail_TextChanged(object sender, EventArgs e)
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validadorUtil.ValidarInfoButton(txtPrecio.Text.ToLower(), ValidadorUsuario.ValidarEmail(txtPrecio.Text), pbEmailError, pbEmail);
+            System.Windows.Forms.TextBox textBox = sender as System.Windows.Forms.TextBox;
+            // Verificar si la tecla presionada es un número, un punto o una tecla de control como la tecla de retroceso
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true; // Cancelar el evento KeyPress
+            }
+
+            // Permitir sólo un punto decimal y asegurarse de que no sea el primer carácter
+            if (e.KeyChar == '.')
+            {
+                if (textBox.Text.IndexOf('.') > -1 || textBox.SelectionStart == 0)
+                {
+                    e.Handled = true; // Cancelar el evento KeyPress
+                }
+            }
+        }
+        
+        private void txtStock_TextChanged(object sender, EventArgs e)
+        {
+            validadorUtil.ValidarInfoButton(txtStock.Text.ToLower(), ValidadorUsuario.ValidarCUIT(txtStock.Text), pbStockError, pbStock);
         }
 
-        private void txtCUIT_TextChanged(object sender, EventArgs e)
+        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validadorUtil.ValidarInfoButton(txtStock.Text.ToLower(), ValidadorUsuario.ValidarCUIT(txtStock.Text), pbDNIError, pbDNI);
+            // Verificar si la tecla presionada es un número o una tecla de control como la tecla de retroceso
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Cancelar el evento KeyPress
+            }              
         }
 
         Dictionary<string, int> opciones = new Dictionary<string, int>
@@ -108,9 +137,9 @@ namespace TPCAI
             {"Smart TV", 5}
         };
 
-        private void cbPerfilUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbCategoriaProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ComboBox comboBox = sender as ComboBox;
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
 
             if (comboBox != null)
             {
@@ -120,9 +149,11 @@ namespace TPCAI
                 // Si la opción seleccionada está en el diccionario, obtenemos el número asociado
                 if (opciones.ContainsKey(opcionSeleccionada))
                 {
-                    int numeroSeleccionado = opciones[opcionSeleccionada];                
+                    numeroSeleccionado = opciones[opcionSeleccionada];               
                 }
             }
         }
+
+       
     }
 }

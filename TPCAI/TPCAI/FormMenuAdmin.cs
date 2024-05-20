@@ -50,5 +50,19 @@ namespace TPCAI
             FormNuevoProducto formNuevoProducto = new FormNuevoProducto();
             formNuevoProducto.ShowDialog();
         }
+
+        private void buttonStockCritico_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormVerStockCritico formVerStockCritico = new FormVerStockCritico();
+            formVerStockCritico.ShowDialog();
+        }
+
+        private void buttonVtaProv_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormVentasPorVendedor formVentasPorVendedor = new FormVentasPorVendedor();
+            formVentasPorVendedor.ShowDialog();
+        }
     }
 }

@@ -44,9 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControladorCliente.cs" />
     <Compile Include="ControladorProducto.cs" />
     <Compile Include="ControladorProveedor.cs" />
     <Compile Include="ControladorUsuario.cs" />
+    <Compile Include="ControladorVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\WebHelper.cs" />
   </ItemGroup>
