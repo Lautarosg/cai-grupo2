@@ -172,3 +172,8 @@ C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Persistencia.dll
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Persistencia.pdb
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Persistencia.dll.config
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Persistencia.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Persistencia.pdb
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Persistencia.dll.config
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Debug\Newtonsoft.Json.xml
