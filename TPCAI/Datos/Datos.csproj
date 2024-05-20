@@ -87,6 +87,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteDTO.cs" />
+    <Compile Include="ClientePostRequest.cs" />
     <Compile Include="ProductoDTO.cs" />
     <Compile Include="ProductoPostRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
