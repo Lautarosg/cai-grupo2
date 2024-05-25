@@ -272,3 +272,36 @@ C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\TPCAI\obj\Debug\TPCAI.exe
 C:\Users\Myrna\Desktop\CAI 2024\nuevo 20\TPCAI\TPCAI\obj\Debug\TPCAI.pdb
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormVentasPorVendedor.resources
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormVerStockCritico.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.AssemblyReference.cache
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.FormAdminProveedor.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.FormAdminUsuario.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.FormInicio.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuAdmin.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuSupervisor.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuVendedor.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoProveedor.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoUsuario.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoProducto.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.FormProductoMasVendidoCategoria.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.FormVentasPorVendedor.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.FormVerStockCritico.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.Properties.Resources.resources
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.GenerateResource.cache
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.CoreCompileInputs.cache
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.exe
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\TPCAI.exe.config
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\TPCAI.exe
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\TPCAI.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Datos.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Negocio.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Persistencia.dll
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Datos.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Datos.dll.config
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Negocio.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Negocio.dll.config
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Persistencia.pdb
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Persistencia.dll.config
+C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.CopyComplete

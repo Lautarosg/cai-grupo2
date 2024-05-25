@@ -70,7 +70,7 @@ namespace TPCAI
                     }
                 }
             }
-            MessageBox.Show($"El cliente de más ventas realizó es {nombreClienteMasVentas} {apellidoClienteMasVentas} con {maxVentas} ventas");
+            MessageBox.Show($"El cliente que más ventas realizó es {nombreClienteMasVentas} {apellidoClienteMasVentas} con {maxVentas} ventas");
         }
 
 

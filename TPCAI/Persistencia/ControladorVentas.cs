@@ -34,5 +34,27 @@ namespace Persistencia
             return content;
         }
 
+        public static string ListarVentas()
+        {
+            string path = "/api/Venta/GetVenta";
+
+            string content = "";
+            HttpResponseMessage response = WebHelper.Get(path);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Verifique los datos ingresados");
+            }
+            else
+            {
+                content = response.Content.ReadAsStringAsync().Result;
+            }
+            return content;
+
+
+            
+        }
+
+       
+
     }
 }

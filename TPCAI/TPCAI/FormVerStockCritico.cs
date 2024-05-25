@@ -21,70 +21,41 @@ namespace TPCAI
         public FormVerStockCritico()
         {
             InitializeComponent();
-
-
-        }
-
-        private void FormVerStockCritico_Load(object sender, EventArgs e)
-        {
-            List<ProductoDTO> productos = negocioProducto.ListaProductos();
-
-            //listaStockCritico.DataSource = productos;
-
-            foreach (ProductoDTO producto in productos)
-            {
-                string datosProducto = $"Stock: {producto.Stock} - Nombre: {producto.Nombre} - Categoría: {producto.IdCategoria}";
-                listaStockCritico.Items.Add(datosProducto);
-            }
+            StockCritico();
 
         }
 
-        //Boton volver atras
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
-            formMenuAdmin.ShowDialog();
-        }
 
-              
-       private void buttonVerStockCritico_Click(object sender, EventArgs e)
+        private void StockCritico()
         {
-            
-            //devuelve una lista de todos los productos criticos
-            //ordenados con su categoria, y dato de su nombre
+            // Devuelve una lista de todos los productos críticos
+            // ordenados con su categoría y dato de su nombre
             Dictionary<int, List<(string Nombre, int Stock)>> productosAgrupados = new Dictionary<int, List<(string, int)>>();
-            int productosConStrockCritico = 0; //inicializo
 
-            List<JToken> listaProductosConStrockCritico = new List<JToken>();
+            string listaproductos = NegocioProducto.GetProductos();//traigo todos los productos
+            JArray arrayproductos = JArray.Parse(listaproductos);
 
-            int StockMaximo = 10;
+            int StockMaximo = 10; // Máximo supuesto para comparar
 
-            if (productosConStrockCritico > 0)
+            if (arrayproductos.Count > 0)
             {
-                //productosConStrockCritico = listaProductosConStrockCritico.Count; //inicializo la var con tamaño de la lista
-
-                //recorrer prodructos y agregarlos en productosAgrupados
-                foreach (JToken producto in listaProductosConStrockCritico)
+                // Recorrer productos y agregarlos en productosAgrupados
+                foreach (JObject producto in arrayproductos)
                 {
                     string nombreProducto = producto["nombre"].Value<string>();
                     int idCategoria = producto["idCategoria"].Value<int>();
-                    int stock = NegocioProducto.VerStock(nombreProducto);
+                    int stock = producto["stock"].Value<int>(); // Corregido aquí
 
                     if (!productosAgrupados.ContainsKey(idCategoria))
                     {
                         productosAgrupados[idCategoria] = new List<(string, int)>();
                     }
 
-                    //agrupo segun key categoria
+                    // Agrupo según key categoría
                     productosAgrupados[idCategoria].Add((nombreProducto, stock));
                 }
 
-                // Filtrar los productos con stock menor al 25% 
-                //Stock < (0.25 * p.Stock)
-                //pending
-
-
+                // Filtrar los productos con stock menor al 25%
                 foreach (var categoriaProductos in productosAgrupados)
                 {
                     int idCategoria = categoriaProductos.Key;
@@ -93,7 +64,7 @@ namespace TPCAI
                     foreach (var producto in categoriaProductos.Value)
                     {
                         // Filtrar los productos con stock menor al 25%
-                        if (producto.Stock < 0.25 * StockMaximo) // comparo contra el maximo supuesto
+                        if (producto.Stock < 0.25 * StockMaximo) // Comparo contra el máximo supuesto
                         {
                             mensaje += $"  Nombre: {producto.Nombre}, Stock: {producto.Stock}\n";
 
@@ -105,12 +76,27 @@ namespace TPCAI
                     mensaje += "\n";
                     MessageBox.Show(mensaje);
                 }
-
             }
             else
             {
                 MessageBox.Show("No hay productos con stock crítico");
             }
+        }
+
+
+
+        //Boton volver atras
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
+            formMenuAdmin.ShowDialog();
+        }
+
+
+        private void buttonVerStockCritico_Click(object sender, EventArgs e)
+        {
+              
 
         }
 
@@ -119,6 +105,19 @@ namespace TPCAI
             
         }
 
-        
+        private void FormVerStockCritico_Load(object sender, EventArgs e)
+        {
+            /*List<ProductoDTO> productos = negocioProducto.ListaProductos();
+
+            //listaStockCritico.DataSource = productos;
+
+            foreach (ProductoDTO producto in productos)
+            {
+                string datosProducto = $"Stock: {producto.Stock} - Nombre: {producto.Nombre} - Categoría: {producto.IdCategoria}";
+                listaStockCritico.Items.Add(datosProducto);
+            }*/
+
+        }
+
     }
 }

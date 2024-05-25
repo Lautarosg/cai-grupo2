@@ -149,6 +149,7 @@
             this.buttonMasVendido.TabIndex = 30;
             this.buttonMasVendido.Text = "Más Vendido";
             this.buttonMasVendido.UseVisualStyleBackColor = true;
+            this.buttonMasVendido.Click += new System.EventHandler(this.buttonMasVendido_Click);
             // 
             // buttonStockCritico
             // 

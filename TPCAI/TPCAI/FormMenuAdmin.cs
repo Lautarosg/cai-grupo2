@@ -64,5 +64,12 @@ namespace TPCAI
             FormVentasPorVendedor formVentasPorVendedor = new FormVentasPorVendedor();
             formVentasPorVendedor.ShowDialog();
         }
+
+        private void buttonMasVendido_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormProductoMasVendidoCategoria formProductoMasVendidoCategoria = new FormProductoMasVendidoCategoria();
+            formProductoMasVendidoCategoria.ShowDialog();
+        }
     }
 }

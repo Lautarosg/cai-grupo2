@@ -16,7 +16,7 @@ namespace TPCAI
     }
     public class ProductoDTO
     {
-        private Guid Id { get; set; }
+        public Guid Id { get; set; }
         public Guid IdCategoria { get; set; }
         public string Nombre { get; set; }
         private DateTime FechaAlta { get; set; }

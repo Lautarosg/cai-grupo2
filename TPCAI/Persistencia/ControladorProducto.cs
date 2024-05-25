@@ -46,7 +46,7 @@ namespace Persistencia
         }
 
         //Lista todos los productos en el swagger TraerProductos
-        public List<ProductoDTO> ListaTodosProductos(string idAdmin)
+        public static List<ProductoDTO> ListaTodosProductos()
         {
             string path = "/api/Producto/TraerProductos";
             List<ProductoDTO> producto = new List<ProductoDTO>();
@@ -75,10 +75,11 @@ namespace Persistencia
         }
 
 
+       
 
 
-        //metodo para ver el stock critico - Estoy viendo porque no lista aun
 
+        //Lista todos los productos en el swagger TraerProductos, pero devuelve un string, usado en calculo de producto con mayor cantidad de ventas
         public static string ListaProductos()
         {
             // Trae todos los productos

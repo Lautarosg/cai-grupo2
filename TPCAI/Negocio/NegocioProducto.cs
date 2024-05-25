@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Newtonsoft.Json.Linq;
 using Persistencia;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace Negocio
     public class NegocioProducto
     {
         private ControladorProducto controladorProducto = new ControladorProducto();
-        private String idAdmin = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
+        private static String idAdmin = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
 
         
 
@@ -29,11 +30,17 @@ namespace Negocio
         public static int VerStock(string nombreProducto) => ControladorProducto.VerStock(nombreProducto);
 
         //cargo todos los productos en lista, para saber si conecta el swagger
-        public List<ProductoDTO> ListaProductos()
+        /*public static List<ProductoDTO> ListaProductos()
         {
-            List<ProductoDTO> productos = controladorProducto.ListaTodosProductos(idAdmin);
-            return productos;
+            return ControladorProducto.ListaTodosProductos();
+        }*/
+
+        public static string GetProductos()
+        {
+            return ControladorProducto.ListaProductos();
         }
+
+
 
     }
 
