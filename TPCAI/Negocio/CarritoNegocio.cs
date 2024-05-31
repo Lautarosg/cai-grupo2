@@ -63,14 +63,14 @@ namespace Negocio
             List<ProductoDTO> procutos = new List<ProductoDTO>();
             procutos = Persistencia.ControladorProducto.ListaTodosProductos();
 
-            ShoppingCart cart = new ShoppingCart();
+            ShoppingCart carrito = new ShoppingCart();
 
             // Example operations
-            cart.AgregarProductoCarro(procutos[0], 1); 
-            cart.VerCarro();                 
-            cart.TotalPrecioCarro();                
-            cart.SacarProductoCarro(procutos[0].Id); 
-            cart.VerCarro();                 
+            carrito.AgregarProductoCarro(procutos[0], 1); 
+            carrito.VerCarro();                 
+            carrito.TotalPrecioCarro();                
+            carrito.SacarProductoCarro(procutos[0].Id); 
+            carrito.VerCarro();                 
         }
     }
 
