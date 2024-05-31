@@ -165,7 +165,7 @@ namespace TPCAI
             return CUIT;
         }
 
-        public bool ValidarPrecio(double precio)
+        public bool ValidarPrecio(int precio)
         {
             // Verificar que el precio sea mayor a 0
             if (precio <= 0)

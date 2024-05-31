@@ -70,28 +70,10 @@ C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Negocio.pdb
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.Up2Date
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Datos.dll
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Negocio.dll
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Text.Json.dll
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Memory.dll
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.ValueTuple.dll
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Text.Encodings.Web.dll
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Buffers.dll
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Datos.pdb
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Datos.dll.config
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Negocio.pdb
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Negocio.dll.config
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Text.Json.xml
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Memory.xml
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.ValueTuple.xml
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Text.Encodings.Web.xml
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Buffers.xml
-C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.Up2Date
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuAdmin.resources
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormMenuSupervisor.resources
@@ -305,3 +287,15 @@ C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Newtonsoft.Json.xm
 C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Persistencia.pdb
 C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\bin\Debug\Persistencia.dll.config
 C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\TPCAI\obj\Debug\TPCAI.csproj.CopyComplete
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Persistencia.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Persistencia.pdb
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\bin\Debug\Persistencia.dll.config
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormAdminProveedor.resources
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormAdminUsuario.resources
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoProveedor.resources
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoProducto.resources
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormProductoMasVendidoCategoria.resources
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormVentasPorVendedor.resources
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormVerStockCritico.resources

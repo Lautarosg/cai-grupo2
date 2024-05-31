@@ -49,7 +49,7 @@ namespace TPCAI
                 String nombre = ValidadorUsuario.ValidarNombre(txtNombre.Text);
                 int categoria = numeroSeleccionado;
                 String idProveedor = "";
-                double precio = Convert.ToDouble(txtPrecio.Text);
+                int precio = Convert.ToInt32(txtPrecio.Text);
                 int stock = Convert.ToInt32(txtStock.Text);
 
                 //VALIDACION DE DATOS DEL USER
