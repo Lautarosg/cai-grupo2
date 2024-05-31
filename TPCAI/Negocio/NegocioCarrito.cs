@@ -9,8 +9,10 @@ using TPCAI;
 namespace Negocio
 {
 
-    class ShoppingCart
+    class NegocioCarrito
     {
+        private ControladorVentas controladorVentas = new ControladorVentas();
+
         private List<(ProductoDTO ProductoDTO, int quantity)> items = new List<(ProductoDTO ProductoDTO, int quantity)>();
 
         public void AgregarProductoCarro(ProductoDTO ProductoDTO, int Cantidad)
@@ -42,7 +44,7 @@ namespace Negocio
         {
             foreach (var (ProductoDTO, quantity) in items)
             {
-                Console.WriteLine($"{ProductoDTO.Nombre} - Quantity: {quantity} - Price per unit: {ProductoDTO.Precio}");
+                Console.WriteLine($"{ProductoDTO.Nombre} - Cantidad: {quantity} - Precio: {ProductoDTO.Precio}");
                 
             }
 
@@ -51,11 +53,32 @@ namespace Negocio
         public decimal TotalPrecioCarro()
         {
             decimal total = items.Sum(item => item.ProductoDTO.Precio * item.quantity);
-            Console.WriteLine($"Total price: {total}");
             return total;
         }
-    }
+        public bool ejecutarCompra(Guid idCliente, Guid idAdmin, Guid idProducto, int Cantidad)
+        {
 
+            try
+            {
+                foreach (var item in items)
+                {
+                   if( controladorVentas.AgregarVenta( idCliente,  idAdmin,  idProducto, Cantidad)==!true)
+                    {
+                        throw new Exception("somthing where howwibly wrong whit the stocking systems comunicate whit help desk for help hours 9-16 workweak");
+
+                    }
+
+
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+    }
+    /* ejemplo implentacion de metodos 
     class Program
     {
         static void Main()
@@ -73,5 +96,6 @@ namespace Negocio
             carrito.VerCarro();                 
         }
     }
+    */
 
 }

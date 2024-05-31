@@ -53,8 +53,32 @@ namespace Persistencia
 
             
         }
+        public bool AgregarVenta(Guid idCliente, Guid idAdmin,Guid idProducto, int Cantidad)
+        {
+            String path = "/api/Venta/AgregarVenta";
 
-       
+            Dictionary<String, String> map = new Dictionary<String, String>();
+            map.Add("idCliente", idCliente.ToString());
+            map.Add("idUsuario", idAdmin.ToString());
+            map.Add("idProducto", idProducto.ToString());
+            map.Add("cantidad", Cantidad.ToString());
+
+
+            var jsonRequest = JsonConvert.SerializeObject(map);
+
+            HttpResponseMessage response = WebHelper.DeleteWithBody(path, jsonRequest);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return false;
+                throw new Exception("Algo salio mal.");
+            }
+            else
+            {
+                return true;
+               
+            }
+        }
 
     }
 }

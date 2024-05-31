@@ -26,6 +26,9 @@ namespace Negocio
         {
             return ControladorVentas.ListarVentas();
         }
-
+        public bool AgregarVenta(Guid idCliente, Guid idUsuario, Guid idProducto,int cantidad )
+        {
+            return controladorVentas.AgregarVenta( idCliente,  idUsuario,  idProducto,  cantidad);
+        }
     }
 }
