@@ -71,5 +71,15 @@ namespace TPCAI
             FormProductoMasVendidoCategoria formProductoMasVendidoCategoria = new FormProductoMasVendidoCategoria();
             formProductoMasVendidoCategoria.ShowDialog();
         }
+
+        private void buttonAltaVend_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonModProd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -73,6 +73,9 @@ namespace TPCAI
             MessageBox.Show($"El cliente que más ventas realizó es {nombreClienteMasVentas} {apellidoClienteMasVentas} con {maxVentas} ventas");
         }
 
+        private void listVentasPorVendedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -42,20 +42,20 @@
             // 
             // btnAltaProveedor
             // 
-            this.btnAltaProveedor.Location = new System.Drawing.Point(530, 27);
+            this.btnAltaProveedor.Location = new System.Drawing.Point(544, 36);
             this.btnAltaProveedor.Name = "btnAltaProveedor";
-            this.btnAltaProveedor.Size = new System.Drawing.Size(135, 42);
+            this.btnAltaProveedor.Size = new System.Drawing.Size(120, 44);
             this.btnAltaProveedor.TabIndex = 23;
-            this.btnAltaProveedor.Text = "Agregar Usuario";
+            this.btnAltaProveedor.Text = "Agregar Proveedor";
             this.btnAltaProveedor.UseVisualStyleBackColor = true;
             this.btnAltaProveedor.Click += new System.EventHandler(this.btnAltaProveedor_Click);
             // 
             // dgvListaProveedores
             // 
             this.dgvListaProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaProveedores.Location = new System.Drawing.Point(69, 102);
+            this.dgvListaProveedores.Location = new System.Drawing.Point(177, 100);
             this.dgvListaProveedores.Name = "dgvListaProveedores";
-            this.dgvListaProveedores.Size = new System.Drawing.Size(516, 187);
+            this.dgvListaProveedores.Size = new System.Drawing.Size(348, 187);
             this.dgvListaProveedores.TabIndex = 22;
             this.dgvListaProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaProveedores_CellClick);
             this.dgvListaProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaProveedores_CellContentClick);
@@ -70,7 +70,7 @@
             // 
             // btnBuscarProveedor
             // 
-            this.btnBuscarProveedor.Location = new System.Drawing.Point(191, 54);
+            this.btnBuscarProveedor.Location = new System.Drawing.Point(205, 50);
             this.btnBuscarProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarProveedor.Name = "btnBuscarProveedor";
             this.btnBuscarProveedor.Size = new System.Drawing.Size(70, 30);
@@ -90,10 +90,10 @@
             // 
             // btnConfirmarBaja
             // 
-            this.btnConfirmarBaja.Location = new System.Drawing.Point(203, 320);
+            this.btnConfirmarBaja.Location = new System.Drawing.Point(205, 327);
             this.btnConfirmarBaja.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmarBaja.Name = "btnConfirmarBaja";
-            this.btnConfirmarBaja.Size = new System.Drawing.Size(107, 35);
+            this.btnConfirmarBaja.Size = new System.Drawing.Size(70, 28);
             this.btnConfirmarBaja.TabIndex = 18;
             this.btnConfirmarBaja.Text = "Eliminar";
             this.btnConfirmarBaja.UseVisualStyleBackColor = true;
@@ -101,13 +101,14 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(558, 327);
+            this.btnVolver.Location = new System.Drawing.Point(545, 311);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(107, 35);
+            this.btnVolver.Size = new System.Drawing.Size(120, 44);
             this.btnVolver.TabIndex = 17;
             this.btnVolver.Text = "Volver Atrás";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // txtSelProveedor
             // 
@@ -123,9 +124,10 @@
             this.lblSelProveedor.Location = new System.Drawing.Point(12, 311);
             this.lblSelProveedor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSelProveedor.Name = "lblSelProveedor";
-            this.lblSelProveedor.Size = new System.Drawing.Size(112, 13);
+            this.lblSelProveedor.Size = new System.Drawing.Size(125, 13);
             this.lblSelProveedor.TabIndex = 15;
-            this.lblSelProveedor.Text = "Usuario seleccionado:";
+            this.lblSelProveedor.Text = "Proveedor seleccionado:";
+            this.lblSelProveedor.Click += new System.EventHandler(this.lblSelProveedor_Click);
             // 
             // FormAdminProveedor
             // 

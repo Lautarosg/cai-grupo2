@@ -70,5 +70,17 @@ namespace TPCAI
             ProveedorDTO proveedorSeleccionado = (ProveedorDTO)dgvListaProveedores.Rows[dgvListaProveedores.CurrentCell.RowIndex].DataBoundItem;
             txtSelProveedor.Text = proveedorSeleccionado.Apellido + ", " + proveedorSeleccionado.Nombre;
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
+            formMenuAdmin.ShowDialog();
+        }
+
+        private void lblSelProveedor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
