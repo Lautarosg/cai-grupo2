@@ -82,5 +82,10 @@ namespace TPCAI
         {
 
         }
+
+        private void listProdMasVendidoCateg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

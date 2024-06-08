@@ -20,5 +20,16 @@ namespace Negocio
             return ControladorCliente.ObtenerClientes();
         }
 
+        public static async Task AgregarCliente(ClienteDTO cliente)
+        {
+            await ControladorCliente.AgregarCliente(cliente);
+        }
+
+        /*
+        public static async Task ModificarCliente(Guid id, string direccion, string telefono, string email)
+        {
+            await ControladorCliente.ModificarCliente(id, direccion, telefono, email);
+        }
+        */
     }
 }

@@ -35,5 +35,36 @@ namespace Persistencia
             return content;
         }
 
+        public static async Task AgregarCliente(ClienteDTO cliente)
+        {
+            string path = "/api/Cliente/AgregarCliente";
+            string json = JsonConvert.SerializeObject(cliente);
+
+            HttpResponseMessage response = await Task.Run(() => WebHelper.Post(path, json));
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Error al agregar el cliente: " + response.ReasonPhrase);
+            }
+        }
+
+        /*public static async Task ModificarCliente(Guid id, string direccion, string telefono, string email)
+        {
+            string path = $"/api/Cliente/PatchCliente";
+            var patchData = new
+            {
+                id = id.ToString(),
+                direccion = direccion,
+                telefono = telefono,
+                email = email
+            };
+            string json = JsonConvert.SerializeObject(patchData);
+
+            HttpResponseMessage response = await Task.Run(() => WebHelper.Patch(path, json));
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Error al modificar el cliente: " + response.ReasonPhrase);
+            }
+        }
+        */
     }
 }

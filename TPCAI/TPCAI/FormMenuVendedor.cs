@@ -16,5 +16,10 @@ namespace TPCAI
         {
             InitializeComponent();
         }
+
+        private void FormMenuVendedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
