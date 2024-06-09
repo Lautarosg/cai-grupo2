@@ -29,6 +29,7 @@
             this.labelQuantity = new System.Windows.Forms.Label();
             this.buttonRemoveFromCart = new System.Windows.Forms.Button();
             this.buttonViewCart = new System.Windows.Forms.Button();
+            this.buttonExecutePurchase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,18 +99,29 @@
             // 
             // buttonViewCart
             // 
-            this.buttonViewCart.Location = new System.Drawing.Point(248, 272);
+            this.buttonViewCart.Location = new System.Drawing.Point(150, 272);
             this.buttonViewCart.Name = "buttonViewCart";
-            this.buttonViewCart.Size = new System.Drawing.Size(75, 23);
+            this.buttonViewCart.Size = new System.Drawing.Size(200, 23);
             this.buttonViewCart.TabIndex = 6;
             this.buttonViewCart.Text = "ver carro";
             this.buttonViewCart.UseVisualStyleBackColor = true;
             this.buttonViewCart.Click += new System.EventHandler(this.buttonViewCart_Click);
+            // 
+            // buttonExecutePurchase
+            // 
+            this.buttonExecutePurchase.Location = new System.Drawing.Point(150, 325);
+            this.buttonExecutePurchase.Name = "buttonExecutePurchase";
+            this.buttonExecutePurchase.Size = new System.Drawing.Size(200, 23);
+            this.buttonExecutePurchase.TabIndex = 7;
+            this.buttonExecutePurchase.Text = "comprar";
+            this.buttonExecutePurchase.UseVisualStyleBackColor = true;
+            this.buttonExecutePurchase.Click += new System.EventHandler(this.buttonExecutePurchase_Click);
 
             // 
             // FormVentasCarrito
             // 
-            this.ClientSize = new System.Drawing.Size(393, 368);
+            this.ClientSize = new System.Drawing.Size(406, 379);
+            this.Controls.Add(this.buttonExecutePurchase);
             this.Controls.Add(this.buttonViewCart);
             this.Controls.Add(this.buttonRemoveFromCart);
             this.Controls.Add(this.labelProvedores);
@@ -123,8 +135,12 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+
         }
 
         private System.Windows.Forms.Button buttonViewCart;
+        private System.Windows.Forms.Button buttonExecutePurchase;
+
+
     }
 }

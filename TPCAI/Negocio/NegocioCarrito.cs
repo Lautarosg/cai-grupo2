@@ -80,17 +80,17 @@ namespace Negocio
             decimal totalTrunk = (decimal)truncatedTotal;
             return totalTrunk;
         }
-        public bool ejecutarCompra(Guid idCliente, Guid idAdmin, Guid idProducto, int Cantidad)
+        public bool ejecutarCompra(Guid idCliente, Guid idusuario)
         {
 
             try
             {
                 foreach (var item in items)
                 {
-                   if( controladorVentas.AgregarVenta( idCliente,  idAdmin,  idProducto, Cantidad)==!true)
+                   if( controladorVentas.AgregarVenta( idCliente, idusuario,  item.ProductoDTO.Id, item.quantity)==!true)
                     {
                         throw new Exception("somthing where howwibly wrong whit the stocking systems comunicate whit help desk for help hours 9-16 workweak");
-
+                        
                     }
 
 

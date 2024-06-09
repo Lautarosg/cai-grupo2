@@ -73,6 +73,45 @@ namespace TPCAI
             MessageBox.Show(cartContent, "Cart Content", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void buttonExecutePurchase_Click(object sender, EventArgs e)
+        {
+            // Prompt for IdCliente
+            using (var inputBox = new InputBoxForm("Enter IdCliente:"))
+            {
+                if (inputBox.ShowDialog() == DialogResult.OK)
+                {
+                    if (!Guid.TryParse(inputBox.InputText, out Guid idCliente))
+                    {
+                        MessageBox.Show("Invalid IdCliente");
+                        return;
+                    }
+
+                    // Prompt for IdUsuario
+                    using (var inputBoxUsuario = new InputBoxForm("Enter IdUsuario:"))
+                    {
+                        if (inputBoxUsuario.ShowDialog() == DialogResult.OK)
+                        {
+                            if (!Guid.TryParse(inputBoxUsuario.InputText, out Guid idUsuario))
+                            {
+                                MessageBox.Show("Invalid IdUsuario");
+                                return;
+                            }
+
+                            // Call ejecutarCompra
+                            bool success = _negocioCarro.ejecutarCompra(idCliente, idUsuario);
+                            if (success)
+                            {
+                                MessageBox.Show("Purchase executed successfully!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Purchase failed.");
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
 
     }
