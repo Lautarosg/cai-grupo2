@@ -21,5 +21,17 @@ namespace TPCAI
         {
 
         }
+
+        private void btnAdminCliente_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAltaCliente formAdminCliente = new FormAltaCliente();
+            formAdminCliente.ShowDialog();
+        }
+
+        private void buttonRegistrarVta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

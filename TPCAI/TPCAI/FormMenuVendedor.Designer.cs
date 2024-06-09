@@ -32,12 +32,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonRegistrarVta = new System.Windows.Forms.Button();
             this.buttonVtaVendedor = new System.Windows.Forms.Button();
+            this.btnAdminCliente = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 32);
+            this.label1.Location = new System.Drawing.Point(39, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 13);
@@ -47,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 71);
+            this.label2.Location = new System.Drawing.Point(39, 56);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 13);
@@ -57,41 +62,81 @@
             // buttonRegistrarVta
             // 
             this.buttonRegistrarVta.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonRegistrarVta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonRegistrarVta.Font = new System.Drawing.Font("Sitka Subheading", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegistrarVta.Location = new System.Drawing.Point(109, 123);
-            this.buttonRegistrarVta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRegistrarVta.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonRegistrarVta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistrarVta.Location = new System.Drawing.Point(37, 25);
+            this.buttonRegistrarVta.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRegistrarVta.Name = "buttonRegistrarVta";
             this.buttonRegistrarVta.Size = new System.Drawing.Size(118, 50);
             this.buttonRegistrarVta.TabIndex = 2;
             this.buttonRegistrarVta.Text = "Registrar Venta";
             this.buttonRegistrarVta.UseVisualStyleBackColor = true;
+            this.buttonRegistrarVta.Click += new System.EventHandler(this.buttonRegistrarVta_Click);
             // 
             // buttonVtaVendedor
             // 
-            this.buttonVtaVendedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonVtaVendedor.Font = new System.Drawing.Font("Sitka Subheading", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonVtaVendedor.Location = new System.Drawing.Point(279, 123);
-            this.buttonVtaVendedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonVtaVendedor.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonVtaVendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVtaVendedor.Location = new System.Drawing.Point(190, 25);
+            this.buttonVtaVendedor.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVtaVendedor.Name = "buttonVtaVendedor";
             this.buttonVtaVendedor.Size = new System.Drawing.Size(120, 50);
             this.buttonVtaVendedor.TabIndex = 3;
             this.buttonVtaVendedor.Text = "Ventas por Vendedor";
             this.buttonVtaVendedor.UseVisualStyleBackColor = true;
             // 
+            // btnAdminCliente
+            // 
+            this.btnAdminCliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAdminCliente.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAdminCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminCliente.Location = new System.Drawing.Point(117, 29);
+            this.btnAdminCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdminCliente.Name = "btnAdminCliente";
+            this.btnAdminCliente.Size = new System.Drawing.Size(118, 50);
+            this.btnAdminCliente.TabIndex = 4;
+            this.btnAdminCliente.Text = "Administración de Clientes";
+            this.btnAdminCliente.UseVisualStyleBackColor = true;
+            this.btnAdminCliente.Click += new System.EventHandler(this.btnAdminCliente_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Controls.Add(this.buttonRegistrarVta);
+            this.groupBox1.Controls.Add(this.buttonVtaVendedor);
+            this.groupBox1.Location = new System.Drawing.Point(89, 100);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(357, 90);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ventas";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox2.Controls.Add(this.btnAdminCliente);
+            this.groupBox2.Location = new System.Drawing.Point(88, 211);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(357, 88);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Clientes";
+            // 
             // FormMenuVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
-            this.Controls.Add(this.buttonVtaVendedor);
-            this.Controls.Add(this.buttonRegistrarVta);
+            this.ClientSize = new System.Drawing.Size(534, 311);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMenuVendedor";
             this.Text = "Menú Vendedor";
             this.Load += new System.EventHandler(this.FormMenuVendedor_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +148,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonRegistrarVta;
         private System.Windows.Forms.Button buttonVtaVendedor;
+        private System.Windows.Forms.Button btnAdminCliente;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
