@@ -39,7 +39,7 @@ namespace TPCAI
 
 
             // Obtener ventas: GetVentas
-            string ventasJson = NegocioVentas.ListarVentas(); 
+            string ventasJson = NegocioVentas.GetVenta(); 
             JArray arrayVentas = JArray.Parse(ventasJson);
 
 

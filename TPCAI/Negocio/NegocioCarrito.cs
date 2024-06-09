@@ -9,7 +9,7 @@ using TPCAI;
 namespace Negocio
 {
 
-    class NegocioCarrito
+    public class NegocioCarrito
     {
         private ControladorVentas controladorVentas = new ControladorVentas();
 
@@ -40,20 +40,45 @@ namespace Negocio
             }
         }
 
-        public void VerCarro()
+        public string VerCarro()
         {
+            string carro ="";
             foreach (var (ProductoDTO, quantity) in items)
             {
-                Console.WriteLine($"{ProductoDTO.Nombre} - Cantidad: {quantity} - Precio: {ProductoDTO.Precio}");
+               carro = carro + $"{ProductoDTO.Nombre} - Cantidad: {quantity} - Precio: {ProductoDTO.Precio}, ";
                 
             }
+            return carro;
 
         }
 
-        public decimal TotalPrecioCarro()
+        public decimal TotalPrecioCarro(Guid idCliente)
         {
-            decimal total = items.Sum(item => item.ProductoDTO.Precio * item.quantity);
-            return total;
+            
+            double total = items.Sum(item => item.ProductoDTO.Precio * item.quantity);
+
+            decimal totalHogar = items
+                .Where(item => item.ProductoDTO.IdCategoria == 3)
+                .Sum(item => item.ProductoDTO.Precio * item.quantity);
+
+            var a= controladorVentas.VentasByCliente(idCliente.ToString());
+           
+            if (totalHogar > 100000|| a.Length >0 ) {
+                if (totalHogar > 100000 && a.Length > 0) {
+
+                    total = total * 0.90;
+                }
+                else
+                {
+                    total = total * 0.95;
+                }
+            
+            
+            }
+            double truncatedTotal = Math.Truncate(total * 100) / 100;
+
+            decimal totalTrunk = (decimal)truncatedTotal;
+            return totalTrunk;
         }
         public bool ejecutarCompra(Guid idCliente, Guid idAdmin, Guid idProducto, int Cantidad)
         {

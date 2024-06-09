@@ -299,3 +299,4 @@ C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormNuevoPr
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormProductoMasVendidoCategoria.resources
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormVentasPorVendedor.resources
 C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormVerStockCritico.resources
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormVentasCarrito.resources

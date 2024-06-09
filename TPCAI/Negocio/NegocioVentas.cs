@@ -2,6 +2,7 @@
 using Persistencia;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -16,19 +17,28 @@ namespace Negocio
 
         HttpClient client = new HttpClient();
 
-        public static string listaVentasByCliente(string idCliente)
+        public string listaVentasByCliente(string idCliente)
         {
-            return ControladorVentas.VentasByCliente(idCliente);
+            return controladorVentas.VentasByCliente(idCliente);
         }
 
         //uso de GetVentas
-        public static string ListarVentas()
+        public static string GetVenta()
         {
-            return ControladorVentas.ListarVentas();
+            return ControladorVentas.GetVenta();
         }
+
+        public void VentasReales()
+        {
+             
+
+        }
+        
         public bool AgregarVenta(Guid idCliente, Guid idUsuario, Guid idProducto,int cantidad )
         {
             return controladorVentas.AgregarVenta( idCliente,  idUsuario,  idProducto,  cantidad);
         }
+
+
     }
 }

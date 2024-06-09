@@ -43,7 +43,7 @@ namespace Persistencia
                 Console.WriteLine($"Exception: {ex.Message}");
             }
         }
-        public void Login(Login Login)
+        public bool Login(Login Login)
         {
             {
                 String path = "/api/Usuario/Login";
@@ -55,20 +55,16 @@ namespace Persistencia
                     HttpResponseMessage response = WebHelper.Post(path, jsonRequest);
                     if (response.IsSuccessStatusCode)
                     {
-                        var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
-                        string respuesta = reader.ReadToEnd();
-                        Console.WriteLine("Login request was successful.");
-
+                        return true;
                     }
                     else
                     {
-                        Console.WriteLine($"Login request failed with status code {response.StatusCode}.");
-
+                        return false;
                     }
                 }
                 catch (Exception ex)
                 {
-
+                    return false;
                     Console.WriteLine($"A Login error occurred: {ex.Message}");
 
                 }

@@ -16,6 +16,8 @@ namespace TPCAI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FormVentasCarrito());
+
             Application.Run(new FormInicio());
         }
     }

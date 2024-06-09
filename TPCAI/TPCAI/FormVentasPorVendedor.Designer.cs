@@ -36,17 +36,18 @@
             // listVentasPorVendedor
             // 
             this.listVentasPorVendedor.FormattingEnabled = true;
-            this.listVentasPorVendedor.ItemHeight = 20;
-            this.listVentasPorVendedor.Location = new System.Drawing.Point(103, 116);
+            this.listVentasPorVendedor.Location = new System.Drawing.Point(69, 75);
+            this.listVentasPorVendedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listVentasPorVendedor.Name = "listVentasPorVendedor";
-            this.listVentasPorVendedor.Size = new System.Drawing.Size(617, 344);
+            this.listVentasPorVendedor.Size = new System.Drawing.Size(413, 225);
             this.listVentasPorVendedor.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(735, 539);
+            this.button1.Location = new System.Drawing.Point(490, 350);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 73);
+            this.button1.Size = new System.Drawing.Size(112, 47);
             this.button1.TabIndex = 1;
             this.button1.Text = "Volver Atrás";
             this.button1.UseVisualStyleBackColor = true;
@@ -55,20 +56,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 42);
+            this.label1.Location = new System.Drawing.Point(22, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 20);
+            this.label1.Size = new System.Drawing.Size(161, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Reporte de ventas por vendedor";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // FormVentasPorVendedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 661);
+            this.ClientSize = new System.Drawing.Size(665, 430);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listVentasPorVendedor);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormVentasPorVendedor";
             this.Text = "Ventas Por Vendedor";
             this.ResumeLayout(false);

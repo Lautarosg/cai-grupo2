@@ -126,6 +126,12 @@
     <Compile Include="Usuario.cs" />
     <Compile Include="Utils\ValidadorUsuario.cs" />
     <Compile Include="Utils\ValidadorUtil.cs" />
+    <Compile Include="FormVentasCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentasCarrito.Designer.cs">
+      <DependentUpon>FormVentasCarrito.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormAdminProveedor.resx">
       <DependentUpon>FormAdminProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +179,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="FormVentasCarrito.resx">
+      <DependentUpon>FormVentasCarrito.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

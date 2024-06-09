@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.NetworkInformation;
 using System.Security.Policy;
@@ -17,7 +18,7 @@ namespace Persistencia
 {
     public class ControladorVentas
     {
-        public static string VentasByCliente(string idCliente)
+        public  string VentasByCliente(string idCliente)
         {
             // 
             
@@ -25,16 +26,21 @@ namespace Persistencia
             HttpResponseMessage response = WebHelper.Get($"/api/Venta/GetVentaByCliente?id={idCliente}");
             if (!response.IsSuccessStatusCode)
             {
+                if (response.StatusCode == HttpStatusCode.NotFound) {
+                    content = response.Content.ReadAsStringAsync().Result;
+                    return content;
+                }
                 throw new Exception("Verifique los datos ingresados");
             }
             else
             {
                 content = response.Content.ReadAsStringAsync().Result;
+                
             }
             return content;
         }
 
-        public static string ListarVentas()
+        public static string GetVenta()
         {
             string path = "/api/Venta/GetVenta";
 
@@ -42,6 +48,11 @@ namespace Persistencia
             HttpResponseMessage response = WebHelper.Get(path);
             if (!response.IsSuccessStatusCode)
             {
+                if (response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    content = response.Content.ReadAsStringAsync().Result;
+                    return content;
+                }
                 throw new Exception("Verifique los datos ingresados");
             }
             else

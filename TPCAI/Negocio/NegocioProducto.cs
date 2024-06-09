@@ -35,7 +35,7 @@ namespace Negocio
             return ControladorProducto.ListaTodosProductos();
         }*/
 
-        public static string GetProductos()
+        public  static string GetProductos()
         {
             return ControladorProducto.ListaProductos();
         }

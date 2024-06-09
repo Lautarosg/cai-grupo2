@@ -14,6 +14,8 @@ namespace TPCAI
 {
     public partial class FormVentasPorVendedor : Form
     {
+        private NegocioVentas negocioVentas = new NegocioVentas();
+
         public FormVentasPorVendedor()
         {
             InitializeComponent();
@@ -47,32 +49,45 @@ namespace TPCAI
                 string apellido = clienteJson["apellido"].Value<string>();
 
                 //con el id extraigo, saco el listado de ventas por cliente
-                string ventasByCliente = NegocioVentas.listaVentasByCliente(idCliente);
-                JArray arrayVentas = JArray.Parse(ventasByCliente);
-
-                if (arrayVentas.Count > 0)
+                string ventasByCliente = negocioVentas.listaVentasByCliente(idCliente);
+                if (string.IsNullOrEmpty(ventasByCliente)) { }
+                else
                 {
-                    listVentasPorVendedor.Items.Add($"Cliente {nombre} {apellido}");
-                    listVentasPorVendedor.Items.Add("Ventas realizadas:");
-                    foreach (JObject venta in arrayVentas)
+
+
+
+
+
+                    JArray arrayVentas = JArray.Parse(ventasByCliente);
+
+
+                    if (arrayVentas.Count > 0)
                     {
-                        string idVenta = venta["id"].Value<string>();
-                        int cantidad = venta["cantidad"].Value<int>();
-                        listVentasPorVendedor.Items.Add($"Id Venta: {idVenta} \nCantidad vendida: {cantidad}");
-                    }
-                    listVentasPorVendedor.Items.Add("");
-                    //el vendedor con ventas maximas de swagger
-                    if (arrayVentas.Count > maxVentas)
-                    {
-                        maxVentas = arrayVentas.Count;
-                        nombreClienteMasVentas = nombre;
-                        apellidoClienteMasVentas = apellido;
+                        listVentasPorVendedor.Items.Add($"Cliente {nombre} {apellido}");
+                        listVentasPorVendedor.Items.Add("Ventas realizadas:");
+                        foreach (JObject venta in arrayVentas)
+                        {
+                            string idVenta = venta["id"].Value<string>();
+                            int cantidad = venta["cantidad"].Value<int>();
+                            listVentasPorVendedor.Items.Add($"Id Venta: {idVenta} \nCantidad vendida: {cantidad}");
+                        }
+                        listVentasPorVendedor.Items.Add("");
+                        //el vendedor con ventas maximas de swagger
+                        if (arrayVentas.Count > maxVentas)
+                        {
+                            maxVentas = arrayVentas.Count;
+                            nombreClienteMasVentas = nombre;
+                            apellidoClienteMasVentas = apellido;
+                        }
                     }
                 }
             }
             MessageBox.Show($"El cliente que más ventas realizó es {nombreClienteMasVentas} {apellidoClienteMasVentas} con {maxVentas} ventas");
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
