@@ -4,7 +4,7 @@ namespace TPCAI
 {
     public class ClienteDTO
     {
-        public Guid IdUsuario { get; set; }
+        public Guid Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public int Dni { get; set; }
@@ -14,9 +14,21 @@ namespace TPCAI
         public DateTime FechaNacimiento { get; set; }
         public string Host { get; set; }
 
-        public ClienteDTO(Guid idUsuario, string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento, string host)
+        public ClienteDTO(Guid id, string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento, string host)
         {
-            IdUsuario = idUsuario;
+            Id = id;
+            Nombre = nombre;
+            Apellido = apellido;
+            Dni = dni;
+            Direccion = direccion;
+            Telefono = telefono;
+            Email = email;
+            FechaNacimiento = fechaNacimiento;
+            Host = host;
+        }
+
+        public ClienteDTO (string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento, string host)
+        {
             Nombre = nombre;
             Apellido = apellido;
             Dni = dni;

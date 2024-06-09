@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Datos.Datos;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Persistencia.utils;
@@ -35,7 +36,33 @@ namespace Persistencia
             return content;
         }
 
-        public static async Task AgregarCliente(ClienteDTO cliente)
+        public List<ClienteDTO> getClientes()
+        {
+            String path = "/api/Cliente/GetClientes";
+            List<ClienteDTO> clientes = new List<ClienteDTO>();
+            try
+            {
+                HttpResponseMessage response = WebHelper.Get(path);
+                if (response.IsSuccessStatusCode)
+                {
+                    var contentStream = response.Content.ReadAsStringAsync().Result;
+                    List<ClienteDTO> listadoClientes = JsonConvert.DeserializeObject<List<ClienteDTO>>(contentStream);
+                    return listadoClientes;
+                }
+                else
+                {
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+            return clientes;
+
+        }
+
+        /*public static async Task AgregarCliente(ClienteDTO cliente)
         {
             string path = "/api/Cliente/AgregarCliente";
             string json = JsonConvert.SerializeObject(cliente);
@@ -45,26 +72,65 @@ namespace Persistencia
             {
                 throw new Exception("Error al agregar el cliente: " + response.ReasonPhrase);
             }
-        }
+        }*/
 
-        /*public static async Task ModificarCliente(Guid id, string direccion, string telefono, string email)
+        public void AgregarCliente(ClientePostRequest altaCliente)
         {
-            string path = $"/api/Cliente/PatchCliente";
-            var patchData = new
-            {
-                id = id.ToString(),
-                direccion = direccion,
-                telefono = telefono,
-                email = email
-            };
-            string json = JsonConvert.SerializeObject(patchData);
+            String path = "/api/Cliente/AgregarCliente";
 
-            HttpResponseMessage response = await Task.Run(() => WebHelper.Patch(path, json));
-            if (!response.IsSuccessStatusCode)
+            var jsonRequest = JsonConvert.SerializeObject(altaCliente);
+
+            try
             {
-                throw new Exception("Error al modificar el cliente: " + response.ReasonPhrase);
+                HttpResponseMessage response = WebHelper.Post(path, jsonRequest);
+                if (response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                }
+                else
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
             }
         }
-        */
+
+        
+        public void ModificarCliente(Guid idCliente, String direccion, String telefono, String email)
+        {
+            String path = "/api/Cliente/PatchCliente";
+            Dictionary<string, string> map = new Dictionary<string, string>();
+            map.Add("id", idCliente.ToString());
+            map.Add("direccion", direccion);
+            map.Add("telefono", telefono);
+            map.Add("email", email);
+
+            var jsonRequest = JsonConvert.SerializeObject(map);
+
+            try
+            {
+                HttpResponseMessage response = WebHelper.Patch(path, jsonRequest);
+                if (response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                }
+                else
+                {
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+        }
+        
     }
 }

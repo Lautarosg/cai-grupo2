@@ -12,7 +12,7 @@ namespace Datos
     {
         public class ClientePostRequest
         {
-            Guid _idUsuario;
+            string _idUsuario;
             string _nombre;
             string _apellido;
             int _dni;
@@ -22,7 +22,7 @@ namespace Datos
             DateTime _fechaNacimiento;
             string _host;
 
-            public  ClientePostRequest(Guid idUsuario, string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento, string host)
+            public  ClientePostRequest(string idUsuario, string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento, string host)
             {
                 _idUsuario = idUsuario;
                 _nombre = nombre;
@@ -35,7 +35,7 @@ namespace Datos
                 _host = host;
             }
 
-            public Guid IdUsuario { get => _idUsuario; set => _idUsuario = value; }
+            public string IdUsuario { get => _idUsuario; set => _idUsuario = value; }
             public string Nombre { get => _nombre; set => _nombre = value; }
             public string Apellido { get => _apellido; set => _apellido = value; }
             public int Dni { get => _dni; set => _dni = value; }

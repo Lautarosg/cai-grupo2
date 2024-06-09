@@ -45,6 +45,9 @@
             this.lblMail = new System.Windows.Forms.Label();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnModificarCliente = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -77,21 +80,21 @@
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(311, 123);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(354, 126);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(134, 20);
             this.dtpFechaNacimiento.TabIndex = 4;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(311, 50);
+            this.txtTelefono.Location = new System.Drawing.Point(354, 50);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 5;
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(311, 88);
+            this.txtMail.Location = new System.Drawing.Point(354, 88);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(100, 20);
             this.txtMail.TabIndex = 6;
@@ -99,18 +102,18 @@
             // btnAgregarCliente
             // 
             this.btnAgregarCliente.DialogResult = System.Windows.Forms.DialogResult.Retry;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(220, 233);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(41, 393);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(87, 35);
             this.btnAgregarCliente.TabIndex = 7;
-            this.btnAgregarCliente.Text = "Confirmar";
+            this.btnAgregarCliente.Text = "Agregar";
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
             this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
             // 
             // btnVolverAtras
             // 
             this.btnVolverAtras.DialogResult = System.Windows.Forms.DialogResult.Retry;
-            this.btnVolverAtras.Location = new System.Drawing.Point(424, 298);
+            this.btnVolverAtras.Location = new System.Drawing.Point(485, 393);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(87, 35);
             this.btnVolverAtras.TabIndex = 8;
@@ -157,7 +160,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(243, 53);
+            this.lblTelefono.Location = new System.Drawing.Point(278, 53);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 13;
@@ -166,7 +169,7 @@
             // lblMail
             // 
             this.lblMail.AutoSize = true;
-            this.lblMail.Location = new System.Drawing.Point(243, 88);
+            this.lblMail.Location = new System.Drawing.Point(278, 88);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(26, 13);
             this.lblMail.TabIndex = 14;
@@ -175,7 +178,7 @@
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(214, 129);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(243, 130);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(93, 13);
             this.lblFechaNacimiento.TabIndex = 15;
@@ -190,11 +193,32 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Datos del Cliente";
             // 
+            // btnModificarCliente
+            // 
+            this.btnModificarCliente.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.btnModificarCliente.Location = new System.Drawing.Point(149, 393);
+            this.btnModificarCliente.Name = "btnModificarCliente";
+            this.btnModificarCliente.Size = new System.Drawing.Size(87, 35);
+            this.btnModificarCliente.TabIndex = 17;
+            this.btnModificarCliente.Text = "Modificar";
+            this.btnModificarCliente.UseVisualStyleBackColor = true;
+            this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(41, 203);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(531, 150);
+            this.dataGridView1.TabIndex = 18;
+            // 
             // FormAltaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 361);
+            this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnModificarCliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFechaNacimiento);
             this.Controls.Add(this.lblMail);
@@ -213,8 +237,9 @@
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Name = "FormAltaCliente";
-            this.Text = "Alta Cliente";
+            this.Text = "Administración de Clientes";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +264,7 @@
         private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnModificarCliente;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

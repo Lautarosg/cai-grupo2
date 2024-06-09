@@ -13,6 +13,7 @@ namespace TPCAI
 {
     public partial class FormAltaCliente : Form
     {
+        private NegocioCliente clienteNegocio = new NegocioCliente();
         public FormAltaCliente()
         {
             InitializeComponent();
@@ -22,16 +23,15 @@ namespace TPCAI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            cargarClientes();
         }
 
        
 
-        private async void btnAgregarCliente_Click(object sender, EventArgs e)
+        private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
             try
             {
-                Guid idUsuario = Guid.NewGuid();
                 string nombre = ValidadorUsuario.ValidarNombre(txtNombre.Text);
                 string apellido = ValidadorUsuario.ValidarApellido(txtApellido.Text);
                 int dni =  ValidadorUsuario.ValidarDNI(txtDni.Text);
@@ -40,11 +40,11 @@ namespace TPCAI
                 string email = ValidadorUsuario.ValidarEmail (txtMail.Text);
                 DateTime fechaNacimiento = ValidadorUsuario.ValidarFechaNac(dtpFechaNacimiento.Value);
                 string host = "2";
+
+
+                clienteNegocio.agregarCliente(nombre, apellido, dni, direccion, telefono, email, fechaNacimiento, host);
+
                 
-
-                ClienteDTO nuevoCliente = new ClienteDTO(idUsuario, nombre, apellido, dni, direccion, telefono, email, fechaNacimiento, host);
-
-                await NegocioCliente.AgregarCliente(nuevoCliente);
 
                 MessageBox.Show("Cliente agregado con éxito.");
             }
@@ -52,11 +52,53 @@ namespace TPCAI
             {
                 MessageBox.Show("Error al agregar el cliente: " + ex.Message);
             }
+            cargarClientes();
         }
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            FormMenuVendedor formMenuVendedor = new FormMenuVendedor();
+            formMenuVendedor.ShowDialog();
+        }
 
+        private void btnModificarCliente_Click(object sender, EventArgs e)
+        {
+            ClienteDTO clienteSeleccionado = (ClienteDTO)dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].DataBoundItem;
+
+            Guid idCliente = clienteSeleccionado.Id;
+            String direccion = ValidadorUsuario.ValidarDireccion(txtDireccion.Text);
+            String telefono = ValidadorUsuario.ValidarTelefono(txtTelefono.Text);
+            String email = ValidadorUsuario.ValidarEmail(txtMail.Text);
+
+            clienteNegocio.modificarCliente(idCliente, direccion, telefono, email);
+
+            cargarClientes();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ClienteDTO clienteSeleccionado = (ClienteDTO)dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].DataBoundItem;
+            txtNombre.Text = clienteSeleccionado.Nombre;
+            txtApellido.Text = clienteSeleccionado.Apellido;
+            txtDni.Text = clienteSeleccionado.Dni.ToString();
+            txtDireccion.Text = clienteSeleccionado.Direccion;
+            txtTelefono.Text = clienteSeleccionado.Telefono;
+            txtMail.Text = clienteSeleccionado.Email;
+            dtpFechaNacimiento.Value = clienteSeleccionado.FechaNacimiento;
+        }
+
+
+
+        private void cargarClientes()
+        {
+            List<ClienteDTO> clientes = clienteNegocio.listarClientes();
+
+            var bindingList = new BindingList<ClienteDTO>(clientes);
+            var source = new BindingSource(bindingList, null);
+            dataGridView1.DataSource = source;
+            dataGridView1.Columns["id"].Visible = false;
+            dataGridView1.Columns["fechaBaja"].Visible = false;
         }
     }
 }
