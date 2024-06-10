@@ -43,6 +43,7 @@ namespace Persistencia
                 Console.WriteLine($"Exception: {ex.Message}");
             }
         }
+        /*
         public void Login(Login Login)
         {
             {
@@ -72,6 +73,41 @@ namespace Persistencia
                     Console.WriteLine($"A Login error occurred: {ex.Message}");
 
                 }
+
+            }
+        }
+        */
+        public int Login(Login Login)
+        {
+            int valor = 0;
+            {
+                String path = "/api/Usuario/Login";
+
+                var jsonRequest = JsonConvert.SerializeObject(Login);
+                Console.WriteLine("Usuario ingresado:" + Login.NombreUsuario + "Contraseña ingresada:" + Login.Contraseña);
+                try
+                {
+                    HttpResponseMessage response = WebHelper.Post(path, jsonRequest);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                        string respuesta = reader.ReadToEnd();
+                        Console.WriteLine("Login request was successful.");
+                        valor = 1;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Login request failed with status code {response.StatusCode}.");
+                        valor = -1;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine($"A Login error occurred: {ex.Message}");
+
+                }
+                return valor;
 
             }
         }
@@ -117,8 +153,8 @@ namespace Persistencia
             return content;
         }
 
-        
-        public JToken BuscoUsuarioporID(string id, String idAdmin)
+
+        public JToken BuscarUsuarioporID(string id, String idAdmin)
         {
             // Busca en los usuarios activos a un usuario por el id
             string content = ListaUsuarios(idAdmin);
@@ -159,6 +195,39 @@ namespace Persistencia
             }
             return usuarios;
 
+        }
+
+        public JToken BuscarUsuarioPorNombreUsuario(string usuario, String idAdmin)
+        {
+            // Busca en los usuarios activos a un usuario por el id
+            string content = ListaUsuarios(idAdmin);
+            // Analizar el contenido JSON
+            JArray jsonArray = JArray.Parse(content);
+
+            JToken usuarioEncontrado = jsonArray.FirstOrDefault(item => (string)item["nombreUsuario"] == usuario);
+
+            return usuarioEncontrado;
+        }
+
+        public int VerRolUsuario(string usuario, string idAdmin)
+        { 
+            JToken usuarioRol = BuscarUsuarioPorNombreUsuario(usuario, idAdmin);
+            int rol = usuarioRol["host"].Value<int>();
+            return rol; 
+        }
+
+        public bool existeUsuario(string usuario, string idAdmin)
+        {
+            bool existe = false;
+            JToken usuarioRol = BuscarUsuarioPorNombreUsuario(usuario, idAdmin);
+            if (usuarioRol == null)
+            {
+                existe = false;
+            }
+            else if (usuarioRol != null){
+                existe = true; 
+            }
+            return existe;  
         }
 
     }

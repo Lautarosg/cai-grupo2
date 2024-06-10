@@ -52,7 +52,7 @@ namespace TPCAI
         {
             string idUsuario = txtBuscarUser.Text;
 
-            negocioUsuario.BuscoUsuarioporID(idUsuario);
+            negocioUsuario.BuscarUsuarioporID(idUsuario);
         }
 
         private void txtBuscarUser_TextChanged(object sender, EventArgs e)

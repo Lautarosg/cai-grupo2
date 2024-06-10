@@ -1,4 +1,5 @@
 ﻿using Negocio;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace TPCAI
 {
     public partial class FormInicio : Form
     {
-
+        NegocioUsuario usuarioNegocio = new NegocioUsuario();
         public FormInicio()
         {
             InitializeComponent();
@@ -29,39 +30,64 @@ namespace TPCAI
             MessageBox.Show("En caso de no tener usuario, comunicarse con el administrador a admin@electrohogar.com", "Ayuda", MessageBoxButtons.OK);
         }
 
-
+        int contadorContraseña = 0;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             String usuario = txtUsuarioInicio.Text;
-            String password = txtContraseñaInicio.Text;
+            String contraseña = txtContraseñaInicio.Text;
 
             // Verificar si los campos están vacíos
-            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contraseña))
             {
                 MessageBox.Show("Por favor, ingrese un usuario y contraseña.");
                 return; // Salir del método para evitar continuar con el inicio de sesión
             }
 
-            //valido el usuario y password que ingreso
-            if (!(usuario.Length > 0 && password.Length > 0))
+            //valido el usuario y contraseña que ingreso
+            // 1. verifico q el usuario exista
+            // 2. verifico q la contraseña coincida (implementar logica de 3 intentos)
+            // 3. Busco rol (host)
+            if (!(usuario.Length > 0 && contraseña.Length > 0))
             {
                 MessageBox.Show("Debe de ingresar un usuario y contraseña correcto");
             }
 
             // Creo un int rol que tome el valor del usuario que inicia sesion
-            NegocioUsuario usuarioNegocio = new NegocioUsuario();
-            usuarioNegocio.LoginUsuario(usuario, password);
-            
+            int rol;
+
             // implementar logica dependiendo el rol encontrado del Login
-            int rol = 3;
-            if (rol == -1)
-            {
-                MessageBox.Show("no se encontro el usuario");
-            }
+            
+            
+            rol = usuarioNegocio.LoginUsuario(usuario, contraseña);
+
+                if (rol == -1)
+                {
+                    MessageBox.Show("no se encontro el usuario");
+                }
+                if (rol == -2)
+                {
+                    contadorContraseña++;
+                    if (contadorContraseña == 1)
+                    {
+                    MessageBox.Show("La contreseña ingresada es incorrecta, le quedan dos intentos");
+
+                    }
+                    else if (contadorContraseña == 2)
+                    {
+                    MessageBox.Show("Ultimo intento, si falla se desactivará la cuenta temporalmente");
+                    }
+                    if (contadorContraseña == 3)
+                    {
+                    MessageBox.Show("El usuario se ha desactivado temporalmente, porfavor contacte a un administrador!");
+                    usuarioNegocio.BajaUsuarioConNombre(usuario);
+                    }          
+                }
+           
+
             // Obtener el rol del user para saber a que menu redireccionar
             //1= Vendedor 2=Supervisor 3=Administrador
-           
-            if (rol != -1 || rol != 0) 
+
+            if (rol == 1 || rol == 2 || rol == 3) 
             {
 
                 // Ir al formulario que corresponde
@@ -77,16 +103,12 @@ namespace TPCAI
                     FormMenuSupervisor formSupervisor = new FormMenuSupervisor();
                     formSupervisor.ShowDialog();
                 }
-                else if(rol ==1)
+                else if(rol == 1)
                 {
                     FormMenuVendedor formVendedor = new FormMenuVendedor();
                     formVendedor.ShowDialog();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Dato ingresado incorrecto");
-            }            
+            }     
            
         }
 
@@ -135,6 +157,5 @@ namespace TPCAI
         {
 
     }
-
     }
 }

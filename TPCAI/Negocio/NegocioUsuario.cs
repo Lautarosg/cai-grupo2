@@ -34,43 +34,65 @@ namespace Negocio
             controllerUsuario.AgregarUsuario(usuario);
         }
 
-        public void LoginUsuario(string usuario, string contraseña)
+        public int LoginUsuario(string usuario, string contraseña)
         {
+            // 1. usar logica de login para comprobar si existe
             Login usuarioDatos = new Login(usuario, contraseña);
-            controllerUsuario.Login(usuarioDatos);
+            int loginComprobado = controllerUsuario.Login(usuarioDatos);
 
-            //implementar logica para encontrar el rol del usuario de Login
-            /*int rol = 0;
-            Login usuarioDatos = new Login(usuario, contraseña);
-            UsuarioDTO responseData = controllerUsuario.Login(usuarioDatos);
-            if (responseData != null)
+            // buscar rol 
+            if (loginComprobado == 1)
             {
-                Console.WriteLine("Usuario encontrado");
-                rol = responseData.Rol;
+                // 1 admin, 2 supervisor, 3 vendedor
+                loginComprobado = BuscarRol(usuario);
             }
-            else
+
+            // comprobar porque no ingresa el usuario
+            else if (loginComprobado == -1)
             {
-                Console.WriteLine("No se pudo iniciar sesión.");
-                rol = -1;
+                // 2. Si no es correcto, verifico q el usuario exista
+                if (controllerUsuario.existeUsuario(usuario, idAdmin) == true)
+                {
+                    // si el usuario existe, pero no comprueba el login, entonces falla la contraseña
+                    // -2 la contraseña es incorrecta
+                        loginComprobado = -2;
+                }
+                else
+                {
+                    // -1 no existe el usuario con ese nombre de usuario
+                    loginComprobado = -1;
+                }
             }
-            return rol; 
-            */
+            return loginComprobado;
         }
-                
-             
+
         public void BajaUsuario(String idUsuario)
         {
             ControladorUsuario.BajaUsuario(idUsuario);
         }
 
-        public void BuscoUsuarioporID(string idUsuario)
+        public void BajaUsuarioConNombre(String usuario)
         {
-            controllerUsuario.BuscoUsuarioporID(idUsuario, idAdmin);
+            JToken usuarioId = controllerUsuario.BuscarUsuarioPorNombreUsuario(usuario, idAdmin);
+            string idUsuario = usuarioId["id"].Value<string>();
+            BajaUsuario(idUsuario);
+        }
+
+
+        public void BuscarUsuarioporID(string idUsuario)
+        {
+            controllerUsuario.BuscarUsuarioporID(idUsuario, idAdmin);
         }
 
         public List<UsuarioDTO> listarUsuarios()
         {
             return controllerUsuario.ListarUsuarios(idAdmin); 
+        }
+
+        public int BuscarRol(string usuario)
+        {
+            int rol = controllerUsuario.VerRolUsuario(usuario, idAdmin);
+            return rol;
         }
 
     }
