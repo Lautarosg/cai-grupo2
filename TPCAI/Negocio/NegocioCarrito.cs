@@ -45,14 +45,14 @@ namespace Negocio
             string carro ="";
             foreach (var (ProductoDTO, quantity) in items)
             {
-               carro = carro + $"{ProductoDTO.Nombre} - Cantidad: {quantity} - Precio: {ProductoDTO.Precio}, ";
+               carro = carro + $"id producto:{ProductoDTO.Id}  {ProductoDTO.Nombre} - Cantidad: {quantity} - Precio unitario: {ProductoDTO.Precio} - Monto :{ProductoDTO.Precio* quantity}  {Environment.NewLine} ";
                 
             }
             return carro;
 
         }
 
-        public decimal TotalPrecioCarro(Guid idCliente)
+        public (decimal totalTrunk, string str) TotalPrecioCarro(Guid idCliente)
         {
             
             double total = items.Sum(item => item.ProductoDTO.Precio * item.quantity);
@@ -60,16 +60,25 @@ namespace Negocio
             decimal totalHogar = items
                 .Where(item => item.ProductoDTO.IdCategoria == 3)
                 .Sum(item => item.ProductoDTO.Precio * item.quantity);
+            string str="";
 
-            var a= controladorVentas.VentasByCliente(idCliente.ToString());
-           
+            var a = controladorVentas.VentasByCliente(idCliente.ToString());
+            
             if (totalHogar > 100000|| a.Length >0 ) {
                 if (totalHogar > 100000 && a.Length > 0) {
 
                     total = total * 0.90;
+                     str = "HF";
                 }
                 else
                 {
+                    if(totalHogar > 100000)
+                    {
+                        str = "H";
+                    }
+                    else { 
+                    str = "F";
+                    }
                     total = total * 0.95;
                 }
             
@@ -78,13 +87,15 @@ namespace Negocio
             double truncatedTotal = Math.Truncate(total * 100) / 100;
 
             decimal totalTrunk = (decimal)truncatedTotal;
-            return totalTrunk;
+            return (totalTrunk,str);
         }
-        public bool ejecutarCompra(Guid idCliente, Guid idusuario)
+        public bool  ejecutarCompra(Guid idCliente, Guid idusuario)
         {
 
             try
             {
+                // so it happen bofer the first purchase 
+                var a=TotalPrecioCarro(idCliente);
                 foreach (var item in items)
                 {
                    if( controladorVentas.AgregarVenta( idCliente, idusuario,  item.ProductoDTO.Id, item.quantity)==!true)
@@ -95,12 +106,56 @@ namespace Negocio
 
 
                 }
-                return true;
+                remito(idCliente, idusuario, a.totalTrunk, a.str);
+                return (true);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+        public void remito(Guid idCliente, Guid idusuario, decimal totalTrunk,string str ) {
+            string comrpovante = $"Electro Hogar SRL {Environment.NewLine}";
+            DateTime localDate = DateTime.Now;
+            ControladorCliente cliente = new ControladorCliente();
+            comrpovante = comrpovante + $"{cliente.ObtenerCliente(idCliente)}{Environment.NewLine}";
+            comrpovante = comrpovante + $"{localDate}{Environment.NewLine}";
+            comrpovante = comrpovante + $"{Environment.NewLine}{VerCarro()}";
+            double total = (double)totalTrunk;
+            switch(str)
+            {
+                case "H":
+                    comrpovante = comrpovante + $"{Environment.NewLine} Descuento Hogar";
+                    comrpovante = comrpovante + $"{Environment.NewLine} descuento : {total/0.95*0.05}";
+
+                    break;
+
+                case "HF":
+                    comrpovante = comrpovante + $"{Environment.NewLine} Descuento Hogar, Descuento Primera Compra";
+                    comrpovante = comrpovante + $"{Environment.NewLine} descuento : {total / 0.90*0.10}";
+
+                    break;
+                case "F":
+                    comrpovante = comrpovante + $"{Environment.NewLine} Descuento Primera Compra";
+                    comrpovante = comrpovante + $"{Environment.NewLine} descuento: {total / 0.95 * 0.05}";
+
+                    break;
+                default:
+                    comrpovante = comrpovante + $"{Environment.NewLine} ";
+                    comrpovante = comrpovante + $"{Environment.NewLine} ";
+
+                    break;
+
+            }
+            comrpovante = comrpovante + $"{Environment.NewLine} el total es :{totalTrunk}";
+
+            Comprovante comprovante = new Comprovante();
+            comprovante.CrearComprovante(comrpovante);
+
+
+
+
+
         }
     }
     /* ejemplo implentacion de metodos 

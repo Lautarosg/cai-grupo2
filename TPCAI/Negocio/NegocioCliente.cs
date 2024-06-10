@@ -19,6 +19,10 @@ namespace Negocio
         {
             return ControladorCliente.ObtenerClientes();
         }
+        public static string Cliente()
+        {
+            return ControladorCliente.ObtenerCliente();
+        }
 
     }
 }

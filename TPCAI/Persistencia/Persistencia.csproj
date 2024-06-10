@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comprovante.cs" />
     <Compile Include="ControladorCliente.cs" />
     <Compile Include="ControladorProducto.cs" />
     <Compile Include="ControladorProveedor.cs" />

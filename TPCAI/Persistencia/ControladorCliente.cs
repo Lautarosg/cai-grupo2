@@ -34,6 +34,31 @@ namespace Persistencia
             }
             return content;
         }
+        public string ObtenerCliente(Guid clienteid)
+        {
+            // Trae todos los clientes activos
+            String path = $"/api/Cliente/GetCliente/GetCliente?id={clienteid.ToString()}";
 
+            string content = "";
+            HttpResponseMessage response = WebHelper.Get(path);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Verifique los datos ingresados");
+            }
+            else
+            {
+                 content = response.Content.ReadAsStringAsync().Result;
+
+                ClienteDTO cliente = JsonConvert.DeserializeObject<ClienteDTO>(content);
+
+                return $"{cliente.Nombre} {cliente.Apellido} - DNI: {cliente.Dni}";
+
+
+
+            }
+            return content;
+        }
     }
+
+    
 }

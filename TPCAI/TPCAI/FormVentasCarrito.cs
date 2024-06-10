@@ -102,6 +102,7 @@ namespace TPCAI
                             if (success)
                             {
                                 MessageBox.Show("Purchase executed successfully!");
+                                
                             }
                             else
                             {
