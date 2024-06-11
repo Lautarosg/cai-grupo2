@@ -17,7 +17,7 @@ namespace TPCAI
         public FormVentasPorVendedor()
         {
             InitializeComponent();
-            VentasByVendedor();
+            //VentasByVendedor();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace TPCAI
         }
 
         //Esto devuelve una lista de vendedores del swagger, con su ID
-        private void VentasByVendedor()
+        /*private void VentasByVendedor()
         {
             string clientes = NegocioCliente.listaCliente(); //traigo todos los clientes
             JArray arrayClientes = JArray.Parse(clientes);
@@ -72,7 +72,7 @@ namespace TPCAI
             }
             MessageBox.Show($"El cliente que más ventas realizó es {nombreClienteMasVentas} {apellidoClienteMasVentas} con {maxVentas} ventas");
         }
-
+        */
         private void listVentasPorVendedor_SelectedIndexChanged(object sender, EventArgs e)
         {
 

@@ -9,7 +9,7 @@ using TPCAI;
 namespace Negocio
 {
 
-    class NegocioCarrito
+    public class NegocioCarrito
     {
         private ControladorVentas controladorVentas = new ControladorVentas();
 
@@ -40,21 +40,26 @@ namespace Negocio
             }
         }
 
-        public void VerCarro()
+        public string VerCarro()
         {
+            string carro = "";
             foreach (var (ProductoDTO, quantity) in items)
             {
-                Console.WriteLine($"{ProductoDTO.Nombre} - Cantidad: {quantity} - Precio: {ProductoDTO.Precio}");
-                
+                carro = carro + $"id producto:{ProductoDTO.Id}  {ProductoDTO.Nombre} - Cantidad: {quantity} - Precio unitario: {ProductoDTO.Precio} - Monto :{ProductoDTO.Precio * quantity}  {Environment.NewLine} ";
+
             }
+            return carro;
 
         }
 
-        public decimal TotalPrecioCarro()
+
+
+        /*public decimal TotalPrecioCarro()
         {
             decimal total = items.Sum(item => item.ProductoDTO.Precio * item.quantity);
             return total;
         }
+
         public bool ejecutarCompra(Guid idCliente, Guid idAdmin, Guid idProducto, int Cantidad)
         {
 
@@ -76,7 +81,115 @@ namespace Negocio
             {
                 throw ex;
             }
+        }*/
+
+        public (decimal totalTrunk, string str) TotalPrecioCarro(Guid idCliente)
+        {
+
+            double total = items.Sum(item => item.ProductoDTO.Precio * item.quantity);
+
+            decimal totalHogar = items
+                .Where(item => item.ProductoDTO.IdCategoria == 3)
+                .Sum(item => item.ProductoDTO.Precio * item.quantity);
+            string str = "";
+
+            var a = controladorVentas.VentasByCliente(idCliente.ToString());
+
+            if (totalHogar > 100000 || a.Length > 0)
+            {
+                if (totalHogar > 100000 && a.Length > 0)
+                {
+
+                    total = total * 0.90;
+                    str = "HF";
+                }
+                else
+                {
+                    if (totalHogar > 100000)
+                    {
+                        str = "H";
+                    }
+                    else
+                    {
+                        str = "F";
+                    }
+                    total = total * 0.95;
+                }
+
+
+            }
+            double truncatedTotal = Math.Truncate(total * 100) / 100;
+
+            decimal totalTrunk = (decimal)truncatedTotal;
+            return (totalTrunk, str);
         }
+
+        public bool ejecutarCompra(Guid idCliente, Guid idusuario)
+        {
+
+            try
+            {
+                // so it happen bofer the first purchase 
+                var a = TotalPrecioCarro(idCliente);
+                foreach (var item in items)
+                {
+                    if (controladorVentas.AgregarVenta(idCliente, idusuario, item.ProductoDTO.Id, item.quantity) == !true)
+                    {
+                        throw new Exception("somthing where howwibly wrong whit the stocking systems comunicate whit help desk for help hours 9-16 workweak");
+
+                    }
+
+
+                }
+                remito(idCliente, idusuario, a.totalTrunk, a.str);
+                return (true);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void remito(Guid idCliente, Guid idusuario, decimal totalTrunk, string str)
+        {
+            string comprobante = $"Electro Hogar SRL {Environment.NewLine}";
+            DateTime localDate = DateTime.Now;
+            ControladorCliente cliente = new ControladorCliente();
+            comprobante = comprobante + $"{cliente.ObtenerCliente(idCliente)}{Environment.NewLine}";
+            comprobante = comprobante + $"{localDate}{Environment.NewLine}";
+            comprobante = comprobante + $"{Environment.NewLine}{VerCarro()}";
+            double total = (double)totalTrunk;
+            switch (str)
+            {
+                case "H":
+                    comprobante = comprobante + $"{Environment.NewLine} Descuento Hogar";
+                    comprobante = comprobante + $"{Environment.NewLine} descuento : {total / 0.95 * 0.05}";
+
+                    break;
+
+                case "HF":
+                    comprobante = comprobante + $"{Environment.NewLine} Descuento Hogar, Descuento Primera Compra";
+                    comprobante = comprobante + $"{Environment.NewLine} descuento : {total / 0.90 * 0.10}";
+
+                    break;
+                case "F":
+                    comprobante = comprobante + $"{Environment.NewLine} Descuento Primera Compra";
+                    comprobante = comprobante + $"{Environment.NewLine} descuento: {total / 0.95 * 0.05}";
+
+                    break;
+                default:
+                    comprobante = comprobante + $"{Environment.NewLine} ";
+                    comprobante = comprobante + $"{Environment.NewLine} ";
+
+                    break;
+
+            }
+            comprobante = comprobante + $"{Environment.NewLine} el total es :{totalTrunk}";
+
+            Comprobante comprovante = new Comprobante();
+            comprovante.CrearComprovante(comprobante);
+        }
+
     }
     /* ejemplo implentacion de metodos 
     class Program
