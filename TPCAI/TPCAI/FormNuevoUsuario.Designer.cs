@@ -48,25 +48,13 @@
             this.buttonConfirmarNuevoUser = new System.Windows.Forms.Button();
             this.buttonVolverAtras = new System.Windows.Forms.Button();
             this.lblVerificarContRegistrar = new System.Windows.Forms.Label();
-            this.lblErrorContraseñaRegistrar = new System.Windows.Forms.Label();
-            this.lblMinContraseñaRegistrar = new System.Windows.Forms.Label();
-            this.lblMayContraseñaRegistrar = new System.Windows.Forms.Label();
-            this.lblInstruccionesContraseñaRegistrar = new System.Windows.Forms.Label();
             this.lblMaxUsuarioRegistrar = new System.Windows.Forms.Label();
             this.lblMinUsuarioRegistrar = new System.Windows.Forms.Label();
             this.lblInstruccionesRegistrar = new System.Windows.Forms.Label();
-            this.lblErrorUsuarioRegistrar = new System.Windows.Forms.Label();
-            this.lblContraseñaVerificar = new System.Windows.Forms.Label();
-            this.lblContrañesaRegistrar = new System.Windows.Forms.Label();
             this.lblUsuarioRegistrar = new System.Windows.Forms.Label();
-            this.txtVerificarRegistrar = new System.Windows.Forms.TextBox();
-            this.txtContraseñaRegistrar = new System.Windows.Forms.TextBox();
             this.txtUsuarioRegistrar = new System.Windows.Forms.TextBox();
             this.dtpfechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.tpAyuda = new System.Windows.Forms.ToolTip(this.components);
-            this.lblNomUsuarioRegistrar = new System.Windows.Forms.Label();
-            this.lblApeUsuarioRegistrar = new System.Windows.Forms.Label();
-            this.cbPerfilUsuario = new System.Windows.Forms.ComboBox();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.pbNacimiento = new System.Windows.Forms.PictureBox();
             this.pbEmail = new System.Windows.Forms.PictureBox();
@@ -74,8 +62,6 @@
             this.pbDNI = new System.Windows.Forms.PictureBox();
             this.pbApellido = new System.Windows.Forms.PictureBox();
             this.pbNombre = new System.Windows.Forms.PictureBox();
-            this.pbMostrarRegistrar = new System.Windows.Forms.PictureBox();
-            this.pbOcultarRegistrar = new System.Windows.Forms.PictureBox();
             this.pbNombreError = new System.Windows.Forms.PictureBox();
             this.pbApellidoError = new System.Windows.Forms.PictureBox();
             this.pbDNIError = new System.Windows.Forms.PictureBox();
@@ -85,6 +71,9 @@
             this.pbTelefonoError = new System.Windows.Forms.PictureBox();
             this.pbNacimientoError = new System.Windows.Forms.PictureBox();
             this.pbPerfilError = new System.Windows.Forms.PictureBox();
+            this.lblNomUsuarioRegistrar = new System.Windows.Forms.Label();
+            this.lblApeUsuarioRegistrar = new System.Windows.Forms.Label();
+            this.cbPerfilUsuario = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNacimiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).BeginInit();
@@ -92,8 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDNI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbApellido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNombre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMostrarRegistrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOcultarRegistrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNombreError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbApellidoError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDNIError)).BeginInit();
@@ -279,41 +266,6 @@
             this.lblVerificarContRegistrar.Size = new System.Drawing.Size(0, 13);
             this.lblVerificarContRegistrar.TabIndex = 40;
             // 
-            // lblErrorContraseñaRegistrar
-            // 
-            this.lblErrorContraseñaRegistrar.AutoSize = true;
-            this.lblErrorContraseñaRegistrar.Location = new System.Drawing.Point(744, 67);
-            this.lblErrorContraseñaRegistrar.Name = "lblErrorContraseñaRegistrar";
-            this.lblErrorContraseñaRegistrar.Size = new System.Drawing.Size(0, 13);
-            this.lblErrorContraseñaRegistrar.TabIndex = 39;
-            // 
-            // lblMinContraseñaRegistrar
-            // 
-            this.lblMinContraseñaRegistrar.AutoSize = true;
-            this.lblMinContraseñaRegistrar.Location = new System.Drawing.Point(712, 158);
-            this.lblMinContraseñaRegistrar.Name = "lblMinContraseñaRegistrar";
-            this.lblMinContraseñaRegistrar.Size = new System.Drawing.Size(104, 13);
-            this.lblMinContraseñaRegistrar.TabIndex = 38;
-            this.lblMinContraseñaRegistrar.Text = "Más de 8 caracteres";
-            // 
-            // lblMayContraseñaRegistrar
-            // 
-            this.lblMayContraseñaRegistrar.AutoSize = true;
-            this.lblMayContraseñaRegistrar.Location = new System.Drawing.Point(712, 140);
-            this.lblMayContraseñaRegistrar.Name = "lblMayContraseñaRegistrar";
-            this.lblMayContraseñaRegistrar.Size = new System.Drawing.Size(80, 13);
-            this.lblMayContraseñaRegistrar.TabIndex = 37;
-            this.lblMayContraseñaRegistrar.Text = "Una mayúscula";
-            // 
-            // lblInstruccionesContraseñaRegistrar
-            // 
-            this.lblInstruccionesContraseñaRegistrar.AutoSize = true;
-            this.lblInstruccionesContraseñaRegistrar.Location = new System.Drawing.Point(720, 116);
-            this.lblInstruccionesContraseñaRegistrar.Name = "lblInstruccionesContraseñaRegistrar";
-            this.lblInstruccionesContraseñaRegistrar.Size = new System.Drawing.Size(135, 13);
-            this.lblInstruccionesContraseñaRegistrar.TabIndex = 35;
-            this.lblInstruccionesContraseñaRegistrar.Text = "La contraseña debe incluir:";
-            // 
             // lblMaxUsuarioRegistrar
             // 
             this.lblMaxUsuarioRegistrar.AutoSize = true;
@@ -344,32 +296,6 @@
             this.lblInstruccionesRegistrar.Text = "Tenga en cuenta el nombre de usuario:";
             this.lblInstruccionesRegistrar.Click += new System.EventHandler(this.lblInstruccionesRegistrar_Click);
             // 
-            // lblErrorUsuarioRegistrar
-            // 
-            this.lblErrorUsuarioRegistrar.AutoSize = true;
-            this.lblErrorUsuarioRegistrar.Location = new System.Drawing.Point(748, 40);
-            this.lblErrorUsuarioRegistrar.Name = "lblErrorUsuarioRegistrar";
-            this.lblErrorUsuarioRegistrar.Size = new System.Drawing.Size(0, 13);
-            this.lblErrorUsuarioRegistrar.TabIndex = 31;
-            // 
-            // lblContraseñaVerificar
-            // 
-            this.lblContraseñaVerificar.AutoSize = true;
-            this.lblContraseñaVerificar.Location = new System.Drawing.Point(596, 89);
-            this.lblContraseñaVerificar.Name = "lblContraseñaVerificar";
-            this.lblContraseñaVerificar.Size = new System.Drawing.Size(105, 13);
-            this.lblContraseñaVerificar.TabIndex = 29;
-            this.lblContraseñaVerificar.Text = "Repita la contraseña";
-            // 
-            // lblContrañesaRegistrar
-            // 
-            this.lblContrañesaRegistrar.AutoSize = true;
-            this.lblContrañesaRegistrar.Location = new System.Drawing.Point(596, 46);
-            this.lblContrañesaRegistrar.Name = "lblContrañesaRegistrar";
-            this.lblContrañesaRegistrar.Size = new System.Drawing.Size(119, 13);
-            this.lblContrañesaRegistrar.TabIndex = 28;
-            this.lblContrañesaRegistrar.Text = "Ingrese una contraseña";
-            // 
             // lblUsuarioRegistrar
             // 
             this.lblUsuarioRegistrar.AutoSize = true;
@@ -379,21 +305,6 @@
             this.lblUsuarioRegistrar.TabIndex = 27;
             this.lblUsuarioRegistrar.Text = "Nombre de Usuario";
             this.lblUsuarioRegistrar.Click += new System.EventHandler(this.lblUsuarioRegistrar_Click);
-            // 
-            // txtVerificarRegistrar
-            // 
-            this.txtVerificarRegistrar.Location = new System.Drawing.Point(747, 86);
-            this.txtVerificarRegistrar.Name = "txtVerificarRegistrar";
-            this.txtVerificarRegistrar.Size = new System.Drawing.Size(100, 20);
-            this.txtVerificarRegistrar.TabIndex = 26;
-            // 
-            // txtContraseñaRegistrar
-            // 
-            this.txtContraseñaRegistrar.Location = new System.Drawing.Point(747, 40);
-            this.txtContraseñaRegistrar.Name = "txtContraseñaRegistrar";
-            this.txtContraseñaRegistrar.Size = new System.Drawing.Size(100, 20);
-            this.txtContraseñaRegistrar.TabIndex = 25;
-            this.txtContraseñaRegistrar.TextChanged += new System.EventHandler(this.txtContraseñaRegistrar_TextChanged);
             // 
             // txtUsuarioRegistrar
             // 
@@ -412,38 +323,6 @@
             this.dtpfechaNacimiento.Size = new System.Drawing.Size(94, 20);
             this.dtpfechaNacimiento.TabIndex = 45;
             this.dtpfechaNacimiento.ValueChanged += new System.EventHandler(this.dtpfechaNacimiento_ValueChanged);
-            // 
-            // lblNomUsuarioRegistrar
-            // 
-            this.lblNomUsuarioRegistrar.AutoSize = true;
-            this.lblNomUsuarioRegistrar.Location = new System.Drawing.Point(237, 267);
-            this.lblNomUsuarioRegistrar.Name = "lblNomUsuarioRegistrar";
-            this.lblNomUsuarioRegistrar.Size = new System.Drawing.Size(196, 13);
-            this.lblNomUsuarioRegistrar.TabIndex = 64;
-            this.lblNomUsuarioRegistrar.Text = "No debe contener el nombre del usuario";
-            this.lblNomUsuarioRegistrar.Click += new System.EventHandler(this.lblNomUsuarioRegistrar_Click);
-            // 
-            // lblApeUsuarioRegistrar
-            // 
-            this.lblApeUsuarioRegistrar.AutoSize = true;
-            this.lblApeUsuarioRegistrar.Location = new System.Drawing.Point(240, 292);
-            this.lblApeUsuarioRegistrar.Name = "lblApeUsuarioRegistrar";
-            this.lblApeUsuarioRegistrar.Size = new System.Drawing.Size(207, 17);
-            this.lblApeUsuarioRegistrar.TabIndex = 65;
-            this.lblApeUsuarioRegistrar.Text = "No debe contener el apellido del usuario";
-            this.lblApeUsuarioRegistrar.UseCompatibleTextRendering = true;
-            // 
-            // cbPerfilUsuario
-            // 
-            this.cbPerfilUsuario.FormattingEnabled = true;
-            this.cbPerfilUsuario.Items.AddRange(new object[] {
-            "1 - Vendedor",
-            "2 - Supervisor",
-            "3 - Admin"});
-            this.cbPerfilUsuario.Location = new System.Drawing.Point(382, 150);
-            this.cbPerfilUsuario.Name = "cbPerfilUsuario";
-            this.cbPerfilUsuario.Size = new System.Drawing.Size(94, 21);
-            this.cbPerfilUsuario.TabIndex = 67;
             // 
             // pbPerfil
             // 
@@ -524,27 +403,6 @@
             this.tpAyuda.SetToolTip(this.pbNombre, "El nombre debe tener entre 3 y 50 caracteres. \r\n\r\nNo debe contener caracteres esp" +
         "eciales!");
             this.pbNombre.Click += new System.EventHandler(this.pbNombre_Click);
-            // 
-            // pbMostrarRegistrar
-            // 
-            this.pbMostrarRegistrar.Image = global::TPCAI.Properties.Resources.Visible;
-            this.pbMostrarRegistrar.Location = new System.Drawing.Point(599, 116);
-            this.pbMostrarRegistrar.Name = "pbMostrarRegistrar";
-            this.pbMostrarRegistrar.Size = new System.Drawing.Size(30, 20);
-            this.pbMostrarRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMostrarRegistrar.TabIndex = 41;
-            this.pbMostrarRegistrar.TabStop = false;
-            // 
-            // pbOcultarRegistrar
-            // 
-            this.pbOcultarRegistrar.Image = global::TPCAI.Properties.Resources.NotVisible;
-            this.pbOcultarRegistrar.Location = new System.Drawing.Point(599, 116);
-            this.pbOcultarRegistrar.Name = "pbOcultarRegistrar";
-            this.pbOcultarRegistrar.Size = new System.Drawing.Size(30, 20);
-            this.pbOcultarRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbOcultarRegistrar.TabIndex = 42;
-            this.pbOcultarRegistrar.TabStop = false;
-            this.pbOcultarRegistrar.Click += new System.EventHandler(this.pbOcultarRegistrar_Click);
             // 
             // pbNombreError
             // 
@@ -647,6 +505,38 @@
             this.tpAyuda.SetToolTip(this.pbPerfilError, "Posibles perfiles Habilitados: \r\n1 - Vendedor\r\n2 - Supervisor\r\n3 - Adminsitrador\r" +
         "\n\r\nAsegurese de elegir el perfil correcto antes de crear el usuario!");
             // 
+            // lblNomUsuarioRegistrar
+            // 
+            this.lblNomUsuarioRegistrar.AutoSize = true;
+            this.lblNomUsuarioRegistrar.Location = new System.Drawing.Point(237, 267);
+            this.lblNomUsuarioRegistrar.Name = "lblNomUsuarioRegistrar";
+            this.lblNomUsuarioRegistrar.Size = new System.Drawing.Size(196, 13);
+            this.lblNomUsuarioRegistrar.TabIndex = 64;
+            this.lblNomUsuarioRegistrar.Text = "No debe contener el nombre del usuario";
+            this.lblNomUsuarioRegistrar.Click += new System.EventHandler(this.lblNomUsuarioRegistrar_Click);
+            // 
+            // lblApeUsuarioRegistrar
+            // 
+            this.lblApeUsuarioRegistrar.AutoSize = true;
+            this.lblApeUsuarioRegistrar.Location = new System.Drawing.Point(240, 292);
+            this.lblApeUsuarioRegistrar.Name = "lblApeUsuarioRegistrar";
+            this.lblApeUsuarioRegistrar.Size = new System.Drawing.Size(207, 17);
+            this.lblApeUsuarioRegistrar.TabIndex = 65;
+            this.lblApeUsuarioRegistrar.Text = "No debe contener el apellido del usuario";
+            this.lblApeUsuarioRegistrar.UseCompatibleTextRendering = true;
+            // 
+            // cbPerfilUsuario
+            // 
+            this.cbPerfilUsuario.FormattingEnabled = true;
+            this.cbPerfilUsuario.Items.AddRange(new object[] {
+            "1 - Vendedor",
+            "2 - Supervisor",
+            "3 - Admin"});
+            this.cbPerfilUsuario.Location = new System.Drawing.Point(382, 150);
+            this.cbPerfilUsuario.Name = "cbPerfilUsuario";
+            this.cbPerfilUsuario.Size = new System.Drawing.Size(94, 21);
+            this.cbPerfilUsuario.TabIndex = 67;
+            // 
             // FormNuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -663,22 +553,11 @@
             this.Controls.Add(this.pbApellido);
             this.Controls.Add(this.pbNombre);
             this.Controls.Add(this.dtpfechaNacimiento);
-            this.Controls.Add(this.pbMostrarRegistrar);
-            this.Controls.Add(this.pbOcultarRegistrar);
             this.Controls.Add(this.lblVerificarContRegistrar);
-            this.Controls.Add(this.lblErrorContraseñaRegistrar);
-            this.Controls.Add(this.lblMinContraseñaRegistrar);
-            this.Controls.Add(this.lblMayContraseñaRegistrar);
-            this.Controls.Add(this.lblInstruccionesContraseñaRegistrar);
             this.Controls.Add(this.lblMaxUsuarioRegistrar);
             this.Controls.Add(this.lblMinUsuarioRegistrar);
             this.Controls.Add(this.lblInstruccionesRegistrar);
-            this.Controls.Add(this.lblErrorUsuarioRegistrar);
-            this.Controls.Add(this.lblContraseñaVerificar);
-            this.Controls.Add(this.lblContrañesaRegistrar);
             this.Controls.Add(this.lblUsuarioRegistrar);
-            this.Controls.Add(this.txtVerificarRegistrar);
-            this.Controls.Add(this.txtContraseñaRegistrar);
             this.Controls.Add(this.txtUsuarioRegistrar);
             this.Controls.Add(this.buttonVolverAtras);
             this.Controls.Add(this.buttonConfirmarNuevoUser);
@@ -717,8 +596,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDNI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbApellido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNombre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMostrarRegistrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOcultarRegistrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNombreError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbApellidoError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDNIError)).EndInit();
@@ -752,22 +629,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonConfirmarNuevoUser;
         private System.Windows.Forms.Button buttonVolverAtras;
-        private System.Windows.Forms.PictureBox pbMostrarRegistrar;
-        private System.Windows.Forms.PictureBox pbOcultarRegistrar;
         private System.Windows.Forms.Label lblVerificarContRegistrar;
-        private System.Windows.Forms.Label lblErrorContraseñaRegistrar;
-        private System.Windows.Forms.Label lblMinContraseñaRegistrar;
-        private System.Windows.Forms.Label lblMayContraseñaRegistrar;
-        private System.Windows.Forms.Label lblInstruccionesContraseñaRegistrar;
         private System.Windows.Forms.Label lblMaxUsuarioRegistrar;
         private System.Windows.Forms.Label lblMinUsuarioRegistrar;
         private System.Windows.Forms.Label lblInstruccionesRegistrar;
-        private System.Windows.Forms.Label lblErrorUsuarioRegistrar;
-        private System.Windows.Forms.Label lblContraseñaVerificar;
-        private System.Windows.Forms.Label lblContrañesaRegistrar;
         private System.Windows.Forms.Label lblUsuarioRegistrar;
-        private System.Windows.Forms.TextBox txtVerificarRegistrar;
-        private System.Windows.Forms.TextBox txtContraseñaRegistrar;
         private System.Windows.Forms.TextBox txtUsuarioRegistrar;
         private System.Windows.Forms.DateTimePicker dtpfechaNacimiento;
         private System.Windows.Forms.ToolTip tpAyuda;

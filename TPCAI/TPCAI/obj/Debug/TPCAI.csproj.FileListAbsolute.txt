@@ -307,3 +307,5 @@ C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormProductoM
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormAltaCliente.resources
 C:\Users\maxim\Source\Repos\Lautarosg\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormAltaCliente.resources
 C:\Users\Cesar\source\repos\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormVentasCarrito.resources
+C:\Users\maxim\Source\Repos\Lautarosg\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormVentasCarrito.resources
+C:\Users\maxim\Source\Repos\Lautarosg\cai-grupo2\TPCAI\TPCAI\obj\Debug\TPCAI.FormCambiarContraseña.resources

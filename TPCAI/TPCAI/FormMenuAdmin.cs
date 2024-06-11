@@ -12,6 +12,7 @@ namespace TPCAI
 {
     public partial class FormMenuAdmin : Form
     {
+        public string Usuario { get; set; }
         public FormMenuAdmin()
         {
             InitializeComponent();
@@ -80,6 +81,14 @@ namespace TPCAI
         private void buttonModProd_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string usuario = this.Usuario;
+            FormCambiarContraseña formContraseña = new FormCambiarContraseña();
+            formContraseña.Usuario = usuario;
+            formContraseña.ShowDialog();
         }
     }
 }

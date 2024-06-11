@@ -39,12 +39,14 @@ namespace Negocio
             // 1. usar logica de login para comprobar si existe
             Login usuarioDatos = new Login(usuario, contraseña);
             int loginComprobado = controllerUsuario.Login(usuarioDatos);
+            
 
             // buscar rol 
             if (loginComprobado == 1)
             {
                 // 1 admin, 2 supervisor, 3 vendedor
                 loginComprobado = BuscarRol(usuario);
+                
             }
 
             // comprobar porque no ingresa el usuario
@@ -64,6 +66,19 @@ namespace Negocio
                 }
             }
             return loginComprobado;
+        }
+
+        public int EsPrimerLogin(string contraseña)
+        {
+            int primerLogin = 0;
+            string contraseñaDefinitiva = "CAI20232";
+            
+            // si el usuario hace login correcto, pero con contraseña diferente a CAI20232, entonces es primer login. 
+            if (contraseña != contraseñaDefinitiva)
+            {
+                primerLogin = 1; 
+            }
+            return primerLogin; 
         }
 
         public void BajaUsuario(String idUsuario)
@@ -93,6 +108,11 @@ namespace Negocio
         {
             int rol = controllerUsuario.VerRolUsuario(usuario, idAdmin);
             return rol;
+        }
+
+        public void ModificarContraseña(string usuario, string contraseña, string contraseñaNueva)
+        {
+            controllerUsuario.ModificarContraseña(usuario, contraseña, contraseñaNueva);
         }
 
     }

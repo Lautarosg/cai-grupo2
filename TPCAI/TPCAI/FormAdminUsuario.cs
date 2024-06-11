@@ -75,7 +75,7 @@ namespace TPCAI
             dgvListaUsuarios.Columns["direccion"].Visible = false;
             dgvListaUsuarios.Columns["telefono"].Visible = false;
             dgvListaUsuarios.Columns["Email"].Visible = false;
-            dgvListaUsuarios.Columns["Contraseña"].Visible = false;
+            dgvListaUsuarios.Columns["Contraseña"].Visible = false; 
             dgvListaUsuarios.Columns["FechaNacimiento"].Visible = false;
             dgvListaUsuarios.Columns["FechaCreacion"].Visible = false;
             dgvListaUsuarios.Columns["FechaContraseña"].Visible = false;

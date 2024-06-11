@@ -53,32 +53,9 @@ namespace TPCAI
                 return;
             }*/
 
-            //VALIDACION DE USER Y CONTRASEÑA
-            string contraseña = txtContraseñaRegistrar.Text;
-            string verificar = txtVerificarRegistrar.Text;
             string usuarioNuevo = txtUsuarioRegistrar.Text;
-            string contraseñaNuevo = txtContraseñaRegistrar.Text;
             bool check = false;
-
-         
-            if (validadorUtil.validarIguales(contraseña, verificar))
-            {
-                lblVerificarContRegistrar.Text = "La contraseña debe ser la misma!";
-                check = false;
-            }
-            if (validadorUtil.validarVacio(usuarioNuevo))
-            {
-                lblErrorUsuarioRegistrar.Text = "Debe ingresar un nombre de usuario";
-                check = false;
-
-            }
-            if (validadorUtil.validarVacio(contraseñaNuevo))
-            {
-                lblErrorContraseñaRegistrar.Text = "Debe ingresar una contraseña";
-                check = false;
-            }
-
-
+            
             //VALIDACION DE DATOS DEL USER
             //Uso un contador de errores para mostrar en pantalla en caso de que haya
             string errores = "";
@@ -131,7 +108,7 @@ namespace TPCAI
            
             if (validadorUtil.validarVacio(usuarioNuevo))
             {
-                lblErrorUsuarioRegistrar.Text = "Debe ingresar un nombre de usuario";
+                //lblErrorUsuarioRegistrar.Text = "Debe ingresar un nombre de usuario";
             }
             if (validadorUtil.validarVacio(usuarioNuevo) || validadorUtil.validarMin(usuarioNuevo, minCarUsuario))
             {
@@ -165,55 +142,12 @@ namespace TPCAI
             {
                 lblApeUsuarioRegistrar.ForeColor = Color.Green;
             }
-            lblErrorUsuarioRegistrar.Text = "";
+            //lblErrorUsuarioRegistrar.Text = "";
         }
 
         private void txtContraseñaVerificar_TextChanged(object sender, EventArgs e)
         {
             lblVerificarContRegistrar.Text = "";
-        }
-
-        private void txtContraseñaRegistrar_TextChanged(object sender, EventArgs e)
-        {
-            string contraseñaNuevo = txtContraseñaRegistrar.Text;
-            
-
-            if (validadorUtil.validarVacio(contraseñaNuevo))
-            {
-                lblErrorContraseñaRegistrar.Text = "Debe ingresar una contraseña";
-            }
-            if (validadorUtil.validarMin(contraseñaNuevo, minCarContraseña))
-            {
-                lblMinContraseñaRegistrar.ForeColor = Color.Red;
-            }
-            else
-            {
-                lblMinContraseñaRegistrar.ForeColor = Color.Green;
-            }
-            if (validadorUtil.validarMay(contraseñaNuevo))
-            {
-                lblMayContraseñaRegistrar.ForeColor = Color.Red;
-            }
-            else
-            {
-                lblMayContraseñaRegistrar.ForeColor = Color.Green;
-            }
-            lblErrorContraseñaRegistrar.Text = "";
-        }
-
-
-        private void pbMostrarRegistrar_Click(object sender, EventArgs e)
-        {
-            pbOcultarRegistrar.BringToFront();
-            txtContraseñaRegistrar.PasswordChar = '\0';
-            txtVerificarRegistrar.PasswordChar = '\0';
-        }
-
-        private void pbOcultarRegistrar_Click(object sender, EventArgs e)
-        {
-            pbMostrarRegistrar.BringToFront();
-            txtContraseñaRegistrar.PasswordChar = '*';
-            txtVerificarRegistrar.PasswordChar = '*';
         }
 
         private void textBoxNombre_TextChanged(object sender, EventArgs e)

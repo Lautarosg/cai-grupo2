@@ -84,18 +84,31 @@ namespace TPCAI
                 }
            
 
-            // Obtener el rol del user para saber a que menu redireccionar
+            // Obtener el rol del usuario para saber a que menu redireccionar
             //1= Vendedor 2=Supervisor 3=Administrador
 
             if (rol == 1 || rol == 2 || rol == 3) 
             {
+                //comprobar si es el primer login del usuario
+                
+                int primerLogin = usuarioNegocio.EsPrimerLogin(contraseña);
+                // si es primer login (1), primero mostrar pantalla de cambiar contraseña, despues pantalla correspondiente
 
-                // Ir al formulario que corresponde
+                if(primerLogin == 1)
+                {
+                    //pantalla cambiar contraseña
+                    FormCambiarContraseña formContraseña = new FormCambiarContraseña();
+                    formContraseña.Usuario = usuario;
+                    formContraseña.ShowDialog();
+                }
+
+                // si no es primer login (0), Ir al formulario que corresponde
                 this.Hide();
 
                 if (rol == 3)
                 {
                     FormMenuAdmin formAdministrador = new FormMenuAdmin();
+                    formAdministrador.Usuario = usuario;
                     formAdministrador.ShowDialog();
                 }
                 else if (rol == 2)
@@ -119,7 +132,7 @@ namespace TPCAI
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-
+            contadorContraseña = 0; 
         }
 
         private void labelUsuario_Click(object sender, EventArgs e)

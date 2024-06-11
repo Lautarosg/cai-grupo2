@@ -30,6 +30,7 @@ namespace Persistencia
                 {
                     var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
                     string respuesta = reader.ReadToEnd();
+                    Console.WriteLine($" Usuario Creado: {response.StatusCode} - {response.ReasonPhrase}");
                 }
                 else
                 {
@@ -228,6 +229,35 @@ namespace Persistencia
                 existe = true; 
             }
             return existe;  
+        }
+
+        public void ModificarContraseña(String nombreCliente, String contraseña, String contraseñaNueva)
+        {
+            String path = "/api/Usuario/CambiarContraseña";
+            Dictionary<string, string> map = new Dictionary<string, string>();
+            map.Add("nombreUsuario", nombreCliente);
+            map.Add("contraseña", contraseña);
+            map.Add("contraseñaNueva", contraseñaNueva);
+
+            var jsonRequest = JsonConvert.SerializeObject(map);
+
+            try
+            {
+                HttpResponseMessage response = WebHelper.Patch(path, jsonRequest);
+                if (response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                }
+                else
+                {
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
         }
 
     }
