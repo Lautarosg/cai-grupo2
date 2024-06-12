@@ -60,74 +60,76 @@ namespace TPCAI
             
             rol = usuarioNegocio.LoginUsuario(usuario, contraseña);
 
-                if (rol == -1)
-                {
-                    MessageBox.Show("no se encontro el usuario");
-                }
-                if (rol == -2)
-                {
-                    contadorContraseña++;
-                    if (contadorContraseña == 1)
-                    {
-                    MessageBox.Show("La contreseña ingresada es incorrecta, le quedan dos intentos");
-
-                    }
-                    else if (contadorContraseña == 2)
-                    {
-                    MessageBox.Show("Ultimo intento, si falla se desactivará la cuenta temporalmente");
-                    }
-                    if (contadorContraseña == 3)
-                    {
-                    MessageBox.Show("El usuario se ha desactivado temporalmente, porfavor contacte a un administrador!");
-                    usuarioNegocio.BajaUsuarioConNombre(usuario);
-                    }          
-                }
-           
-
-            // Obtener el rol del usuario para saber a que menu redireccionar
-            //1= Vendedor 2=Supervisor 3=Administrador
-
-            if (rol == 1 || rol == 2 || rol == 3) 
+            if (rol == -1)
             {
-                //comprobar si es el primer login del usuario
+                MessageBox.Show("no se encontro el usuario");
+            }
+            else if (rol == -2)
+            {
+                contadorContraseña++;
+                if (contadorContraseña == 1)
+                {
+                MessageBox.Show("La contreseña ingresada es incorrecta, le quedan dos intentos");
+
+                }
+                else if (contadorContraseña == 2)
+                {
+                MessageBox.Show("Ultimo intento, si falla se desactivará la cuenta temporalmente");
+                }
+                if (contadorContraseña == 3)
+                {
+                MessageBox.Show("El usuario se ha desactivado temporalmente, porfavor contacte a un administrador!");
+                usuarioNegocio.BajaUsuarioConNombre(usuario);
+                }          
+            }
+                // Obtener el rol del usuario para saber a que menu redireccionar
+                //1= Vendedor 2=Supervisor 3=Administrador
+
+                if (rol == 1 || rol == 2 || rol == 3) 
+                {
+                    //comprobar si es el primer login del usuario
+                    int primerLogin = usuarioNegocio.EsPrimerLogin(contraseña);
+                    int contraseñaVencida = usuarioNegocio.EsContraseñaVencida(usuario);
+                // si es primer login (1), primero mostrar pantalla de cambiar contraseña
+                // despues comprobar q la contraseña no este vencida (menor a 30 dias)
+                // despues pantalla correspondiente
+
+                        if (primerLogin == 1 || contraseñaVencida == 1)
+                        {
+                            MessageBox.Show("Debe cambiar su contraseña", "",MessageBoxButtons.OK);
+                            //pantalla cambiar contraseña
+                            FormCambiarContraseña formContraseña = new FormCambiarContraseña();
+                            formContraseña.Usuario = usuario;
+                            formContraseña.ShowDialog();
+                        }
                 
-                int primerLogin = usuarioNegocio.EsPrimerLogin(contraseña);
-                // si es primer login (1), primero mostrar pantalla de cambiar contraseña, despues pantalla correspondiente
 
-                if(primerLogin == 1)
-                {
-                    //pantalla cambiar contraseña
-                    FormCambiarContraseña formContraseña = new FormCambiarContraseña();
-                    formContraseña.Usuario = usuario;
-                    formContraseña.ShowDialog();
-                }
+                    // si no es primer login (0), Ir al formulario que corresponde
+                    this.Hide();
 
-                // si no es primer login (0), Ir al formulario que corresponde
-                this.Hide();
-
-                if (rol == 3)
-                {
-                    FormMenuAdmin formAdministrador = new FormMenuAdmin();
-                    formAdministrador.Usuario = usuario;
-                    formAdministrador.RolUsuario = rol; 
-                    formAdministrador.ShowDialog();
+                    if (rol == 3)
+                    {
+                        FormMenuAdmin formAdministrador = new FormMenuAdmin();
+                        formAdministrador.Usuario = usuario;
+                        formAdministrador.RolUsuario = rol; 
+                        formAdministrador.ShowDialog();
+                    }
+                    else if (rol == 2)
+                    {
+                        FormMenuSupervisor formSupervisor = new FormMenuSupervisor();
+                        formSupervisor.Usuario = usuario;
+                        formSupervisor.RolUsuario = rol;
+                        formSupervisor.ShowDialog();
+                    }
+                    else if(rol == 1)
+                    {
+                        FormMenuVendedor formVendedor = new FormMenuVendedor();
+                        formVendedor.Usuario = usuario;
+                        formVendedor.RolUsuario = rol;
+                        formVendedor.ShowDialog();
+                    }
                 }
-                else if (rol == 2)
-                {
-                    FormMenuSupervisor formSupervisor = new FormMenuSupervisor();
-                    formSupervisor.Usuario = usuario;
-                    formSupervisor.RolUsuario = rol;
-                    formSupervisor.ShowDialog();
-                }
-                else if(rol == 1)
-                {
-                    FormMenuVendedor formVendedor = new FormMenuVendedor();
-                    formVendedor.Usuario = usuario;
-                    formVendedor.RolUsuario = rol;
-                    formVendedor.ShowDialog();
-                }
-            }     
-           
+            
         }
 
         private void TxtContraseña_TextChanged(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace TPCAI
         public string Usuario { get; set; }
         public int RolUsuario { get; set; }
 
+        NegocioUsuario negocioUsuario = new NegocioUsuario();
+
         public FormMenuAdmin()
         {
             InitializeComponent();
@@ -22,7 +25,8 @@ namespace TPCAI
 
         private void FormMenuAdmin_Load(object sender, EventArgs e)
         {
-
+            DateTime fechaAlta = negocioUsuario.BuscarFechaAlta(Usuario);
+            lblFechaAlta.Text = fechaAlta.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -100,6 +104,11 @@ namespace TPCAI
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFechaAlta_Click(object sender, EventArgs e)
         {
 
         }

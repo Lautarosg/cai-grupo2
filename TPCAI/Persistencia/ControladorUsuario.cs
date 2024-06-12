@@ -224,6 +224,14 @@ namespace Persistencia
             return id;
         }
 
+        public DateTime VerFechaAltaUsuario(string usuario, string idAdmin)
+        {
+            JToken usuariofechaAlta = BuscarUsuarioPorNombreUsuario(usuario, idAdmin);
+            //DateTime fechaAlta = usuariofechaAlta["fechaAlta"].Value<DateTime>();
+            DateTime fechaAlta = DateTime.Now;
+            return fechaAlta;
+        }
+
         public bool existeUsuario(string usuario, string idAdmin)
         {
             bool existe = false;

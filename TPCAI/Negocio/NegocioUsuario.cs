@@ -81,6 +81,31 @@ namespace Negocio
             return primerLogin; 
         }
 
+        public int EsContraseñaVencida (string usuario)
+        {
+            int fecha;
+            DateTime fechaAlta = BuscarFechaAlta(usuario);
+            DateTime fechaActual = DateTime.Now;
+            TimeSpan diferenciaFechas = fechaActual - fechaAlta;
+
+            if (diferenciaFechas.TotalDays < 30)
+            {
+                fecha = 0; 
+            }
+            else
+            {
+                fecha=  1;
+            }
+            return fecha; 
+        }
+
+        public DateTime BuscarFechaAlta(string usuario)
+        {
+            DateTime fechaAlta = controllerUsuario.VerFechaAltaUsuario(usuario, idAdmin);
+            return fechaAlta;
+        }
+
+
         public void BajaUsuario(String idUsuario)
         {
             ControladorUsuario.BajaUsuario(idUsuario);
@@ -115,6 +140,9 @@ namespace Negocio
             string id = controllerUsuario.VerIdUsuario(usuario, idAdmin);
             return id;
         }
+
+  
+
 
         public void ModificarContraseña(string usuario, string contraseña, string contraseñaNueva)
         {
