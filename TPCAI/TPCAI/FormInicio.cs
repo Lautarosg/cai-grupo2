@@ -109,16 +109,21 @@ namespace TPCAI
                 {
                     FormMenuAdmin formAdministrador = new FormMenuAdmin();
                     formAdministrador.Usuario = usuario;
+                    formAdministrador.RolUsuario = rol; 
                     formAdministrador.ShowDialog();
                 }
                 else if (rol == 2)
                 {
                     FormMenuSupervisor formSupervisor = new FormMenuSupervisor();
+                    formSupervisor.Usuario = usuario;
+                    formSupervisor.RolUsuario = rol;
                     formSupervisor.ShowDialog();
                 }
                 else if(rol == 1)
                 {
                     FormMenuVendedor formVendedor = new FormMenuVendedor();
+                    formVendedor.Usuario = usuario;
+                    formVendedor.RolUsuario = rol;
                     formVendedor.ShowDialog();
                 }
             }     

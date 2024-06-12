@@ -16,6 +16,8 @@ namespace TPCAI
     {
         public string Usuario { get; set; }
 
+        public int RolUsuario  { get; set; }
+
         NegocioUsuario usuarioNegocio = new NegocioUsuario(); 
 
         ValidadorUtil validadorUtil = new ValidadorUtil();
@@ -39,6 +41,10 @@ namespace TPCAI
             if (validadorUtil.validarIguales(contraseña, contraseñaVerificar))
             {
                 lblErrorContraseñaRegistrar.Text = "La contraseña debe ser la misma!";
+            }
+            else if(contraseña == "")
+            {
+                lblContrActual.Text = "Debe ingresar la contraseña actual";
             }
             else
             {
@@ -75,6 +81,31 @@ namespace TPCAI
         private void FormCambiarContraseña_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            if (RolUsuario == 3)
+            {
+                FormMenuAdmin formAdministrador = new FormMenuAdmin();
+                formAdministrador.Usuario = Usuario;
+                formAdministrador.RolUsuario = RolUsuario;
+                formAdministrador.ShowDialog();
+            }
+            else if (RolUsuario == 2)
+            {
+                FormMenuSupervisor formSupervisor = new FormMenuSupervisor();
+                formSupervisor.Usuario = Usuario;
+                formSupervisor.RolUsuario = RolUsuario;
+                formSupervisor.ShowDialog();
+            }
+            else if (RolUsuario == 1)
+            {
+                FormMenuVendedor formVendedor = new FormMenuVendedor();
+                formVendedor.Usuario = Usuario;
+                formVendedor.RolUsuario = RolUsuario;
+                formVendedor.ShowDialog();
+            }
         }
     }
 }

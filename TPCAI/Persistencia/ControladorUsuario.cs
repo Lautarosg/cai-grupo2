@@ -217,6 +217,13 @@ namespace Persistencia
             return rol; 
         }
 
+        public string VerIdUsuario(string usuario, string idAdmin)
+        {
+            JToken usuarioId = BuscarUsuarioPorNombreUsuario(usuario, idAdmin);
+            string id = usuarioId["id"].Value<string>();
+            return id;
+        }
+
         public bool existeUsuario(string usuario, string idAdmin)
         {
             bool existe = false;

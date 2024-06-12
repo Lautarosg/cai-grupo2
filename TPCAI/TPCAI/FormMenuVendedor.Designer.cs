@@ -35,6 +35,7 @@
             this.btnAdminCliente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCambiarContraseña = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -122,11 +123,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Clientes";
             // 
+            // btnCambiarContraseña
+            // 
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(413, 12);
+            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(109, 30);
+            this.btnCambiarContraseña.TabIndex = 7;
+            this.btnCambiarContraseña.Text = "Cambiar contraseña";
+            this.btnCambiarContraseña.UseVisualStyleBackColor = true;
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
+            // 
             // FormMenuVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 311);
+            this.Controls.Add(this.btnCambiarContraseña);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
@@ -151,5 +163,6 @@
         private System.Windows.Forms.Button btnAdminCliente;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnCambiarContraseña;
     }
 }

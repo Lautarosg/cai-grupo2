@@ -110,6 +110,12 @@ namespace Negocio
             return rol;
         }
 
+        public string BuscarId(string usuario)
+        {
+            string id = controllerUsuario.VerIdUsuario(usuario, idAdmin);
+            return id;
+        }
+
         public void ModificarContraseña(string usuario, string contraseña, string contraseñaNueva)
         {
             controllerUsuario.ModificarContraseña(usuario, contraseña, contraseñaNueva);

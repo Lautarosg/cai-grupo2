@@ -13,13 +13,16 @@ namespace TPCAI
 {
     public partial class FormAdminProducto : Form
     {
+        public string Usuario { get; set; }
+        public int RolUsuario { get; set; }
+        
+        NegocioUsuario negocioUsuario = new NegocioUsuario();
+
         private NegocioProducto productoNegocio = new NegocioProducto();    
         public FormAdminProducto()
         {
             InitializeComponent();
         }
-
-
 
         private void FormAltaCliente_Load(object sender, EventArgs e)
         {
@@ -118,6 +121,7 @@ namespace TPCAI
                 dataGridView1.DataSource = productos;
                 dataGridView1.Columns["id"].Visible = false;
                 //dataGridView1.Columns[""].Visible = false;
+
 
             }
             catch (Exception ex)

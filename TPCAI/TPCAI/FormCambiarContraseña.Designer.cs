@@ -33,7 +33,7 @@
             this.lblMinContraseñaRegistrar = new System.Windows.Forms.Label();
             this.lblMayContraseñaRegistrar = new System.Windows.Forms.Label();
             this.lblInstruccionesContraseñaRegistrar = new System.Windows.Forms.Label();
-            this.lblErrorUsuarioRegistrar = new System.Windows.Forms.Label();
+            this.lblContrActual = new System.Windows.Forms.Label();
             this.lblContraseñaVerificar = new System.Windows.Forms.Label();
             this.lblContrañesaRegistrar = new System.Windows.Forms.Label();
             this.txtVerificarRegistrar = new System.Windows.Forms.TextBox();
@@ -44,6 +44,7 @@
             this.pbMostrarRegistrar = new System.Windows.Forms.PictureBox();
             this.pbOcultarRegistrar = new System.Windows.Forms.PictureBox();
             this.btnConfCambio = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrarRegistrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultarRegistrar)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +60,7 @@
             // lblMinContraseñaRegistrar
             // 
             this.lblMinContraseñaRegistrar.AutoSize = true;
-            this.lblMinContraseñaRegistrar.Location = new System.Drawing.Point(444, 143);
+            this.lblMinContraseñaRegistrar.Location = new System.Drawing.Point(446, 152);
             this.lblMinContraseñaRegistrar.Name = "lblMinContraseñaRegistrar";
             this.lblMinContraseñaRegistrar.Size = new System.Drawing.Size(104, 13);
             this.lblMinContraseñaRegistrar.TabIndex = 50;
@@ -68,7 +69,7 @@
             // lblMayContraseñaRegistrar
             // 
             this.lblMayContraseñaRegistrar.AutoSize = true;
-            this.lblMayContraseñaRegistrar.Location = new System.Drawing.Point(444, 125);
+            this.lblMayContraseñaRegistrar.Location = new System.Drawing.Point(446, 134);
             this.lblMayContraseñaRegistrar.Name = "lblMayContraseñaRegistrar";
             this.lblMayContraseñaRegistrar.Size = new System.Drawing.Size(80, 13);
             this.lblMayContraseñaRegistrar.TabIndex = 49;
@@ -77,24 +78,24 @@
             // lblInstruccionesContraseñaRegistrar
             // 
             this.lblInstruccionesContraseñaRegistrar.AutoSize = true;
-            this.lblInstruccionesContraseñaRegistrar.Location = new System.Drawing.Point(444, 105);
+            this.lblInstruccionesContraseñaRegistrar.Location = new System.Drawing.Point(446, 114);
             this.lblInstruccionesContraseñaRegistrar.Name = "lblInstruccionesContraseñaRegistrar";
             this.lblInstruccionesContraseñaRegistrar.Size = new System.Drawing.Size(135, 13);
             this.lblInstruccionesContraseñaRegistrar.TabIndex = 48;
             this.lblInstruccionesContraseñaRegistrar.Text = "La contraseña debe incluir:";
             // 
-            // lblErrorUsuarioRegistrar
+            // lblContrActual
             // 
-            this.lblErrorUsuarioRegistrar.AutoSize = true;
-            this.lblErrorUsuarioRegistrar.Location = new System.Drawing.Point(228, 98);
-            this.lblErrorUsuarioRegistrar.Name = "lblErrorUsuarioRegistrar";
-            this.lblErrorUsuarioRegistrar.Size = new System.Drawing.Size(0, 13);
-            this.lblErrorUsuarioRegistrar.TabIndex = 47;
+            this.lblContrActual.AutoSize = true;
+            this.lblContrActual.Location = new System.Drawing.Point(228, 98);
+            this.lblContrActual.Name = "lblContrActual";
+            this.lblContrActual.Size = new System.Drawing.Size(0, 13);
+            this.lblContrActual.TabIndex = 47;
             // 
             // lblContraseñaVerificar
             // 
             this.lblContraseñaVerificar.AutoSize = true;
-            this.lblContraseñaVerificar.Location = new System.Drawing.Point(87, 144);
+            this.lblContraseñaVerificar.Location = new System.Drawing.Point(89, 153);
             this.lblContraseñaVerificar.Name = "lblContraseñaVerificar";
             this.lblContraseñaVerificar.Size = new System.Drawing.Size(105, 13);
             this.lblContraseñaVerificar.TabIndex = 46;
@@ -103,7 +104,7 @@
             // lblContrañesaRegistrar
             // 
             this.lblContrañesaRegistrar.AutoSize = true;
-            this.lblContrañesaRegistrar.Location = new System.Drawing.Point(40, 105);
+            this.lblContrañesaRegistrar.Location = new System.Drawing.Point(42, 114);
             this.lblContrañesaRegistrar.Name = "lblContrañesaRegistrar";
             this.lblContrañesaRegistrar.Size = new System.Drawing.Size(152, 13);
             this.lblContrañesaRegistrar.TabIndex = 45;
@@ -111,7 +112,7 @@
             // 
             // txtVerificarRegistrar
             // 
-            this.txtVerificarRegistrar.Location = new System.Drawing.Point(227, 144);
+            this.txtVerificarRegistrar.Location = new System.Drawing.Point(229, 153);
             this.txtVerificarRegistrar.Name = "txtVerificarRegistrar";
             this.txtVerificarRegistrar.Size = new System.Drawing.Size(100, 20);
             this.txtVerificarRegistrar.TabIndex = 44;
@@ -119,7 +120,7 @@
             // 
             // txtContraseñaRegistrar
             // 
-            this.txtContraseñaRegistrar.Location = new System.Drawing.Point(227, 105);
+            this.txtContraseñaRegistrar.Location = new System.Drawing.Point(229, 114);
             this.txtContraseñaRegistrar.Name = "txtContraseñaRegistrar";
             this.txtContraseñaRegistrar.Size = new System.Drawing.Size(100, 20);
             this.txtContraseñaRegistrar.TabIndex = 43;
@@ -154,7 +155,7 @@
             // pbMostrarRegistrar
             // 
             this.pbMostrarRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("pbMostrarRegistrar.Image")));
-            this.pbMostrarRegistrar.Location = new System.Drawing.Point(344, 105);
+            this.pbMostrarRegistrar.Location = new System.Drawing.Point(346, 114);
             this.pbMostrarRegistrar.Name = "pbMostrarRegistrar";
             this.pbMostrarRegistrar.Size = new System.Drawing.Size(30, 20);
             this.pbMostrarRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -165,7 +166,7 @@
             // pbOcultarRegistrar
             // 
             this.pbOcultarRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("pbOcultarRegistrar.Image")));
-            this.pbOcultarRegistrar.Location = new System.Drawing.Point(344, 105);
+            this.pbOcultarRegistrar.Location = new System.Drawing.Point(346, 114);
             this.pbOcultarRegistrar.Name = "pbOcultarRegistrar";
             this.pbOcultarRegistrar.Size = new System.Drawing.Size(30, 20);
             this.pbOcultarRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,11 +184,22 @@
             this.btnConfCambio.UseVisualStyleBackColor = true;
             this.btnConfCambio.Click += new System.EventHandler(this.btnConfCambio_Click);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(506, 229);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 58;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // FormCambiarContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 264);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnConfCambio);
             this.Controls.Add(this.txtContraseñaActual);
             this.Controls.Add(this.label1);
@@ -198,7 +210,7 @@
             this.Controls.Add(this.lblMinContraseñaRegistrar);
             this.Controls.Add(this.lblMayContraseñaRegistrar);
             this.Controls.Add(this.lblInstruccionesContraseñaRegistrar);
-            this.Controls.Add(this.lblErrorUsuarioRegistrar);
+            this.Controls.Add(this.lblContrActual);
             this.Controls.Add(this.lblContraseñaVerificar);
             this.Controls.Add(this.lblContrañesaRegistrar);
             this.Controls.Add(this.txtVerificarRegistrar);
@@ -221,7 +233,7 @@
         private System.Windows.Forms.Label lblMinContraseñaRegistrar;
         private System.Windows.Forms.Label lblMayContraseñaRegistrar;
         private System.Windows.Forms.Label lblInstruccionesContraseñaRegistrar;
-        private System.Windows.Forms.Label lblErrorUsuarioRegistrar;
+        private System.Windows.Forms.Label lblContrActual;
         private System.Windows.Forms.Label lblContraseñaVerificar;
         private System.Windows.Forms.Label lblContrañesaRegistrar;
         private System.Windows.Forms.TextBox txtVerificarRegistrar;
@@ -230,5 +242,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtContraseñaActual;
         private System.Windows.Forms.Button btnConfCambio;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
