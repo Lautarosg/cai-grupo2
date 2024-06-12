@@ -67,6 +67,12 @@
     <Compile Include="FormAdminUsuario.Designer.cs">
       <DependentUpon>FormAdminUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAdminProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminProducto.Designer.cs">
+      <DependentUpon>FormAdminProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdminUsuario.resx">
       <DependentUpon>FormAdminUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminProducto.resx">
+      <DependentUpon>FormAdminProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCambiarContraseña.resx">
       <DependentUpon>FormCambiarContraseña.cs</DependentUpon>

@@ -74,11 +74,7 @@ namespace Persistencia
 
         }
 
-
        
-
-
-
         //Lista todos los productos en el swagger TraerProductos, pero devuelve un string, usado en calculo de producto con mayor cantidad de ventas
         public static string ListaProductos()
         {
@@ -115,6 +111,45 @@ namespace Persistencia
             return stock;
         }
 
+
+        public static async Task ModificarProducto(Guid id, Guid idUsuario, int precio, int stock)
+        {
+            string path = "/api/Producto/ModificarProducto";
+            var patchData = new
+            {
+                id = id.ToString(),
+                idUsuario = idUsuario.ToString(),
+                precio = precio,
+                stock = stock
+            };
+            string json = JsonConvert.SerializeObject(patchData);
+
+            HttpResponseMessage response = await Task.Run(() => WebHelper.Patch(path, json));
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Error al modificar el producto: " + response.ReasonPhrase);
+            }
+        }
+
+        public static async Task EliminarProducto(Guid id, Guid idUsuario)
+        {
+            string path = "/api/Producto/BajaProducto";
+            var productoDeleteRequest = new
+            {
+                id = id,
+                idUsuario = idUsuario
+            };
+
+            var jsonRequest = JsonConvert.SerializeObject(productoDeleteRequest);
+            HttpResponseMessage response = await Task.Run(() => WebHelper.DeleteWithBody(path, jsonRequest));
+
+            if (!response.IsSuccessStatusCode)
+            {
+                var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                string respuesta = reader.ReadToEnd();
+                throw new Exception($"Error: {response.StatusCode} - {response.ReasonPhrase}\n{respuesta}");
+            }
+        }
     }
 
 }

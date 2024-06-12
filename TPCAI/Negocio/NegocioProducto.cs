@@ -30,10 +30,10 @@ namespace Negocio
         public static int VerStock(string nombreProducto) => ControladorProducto.VerStock(nombreProducto);
 
         //cargo todos los productos en lista, para saber si conecta el swagger
-        /*public static List<ProductoDTO> ListaProductos()
+        public static List<ProductoDTO> ListaProductos()
         {
             return ControladorProducto.ListaTodosProductos();
-        }*/
+        }
 
         public static string GetProductos()
         {
@@ -41,6 +41,15 @@ namespace Negocio
         }
 
 
+        public static async Task ModificarProducto(Guid id, Guid idUsuario, int precio, int stock)
+        {
+            await ControladorProducto.ModificarProducto(id, idUsuario, precio, stock);
+        }
+
+        public static async Task EliminarProducto(Guid id, Guid idUsuario)
+        {
+            await ControladorProducto.EliminarProducto(id, idUsuario);
+        }
 
     }
 
