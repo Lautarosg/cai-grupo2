@@ -170,7 +170,7 @@
             this.buttonVtaProv.Name = "buttonVtaProv";
             this.buttonVtaProv.Size = new System.Drawing.Size(97, 33);
             this.buttonVtaProv.TabIndex = 29;
-            this.buttonVtaProv.Text = "Ventas Por vendedor";
+            this.buttonVtaProv.Text = "Ventas Por Vendedor";
             this.buttonVtaProv.UseVisualStyleBackColor = true;
             this.buttonVtaProv.Click += new System.EventHandler(this.buttonVtaProv_Click);
             // 
@@ -229,7 +229,7 @@
             this.buttonBajaSup.Name = "buttonBajaSup";
             this.buttonBajaSup.Size = new System.Drawing.Size(151, 38);
             this.buttonBajaSup.TabIndex = 23;
-            this.buttonBajaSup.Text = "Administrar usuarios";
+            this.buttonBajaSup.Text = "Administrar Usuarios";
             this.buttonBajaSup.UseVisualStyleBackColor = true;
             this.buttonBajaSup.Click += new System.EventHandler(this.buttonBajaSup_Click);
             // 
@@ -260,10 +260,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(504, 473);
+            this.button1.Location = new System.Drawing.Point(546, 472);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 50);
+            this.button1.Size = new System.Drawing.Size(90, 45);
             this.button1.TabIndex = 24;
             this.button1.Text = "Cerrar Sesión";
             this.button1.UseVisualStyleBackColor = true;

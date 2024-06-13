@@ -13,6 +13,11 @@ namespace TPCAI
 {
     public partial class FormAltaCliente : Form
     {
+        public string Usuario {  get; set; }
+        public int RolUsuario { get; set; }
+
+        NegocioUsuario negocioUsuario = new NegocioUsuario();
+
         private NegocioCliente clienteNegocio = new NegocioCliente();
         public FormAltaCliente()
         {
@@ -32,6 +37,8 @@ namespace TPCAI
         {
             try
             {
+                string usuario = this.Usuario;
+                string idUsuario = negocioUsuario.BuscarId(usuario);
                 string nombre = ValidadorUsuario.ValidarNombre(txtNombre.Text);
                 string apellido = ValidadorUsuario.ValidarApellido(txtApellido.Text);
                 int dni =  ValidadorUsuario.ValidarDNI(txtDni.Text);
@@ -42,7 +49,7 @@ namespace TPCAI
                 string host = "2";
 
 
-                clienteNegocio.agregarCliente(nombre, apellido, dni, direccion, telefono, email, fechaNacimiento, host);
+                clienteNegocio.agregarCliente(idUsuario, nombre, apellido, dni, direccion, telefono, email, fechaNacimiento, host);
 
                 
 
@@ -58,8 +65,20 @@ namespace TPCAI
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormMenuVendedor formMenuVendedor = new FormMenuVendedor();
-            formMenuVendedor.ShowDialog();
+            if (RolUsuario == 3)
+            {
+                FormMenuAdmin formAdministrador = new FormMenuAdmin();
+                formAdministrador.Usuario = Usuario;
+                formAdministrador.RolUsuario = RolUsuario;
+                formAdministrador.ShowDialog();
+            }
+            else if (RolUsuario == 1)
+            {
+                FormMenuVendedor formSupervisor = new FormMenuVendedor();
+                formSupervisor.Usuario = Usuario;
+                formSupervisor.RolUsuario = RolUsuario;
+                formSupervisor.ShowDialog();
+            }
         }
 
         private void btnModificarCliente_Click(object sender, EventArgs e)
@@ -90,6 +109,22 @@ namespace TPCAI
 
 
 
+        /*private async void cargaClientes()
+        {
+            try
+            {
+                var productos = await Task.Run(() => clienteNegocio.listarClientes());
+                dataGridView1.DataSource = productos;
+                dataGridView1.Columns["id"].Visible = false;
+                //dataGridView1.Columns[""].Visible = false;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar productos: " + ex.Message);
+            }
+        }*/
         private void cargarClientes()
         {
             List<ClienteDTO> clientes = clienteNegocio.listarClientes();

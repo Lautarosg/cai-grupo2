@@ -85,7 +85,12 @@ namespace TPCAI
 
         private void buttonAltaVend_Click(object sender, EventArgs e)
         {
-
+            string usuario = this.Usuario;
+            int rolUsuario = this.RolUsuario;
+            FormAltaCliente formAdminCliente = new FormAltaCliente();
+            formAdminCliente.Usuario = usuario;
+            formAdminCliente.RolUsuario = rolUsuario;
+            formAdminCliente.ShowDialog();
         }
 
         private void buttonModProd_Click(object sender, EventArgs e)

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPCAI", "TPCAI\TPCAI.csproj", "{718E0B12-426F-4445-B566-D596FA9F0F67}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "TPCAI\Presentacion.csproj", "{718E0B12-426F-4445-B566-D596FA9F0F67}"
 	ProjectSection(ProjectDependencies) = postProject
 		{10ECFFA4-7F3E-40AB-B1DD-317F548CCC09} = {10ECFFA4-7F3E-40AB-B1DD-317F548CCC09}
 	EndProjectSection

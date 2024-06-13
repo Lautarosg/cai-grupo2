@@ -27,14 +27,16 @@ namespace Negocio
             return controladorCliente.getClientes();
         }
 
+      
+
         /*public void Task AgregarCliente(ClientePostRequest cliente)
         {
             await ControladorCliente.AgregarCliente(cliente);
         }*/
 
-        public void agregarCliente(string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento, string host)
+        public void agregarCliente(string idUsuario, string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento, string host)
         {
-            ClientePostRequest altaCliente = new ClientePostRequest(idAdmin, nombre, apellido, dni, direccion, telefono, email, fechaNacimiento, host);
+            ClientePostRequest altaCliente = new ClientePostRequest(idUsuario, nombre, apellido, dni, direccion, telefono, email, fechaNacimiento, host);
             controladorCliente.AgregarCliente(altaCliente);
 
         }
