@@ -27,13 +27,19 @@ namespace TPCAI
         private void btnAdminCliente_Click(object sender, EventArgs e)
         {
             this.Hide();
+            string usuario = this.Usuario;
+            int rolUsuario = this.RolUsuario;
             FormAltaCliente formAdminCliente = new FormAltaCliente();
             formAdminCliente.ShowDialog();
         }
 
         private void buttonRegistrarVta_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            string usuario = this.Usuario;
+            int rolUsuario = this.RolUsuario;
+            FormVentasCarrito formVentas = new FormVentasCarrito();
+            formVentas.ShowDialog();
         }
 
         private void btnCambiarContraseña_Click(object sender, EventArgs e)
@@ -43,6 +49,20 @@ namespace TPCAI
             formContraseña.Usuario = usuario;
             formContraseña.RolUsuario = RolUsuario;
             formContraseña.ShowDialog();
+        }
+
+        private void buttonVtaVendedor_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormVentasPorVendedor formVentasPorVendedor = new FormVentasPorVendedor();
+            formVentasPorVendedor.ShowDialog();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormInicio formInicio = new FormInicio();
+            formInicio.ShowDialog();
         }
     }
 }
