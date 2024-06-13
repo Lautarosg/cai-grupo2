@@ -142,13 +142,15 @@ namespace Negocio
         }
 
   
-
-
         public void ModificarContraseña(string usuario, string contraseña, string contraseñaNueva)
         {
             controllerUsuario.ModificarContraseña(usuario, contraseña, contraseñaNueva);
         }
 
+        public List<UsuarioDTO> ListarUsuariosPorNombreUsuario(string valor, string filtro)
+        {
+            return controllerUsuario.ListarUsuariosPorNombreUsuario(valor, idAdmin, filtro);
+        }
     }
 }
 

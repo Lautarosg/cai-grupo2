@@ -25,8 +25,6 @@ namespace TPCAI
 
         private void FormMenuAdmin_Load(object sender, EventArgs e)
         {
-            DateTime fechaAlta = negocioUsuario.BuscarFechaAlta(Usuario);
-            lblFechaAlta.Text = fechaAlta.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

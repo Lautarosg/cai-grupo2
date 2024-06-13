@@ -109,6 +109,7 @@ namespace TPCAI
 
                     if (rol == 3)
                     {
+                        this.Hide();
                         FormMenuAdmin formAdministrador = new FormMenuAdmin();
                         formAdministrador.Usuario = usuario;
                         formAdministrador.RolUsuario = rol; 
@@ -116,6 +117,7 @@ namespace TPCAI
                     }
                     else if (rol == 2)
                     {
+                        this.Hide();
                         FormMenuSupervisor formSupervisor = new FormMenuSupervisor();
                         formSupervisor.Usuario = usuario;
                         formSupervisor.RolUsuario = rol;
@@ -123,6 +125,7 @@ namespace TPCAI
                     }
                     else if(rol == 1)
                     {
+                        this.Hide();
                         FormMenuVendedor formVendedor = new FormMenuVendedor();
                         formVendedor.Usuario = usuario;
                         formVendedor.RolUsuario = rol;

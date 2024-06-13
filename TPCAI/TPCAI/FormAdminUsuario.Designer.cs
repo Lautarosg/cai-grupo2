@@ -37,6 +37,8 @@
             this.txtBuscarUser = new System.Windows.Forms.TextBox();
             this.dgvListaUsuarios = new System.Windows.Forms.DataGridView();
             this.btnAltaUsuario = new System.Windows.Forms.Button();
+            this.cbListarUsuarios = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,9 +89,9 @@
             this.label3.Location = new System.Drawing.Point(12, 35);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 13);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Buscar por Nombre";
+            this.label3.Text = "Buscar por:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // buttonListarUsuariosActivos
@@ -131,11 +133,35 @@
             this.btnAltaUsuario.UseVisualStyleBackColor = true;
             this.btnAltaUsuario.Click += new System.EventHandler(this.btnAltaUsuario_Click);
             // 
+            // cbListarUsuarios
+            // 
+            this.cbListarUsuarios.FormattingEnabled = true;
+            this.cbListarUsuarios.Items.AddRange(new object[] {
+            "Nombre",
+            "Apellido",
+            "Nombre Usuario"});
+            this.cbListarUsuarios.Location = new System.Drawing.Point(78, 32);
+            this.cbListarUsuarios.Name = "cbListarUsuarios";
+            this.cbListarUsuarios.Size = new System.Drawing.Size(93, 21);
+            this.cbListarUsuarios.TabIndex = 15;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(266, 53);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(70, 30);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Limpiar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // FormAdminUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 372);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cbListarUsuarios);
             this.Controls.Add(this.btnAltaUsuario);
             this.Controls.Add(this.dgvListaUsuarios);
             this.Controls.Add(this.txtBuscarUser);
@@ -166,5 +192,7 @@
         private System.Windows.Forms.TextBox txtBuscarUser;
         private System.Windows.Forms.DataGridView dgvListaUsuarios;
         private System.Windows.Forms.Button btnAltaUsuario;
+        private System.Windows.Forms.ComboBox cbListarUsuarios;
+        private System.Windows.Forms.Button button2;
     }
 }

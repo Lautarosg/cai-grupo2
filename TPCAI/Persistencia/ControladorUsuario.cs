@@ -246,11 +246,44 @@ namespace Persistencia
             return existe;  
         }
 
-        public void ModificarContraseña(String nombreCliente, String contraseña, String contraseñaNueva)
+        public List<UsuarioDTO> ListarUsuariosPorNombreUsuario(string valor, string idAdmin, string filtro)
+        {
+            // Primermo se obtiene la lista de usuarios activos
+            List<UsuarioDTO> usuarios = ListarUsuarios(idAdmin);
+
+            // Segundo se filtra los usuarios cuyo nombre de usuario coincida con el nombre ingresado
+            List<UsuarioDTO> usuariosEncontrados;
+
+            switch (filtro.ToLower())
+            {
+                case "nombre usuario":
+                    usuariosEncontrados = usuarios
+                        .Where(u => u.NombreUsuario.Equals(valor, StringComparison.OrdinalIgnoreCase))
+                        .ToList();
+                    break;
+                case "apellido":
+                    usuariosEncontrados = usuarios
+                        .Where(u => u.Apellido.Equals(valor, StringComparison.OrdinalIgnoreCase))
+                        .ToList();
+                    break;
+                case "nombre":
+                    usuariosEncontrados = usuarios
+                        .Where(u => u.Nombre.Equals(valor, StringComparison.OrdinalIgnoreCase))
+                        .ToList();
+                    break;
+                default:
+                    throw new ArgumentException("Filtro no válido. Debe ser NombreUsuario , Apellido o Nombre.");
+            }
+
+            return usuariosEncontrados;
+        }
+        
+
+        public void ModificarContraseña(String nombreUsuario, String contraseña, String contraseñaNueva)
         {
             String path = "/api/Usuario/CambiarContraseña";
             Dictionary<string, string> map = new Dictionary<string, string>();
-            map.Add("nombreUsuario", nombreCliente);
+            map.Add("nombreUsuario", nombreUsuario);
             map.Add("contraseña", contraseña);
             map.Add("contraseñaNueva", contraseñaNueva);
 
@@ -263,6 +296,7 @@ namespace Persistencia
                 {
                     var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
                     string respuesta = reader.ReadToEnd();
+                    Console.WriteLine($"Cambio contraseña exitoso: {response.StatusCode} - {response.ReasonPhrase}");
                 }
                 else
                 {
@@ -274,7 +308,6 @@ namespace Persistencia
                 Console.WriteLine($"Exception: {ex.Message}");
             }
         }
-
     }
 
 

@@ -114,6 +114,7 @@
             // 
             this.txtVerificarRegistrar.Location = new System.Drawing.Point(229, 153);
             this.txtVerificarRegistrar.Name = "txtVerificarRegistrar";
+            this.txtVerificarRegistrar.PasswordChar = '*';
             this.txtVerificarRegistrar.Size = new System.Drawing.Size(100, 20);
             this.txtVerificarRegistrar.TabIndex = 44;
             this.txtVerificarRegistrar.TextChanged += new System.EventHandler(this.txtVerificarRegistrar_TextChanged);
@@ -122,6 +123,7 @@
             // 
             this.txtContraseñaRegistrar.Location = new System.Drawing.Point(229, 114);
             this.txtContraseñaRegistrar.Name = "txtContraseñaRegistrar";
+            this.txtContraseñaRegistrar.PasswordChar = '*';
             this.txtContraseñaRegistrar.Size = new System.Drawing.Size(100, 20);
             this.txtContraseñaRegistrar.TabIndex = 43;
             // 
@@ -148,6 +150,7 @@
             // 
             this.txtContraseñaActual.Location = new System.Drawing.Point(227, 68);
             this.txtContraseñaActual.Name = "txtContraseñaActual";
+            this.txtContraseñaActual.PasswordChar = '*';
             this.txtContraseñaActual.Size = new System.Drawing.Size(100, 20);
             this.txtContraseñaActual.TabIndex = 56;
             this.txtContraseñaActual.TextChanged += new System.EventHandler(this.txtContraseñaActual_TextChanged);

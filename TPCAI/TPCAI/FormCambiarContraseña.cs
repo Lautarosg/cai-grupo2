@@ -38,17 +38,24 @@ namespace TPCAI
             string contraseñaNueva = txtContraseñaRegistrar.Text;
             string contraseñaVerificar = txtVerificarRegistrar.Text;
 
-            if (validadorUtil.validarIguales(contraseña, contraseñaVerificar))
+            if (!(validadorUtil.validarIguales(contraseña, contraseñaVerificar)))
             {
                 lblErrorContraseñaRegistrar.Text = "La contraseña debe ser la misma!";
             }
-            else if(contraseña == "")
+            else if (contraseña == "")
             {
                 lblContrActual.Text = "Debe ingresar la contraseña actual";
             }
             else
             {
                 usuarioNegocio.ModificarContraseña(usuario, contraseña, contraseñaNueva);
+
+                var result = MessageBox.Show("Contraseña cambiada exitosamente", "", MessageBoxButtons.OK);
+                if (result == DialogResult.OK)
+                {
+                    Close();
+                    this.Hide();
+                }
             }
         }
 
@@ -85,27 +92,7 @@ namespace TPCAI
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            if (RolUsuario == 3)
-            {
-                FormMenuAdmin formAdministrador = new FormMenuAdmin();
-                formAdministrador.Usuario = Usuario;
-                formAdministrador.RolUsuario = RolUsuario;
-                formAdministrador.ShowDialog();
-            }
-            else if (RolUsuario == 2)
-            {
-                FormMenuSupervisor formSupervisor = new FormMenuSupervisor();
-                formSupervisor.Usuario = Usuario;
-                formSupervisor.RolUsuario = RolUsuario;
-                formSupervisor.ShowDialog();
-            }
-            else if (RolUsuario == 1)
-            {
-                FormMenuVendedor formVendedor = new FormMenuVendedor();
-                formVendedor.Usuario = Usuario;
-                formVendedor.RolUsuario = RolUsuario;
-                formVendedor.ShowDialog();
-            }
+            this.Hide();
         }
     }
 }
