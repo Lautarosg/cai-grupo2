@@ -251,7 +251,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(546, 472);
+            this.button1.Location = new System.Drawing.Point(363, 537);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 45);
@@ -262,7 +262,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(522, 16);
+            this.button2.Location = new System.Drawing.Point(49, 546);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 27);
             this.button2.TabIndex = 25;
@@ -285,7 +285,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(647, 528);
+            this.ClientSize = new System.Drawing.Size(469, 593);
             this.Controls.Add(this.textBoxProdCritico);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -299,6 +299,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMenuAdmin";
+            this.Text = "Menu de Administrador";
             this.Load += new System.EventHandler(this.FormMenuAdmin_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);

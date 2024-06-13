@@ -74,7 +74,7 @@
             // 
             // buttonConfirmar
             // 
-            this.buttonConfirmar.Location = new System.Drawing.Point(203, 319);
+            this.buttonConfirmar.Location = new System.Drawing.Point(200, 326);
             this.buttonConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(107, 35);

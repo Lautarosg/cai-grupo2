@@ -54,7 +54,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 56);
+            this.label2.Location = new System.Drawing.Point(39, 48);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 13);
@@ -66,7 +66,7 @@
             this.buttonRegistrarVta.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonRegistrarVta.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonRegistrarVta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegistrarVta.Location = new System.Drawing.Point(37, 25);
+            this.buttonRegistrarVta.Location = new System.Drawing.Point(47, 18);
             this.buttonRegistrarVta.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRegistrarVta.Name = "buttonRegistrarVta";
             this.buttonRegistrarVta.Size = new System.Drawing.Size(118, 50);
@@ -79,7 +79,7 @@
             // 
             this.buttonVtaVendedor.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonVtaVendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonVtaVendedor.Location = new System.Drawing.Point(190, 25);
+            this.buttonVtaVendedor.Location = new System.Drawing.Point(196, 18);
             this.buttonVtaVendedor.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVtaVendedor.Name = "buttonVtaVendedor";
             this.buttonVtaVendedor.Size = new System.Drawing.Size(120, 50);
@@ -93,7 +93,7 @@
             this.btnAdminCliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAdminCliente.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAdminCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdminCliente.Location = new System.Drawing.Point(117, 29);
+            this.btnAdminCliente.Location = new System.Drawing.Point(120, 18);
             this.btnAdminCliente.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdminCliente.Name = "btnAdminCliente";
             this.btnAdminCliente.Size = new System.Drawing.Size(118, 50);
@@ -107,9 +107,9 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.buttonRegistrarVta);
             this.groupBox1.Controls.Add(this.buttonVtaVendedor);
-            this.groupBox1.Location = new System.Drawing.Point(89, 100);
+            this.groupBox1.Location = new System.Drawing.Point(42, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(357, 90);
+            this.groupBox1.Size = new System.Drawing.Size(357, 75);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ventas";
@@ -118,16 +118,16 @@
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox2.Controls.Add(this.btnAdminCliente);
-            this.groupBox2.Location = new System.Drawing.Point(88, 211);
+            this.groupBox2.Location = new System.Drawing.Point(42, 177);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(357, 88);
+            this.groupBox2.Size = new System.Drawing.Size(357, 75);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Clientes";
             // 
             // btnCambiarContraseña
             // 
-            this.btnCambiarContraseña.Location = new System.Drawing.Point(463, 12);
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(42, 282);
             this.btnCambiarContraseña.Name = "btnCambiarContraseña";
             this.btnCambiarContraseña.Size = new System.Drawing.Size(109, 30);
             this.btnCambiarContraseña.TabIndex = 7;
@@ -137,7 +137,7 @@
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Location = new System.Drawing.Point(482, 254);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(309, 267);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(90, 45);
@@ -150,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 311);
+            this.ClientSize = new System.Drawing.Size(419, 323);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnCambiarContraseña);
             this.Controls.Add(this.groupBox2);

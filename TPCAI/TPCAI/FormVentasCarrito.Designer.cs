@@ -116,9 +116,8 @@
             this.buttonExecutePurchase.Text = "comprar";
             this.buttonExecutePurchase.UseVisualStyleBackColor = true;
             this.buttonExecutePurchase.Click += new System.EventHandler(this.buttonExecutePurchase_Click);
-
             // 
-            // TPCAICarrito1
+            // FormVentasCarrito
             // 
             this.ClientSize = new System.Drawing.Size(406, 379);
             this.Controls.Add(this.buttonExecutePurchase);
@@ -129,13 +128,12 @@
             this.Controls.Add(this.labelQuantity);
             this.Controls.Add(this.numericUpDownQuantity);
             this.Controls.Add(this.buttonAddToCart);
-            this.Name = "TPCAICarrito1";
+            this.Name = "FormVentasCarrito";
+            this.Text = "Carrito de compras";
             this.Load += new System.EventHandler(this.ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
-
 
         }
 

@@ -145,5 +145,10 @@ namespace TPCAI
                 MessageBox.Show("Error al cargar productos: " + ex.Message);
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

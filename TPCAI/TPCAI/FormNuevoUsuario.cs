@@ -220,5 +220,10 @@ namespace TPCAI
         {
 
         }
+
+        private void pbDNI_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -65,7 +65,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(535, 90);
+            this.groupBox1.Size = new System.Drawing.Size(467, 86);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Producto";
@@ -74,7 +74,7 @@
             // 
             this.buttonAdminProd.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonAdminProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdminProd.Location = new System.Drawing.Point(275, 21);
+            this.buttonAdminProd.Location = new System.Drawing.Point(256, 18);
             this.buttonAdminProd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdminProd.Name = "buttonAdminProd";
             this.buttonAdminProd.Size = new System.Drawing.Size(120, 50);
@@ -87,10 +87,10 @@
             // 
             this.buttonAltaProd.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonAltaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAltaProd.Location = new System.Drawing.Point(138, 21);
+            this.buttonAltaProd.Location = new System.Drawing.Point(104, 18);
             this.buttonAltaProd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAltaProd.Name = "buttonAltaProd";
-            this.buttonAltaProd.Size = new System.Drawing.Size(100, 50);
+            this.buttonAltaProd.Size = new System.Drawing.Size(120, 50);
             this.buttonAltaProd.TabIndex = 0;
             this.buttonAltaProd.Text = "Alta";
             this.buttonAltaProd.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(535, 90);
+            this.groupBox2.Size = new System.Drawing.Size(467, 90);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Reporte";
@@ -116,7 +116,7 @@
             // 
             this.buttonMasVendido.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonMasVendido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMasVendido.Location = new System.Drawing.Point(353, 25);
+            this.buttonMasVendido.Location = new System.Drawing.Point(328, 25);
             this.buttonMasVendido.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMasVendido.Name = "buttonMasVendido";
             this.buttonMasVendido.Size = new System.Drawing.Size(114, 47);
@@ -129,7 +129,7 @@
             // 
             this.buttonVtaProv.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonVtaProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonVtaProv.Location = new System.Drawing.Point(215, 25);
+            this.buttonVtaProv.Location = new System.Drawing.Point(195, 25);
             this.buttonVtaProv.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVtaProv.Name = "buttonVtaProv";
             this.buttonVtaProv.Size = new System.Drawing.Size(119, 47);
@@ -142,7 +142,7 @@
             // 
             this.buttonStockCritico.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonStockCritico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStockCritico.Location = new System.Drawing.Point(82, 25);
+            this.buttonStockCritico.Location = new System.Drawing.Point(70, 25);
             this.buttonStockCritico.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStockCritico.Name = "buttonStockCritico";
             this.buttonStockCritico.Size = new System.Drawing.Size(112, 47);
@@ -153,9 +153,9 @@
             // 
             // btnCambiarContraseña
             // 
-            this.btnCambiarContraseña.Location = new System.Drawing.Point(539, 14);
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(37, 320);
             this.btnCambiarContraseña.Name = "btnCambiarContraseña";
-            this.btnCambiarContraseña.Size = new System.Drawing.Size(114, 26);
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(114, 29);
             this.btnCambiarContraseña.TabIndex = 7;
             this.btnCambiarContraseña.Text = "Cambiar contraseña";
             this.btnCambiarContraseña.UseVisualStyleBackColor = true;
@@ -163,7 +163,7 @@
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Location = new System.Drawing.Point(563, 305);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(414, 304);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(90, 45);
@@ -206,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 361);
+            this.ClientSize = new System.Drawing.Size(521, 361);
             this.Controls.Add(this.textBoxProdCritico);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);

@@ -95,7 +95,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 45);
+            this.label1.Location = new System.Drawing.Point(25, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
@@ -104,7 +104,7 @@
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(122, 43);
+            this.textBoxNombre.Location = new System.Drawing.Point(122, 45);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(94, 20);
@@ -113,7 +113,7 @@
             // 
             // textBoxApellido
             // 
-            this.textBoxApellido.Location = new System.Drawing.Point(122, 79);
+            this.textBoxApellido.Location = new System.Drawing.Point(122, 75);
             this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(94, 20);
@@ -123,7 +123,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 81);
+            this.label2.Location = new System.Drawing.Point(25, 75);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
@@ -132,7 +132,7 @@
             // 
             // textBoxDNI
             // 
-            this.textBoxDNI.Location = new System.Drawing.Point(122, 114);
+            this.textBoxDNI.Location = new System.Drawing.Point(122, 105);
             this.textBoxDNI.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(94, 20);
@@ -142,7 +142,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 116);
+            this.label3.Location = new System.Drawing.Point(25, 105);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
@@ -151,7 +151,7 @@
             // 
             // textBoxDireccion
             // 
-            this.textBoxDireccion.Location = new System.Drawing.Point(122, 146);
+            this.textBoxDireccion.Location = new System.Drawing.Point(122, 135);
             this.textBoxDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(94, 20);
@@ -161,7 +161,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 148);
+            this.label4.Location = new System.Drawing.Point(25, 135);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
@@ -170,7 +170,7 @@
             // 
             // textBoxTelefono
             // 
-            this.textBoxTelefono.Location = new System.Drawing.Point(382, 77);
+            this.textBoxTelefono.Location = new System.Drawing.Point(380, 75);
             this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(94, 20);
@@ -180,7 +180,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(282, 79);
+            this.label5.Location = new System.Drawing.Point(280, 75);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
@@ -189,7 +189,7 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(382, 45);
+            this.textBoxEmail.Location = new System.Drawing.Point(380, 45);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(94, 20);
@@ -199,7 +199,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(282, 47);
+            this.label6.Location = new System.Drawing.Point(280, 45);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
@@ -219,7 +219,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(282, 116);
+            this.label8.Location = new System.Drawing.Point(280, 105);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(93, 13);
@@ -229,7 +229,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(282, 150);
+            this.label9.Location = new System.Drawing.Point(280, 135);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 13);
@@ -238,10 +238,10 @@
             // 
             // buttonConfirmarNuevoUser
             // 
-            this.buttonConfirmarNuevoUser.Location = new System.Drawing.Point(17, 269);
+            this.buttonConfirmarNuevoUser.Location = new System.Drawing.Point(17, 276);
             this.buttonConfirmarNuevoUser.Margin = new System.Windows.Forms.Padding(2);
             this.buttonConfirmarNuevoUser.Name = "buttonConfirmarNuevoUser";
-            this.buttonConfirmarNuevoUser.Size = new System.Drawing.Size(93, 33);
+            this.buttonConfirmarNuevoUser.Size = new System.Drawing.Size(93, 41);
             this.buttonConfirmarNuevoUser.TabIndex = 17;
             this.buttonConfirmarNuevoUser.Text = "Confirmar";
             this.buttonConfirmarNuevoUser.UseVisualStyleBackColor = true;
@@ -249,10 +249,10 @@
             // 
             // buttonVolverAtras
             // 
-            this.buttonVolverAtras.Location = new System.Drawing.Point(757, 404);
+            this.buttonVolverAtras.Location = new System.Drawing.Point(475, 276);
             this.buttonVolverAtras.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVolverAtras.Name = "buttonVolverAtras";
-            this.buttonVolverAtras.Size = new System.Drawing.Size(93, 33);
+            this.buttonVolverAtras.Size = new System.Drawing.Size(91, 41);
             this.buttonVolverAtras.TabIndex = 18;
             this.buttonVolverAtras.Text = "Volver Atrás";
             this.buttonVolverAtras.UseVisualStyleBackColor = true;
@@ -269,7 +269,7 @@
             // lblMaxUsuarioRegistrar
             // 
             this.lblMaxUsuarioRegistrar.AutoSize = true;
-            this.lblMaxUsuarioRegistrar.Location = new System.Drawing.Point(237, 244);
+            this.lblMaxUsuarioRegistrar.Location = new System.Drawing.Point(240, 250);
             this.lblMaxUsuarioRegistrar.Name = "lblMaxUsuarioRegistrar";
             this.lblMaxUsuarioRegistrar.Size = new System.Drawing.Size(195, 13);
             this.lblMaxUsuarioRegistrar.TabIndex = 34;
@@ -280,7 +280,7 @@
             // 
             this.lblMinUsuarioRegistrar.AutoSize = true;
             this.lblMinUsuarioRegistrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblMinUsuarioRegistrar.Location = new System.Drawing.Point(237, 222);
+            this.lblMinUsuarioRegistrar.Location = new System.Drawing.Point(240, 225);
             this.lblMinUsuarioRegistrar.Name = "lblMinUsuarioRegistrar";
             this.lblMinUsuarioRegistrar.Size = new System.Drawing.Size(177, 13);
             this.lblMinUsuarioRegistrar.TabIndex = 33;
@@ -289,7 +289,7 @@
             // lblInstruccionesRegistrar
             // 
             this.lblInstruccionesRegistrar.AutoSize = true;
-            this.lblInstruccionesRegistrar.Location = new System.Drawing.Point(237, 198);
+            this.lblInstruccionesRegistrar.Location = new System.Drawing.Point(240, 200);
             this.lblInstruccionesRegistrar.Name = "lblInstruccionesRegistrar";
             this.lblInstruccionesRegistrar.Size = new System.Drawing.Size(193, 13);
             this.lblInstruccionesRegistrar.TabIndex = 32;
@@ -299,7 +299,7 @@
             // lblUsuarioRegistrar
             // 
             this.lblUsuarioRegistrar.AutoSize = true;
-            this.lblUsuarioRegistrar.Location = new System.Drawing.Point(14, 195);
+            this.lblUsuarioRegistrar.Location = new System.Drawing.Point(14, 200);
             this.lblUsuarioRegistrar.Name = "lblUsuarioRegistrar";
             this.lblUsuarioRegistrar.Size = new System.Drawing.Size(98, 13);
             this.lblUsuarioRegistrar.TabIndex = 27;
@@ -317,7 +317,7 @@
             // dtpfechaNacimiento
             // 
             this.dtpfechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfechaNacimiento.Location = new System.Drawing.Point(382, 114);
+            this.dtpfechaNacimiento.Location = new System.Drawing.Point(380, 105);
             this.dtpfechaNacimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dtpfechaNacimiento.Name = "dtpfechaNacimiento";
             this.dtpfechaNacimiento.Size = new System.Drawing.Size(94, 20);
@@ -327,7 +327,7 @@
             // pbPerfil
             // 
             this.pbPerfil.Image = ((System.Drawing.Image)(resources.GetObject("pbPerfil.Image")));
-            this.pbPerfil.Location = new System.Drawing.Point(481, 153);
+            this.pbPerfil.Location = new System.Drawing.Point(485, 135);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(19, 17);
             this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -339,7 +339,7 @@
             // pbNacimiento
             // 
             this.pbNacimiento.Image = ((System.Drawing.Image)(resources.GetObject("pbNacimiento.Image")));
-            this.pbNacimiento.Location = new System.Drawing.Point(481, 114);
+            this.pbNacimiento.Location = new System.Drawing.Point(485, 105);
             this.pbNacimiento.Name = "pbNacimiento";
             this.pbNacimiento.Size = new System.Drawing.Size(19, 17);
             this.pbNacimiento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -350,7 +350,7 @@
             // pbEmail
             // 
             this.pbEmail.Image = ((System.Drawing.Image)(resources.GetObject("pbEmail.Image")));
-            this.pbEmail.Location = new System.Drawing.Point(481, 47);
+            this.pbEmail.Location = new System.Drawing.Point(485, 45);
             this.pbEmail.Name = "pbEmail";
             this.pbEmail.Size = new System.Drawing.Size(19, 18);
             this.pbEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -361,7 +361,7 @@
             // pbDireccion
             // 
             this.pbDireccion.Image = ((System.Drawing.Image)(resources.GetObject("pbDireccion.Image")));
-            this.pbDireccion.Location = new System.Drawing.Point(227, 146);
+            this.pbDireccion.Location = new System.Drawing.Point(227, 135);
             this.pbDireccion.Name = "pbDireccion";
             this.pbDireccion.Size = new System.Drawing.Size(19, 17);
             this.pbDireccion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -372,18 +372,19 @@
             // pbDNI
             // 
             this.pbDNI.Image = ((System.Drawing.Image)(resources.GetObject("pbDNI.Image")));
-            this.pbDNI.Location = new System.Drawing.Point(227, 114);
+            this.pbDNI.Location = new System.Drawing.Point(227, 105);
             this.pbDNI.Name = "pbDNI";
             this.pbDNI.Size = new System.Drawing.Size(19, 17);
             this.pbDNI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDNI.TabIndex = 49;
             this.pbDNI.TabStop = false;
             this.tpAyuda.SetToolTip(this.pbDNI, "El documento debe tener 7 u 8 caracteres. \r\n");
+            this.pbDNI.Click += new System.EventHandler(this.pbDNI_Click);
             // 
             // pbApellido
             // 
             this.pbApellido.Image = ((System.Drawing.Image)(resources.GetObject("pbApellido.Image")));
-            this.pbApellido.Location = new System.Drawing.Point(227, 81);
+            this.pbApellido.Location = new System.Drawing.Point(227, 75);
             this.pbApellido.Name = "pbApellido";
             this.pbApellido.Size = new System.Drawing.Size(19, 18);
             this.pbApellido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -394,7 +395,7 @@
             // pbNombre
             // 
             this.pbNombre.Image = ((System.Drawing.Image)(resources.GetObject("pbNombre.Image")));
-            this.pbNombre.Location = new System.Drawing.Point(227, 43);
+            this.pbNombre.Location = new System.Drawing.Point(227, 45);
             this.pbNombre.Name = "pbNombre";
             this.pbNombre.Size = new System.Drawing.Size(19, 17);
             this.pbNombre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -407,7 +408,7 @@
             // pbNombreError
             // 
             this.pbNombreError.Image = ((System.Drawing.Image)(resources.GetObject("pbNombreError.Image")));
-            this.pbNombreError.Location = new System.Drawing.Point(227, 43);
+            this.pbNombreError.Location = new System.Drawing.Point(227, 45);
             this.pbNombreError.Name = "pbNombreError";
             this.pbNombreError.Size = new System.Drawing.Size(19, 17);
             this.pbNombreError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -419,7 +420,7 @@
             // pbApellidoError
             // 
             this.pbApellidoError.Image = ((System.Drawing.Image)(resources.GetObject("pbApellidoError.Image")));
-            this.pbApellidoError.Location = new System.Drawing.Point(227, 82);
+            this.pbApellidoError.Location = new System.Drawing.Point(227, 75);
             this.pbApellidoError.Name = "pbApellidoError";
             this.pbApellidoError.Size = new System.Drawing.Size(19, 17);
             this.pbApellidoError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -430,7 +431,7 @@
             // pbDNIError
             // 
             this.pbDNIError.Image = ((System.Drawing.Image)(resources.GetObject("pbDNIError.Image")));
-            this.pbDNIError.Location = new System.Drawing.Point(227, 114);
+            this.pbDNIError.Location = new System.Drawing.Point(227, 105);
             this.pbDNIError.Name = "pbDNIError";
             this.pbDNIError.Size = new System.Drawing.Size(19, 17);
             this.pbDNIError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -441,7 +442,7 @@
             // pbDireccionError
             // 
             this.pbDireccionError.Image = ((System.Drawing.Image)(resources.GetObject("pbDireccionError.Image")));
-            this.pbDireccionError.Location = new System.Drawing.Point(227, 146);
+            this.pbDireccionError.Location = new System.Drawing.Point(227, 135);
             this.pbDireccionError.Name = "pbDireccionError";
             this.pbDireccionError.Size = new System.Drawing.Size(19, 17);
             this.pbDireccionError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -452,7 +453,7 @@
             // pbEmailError
             // 
             this.pbEmailError.Image = ((System.Drawing.Image)(resources.GetObject("pbEmailError.Image")));
-            this.pbEmailError.Location = new System.Drawing.Point(481, 48);
+            this.pbEmailError.Location = new System.Drawing.Point(485, 45);
             this.pbEmailError.Name = "pbEmailError";
             this.pbEmailError.Size = new System.Drawing.Size(19, 17);
             this.pbEmailError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -463,7 +464,7 @@
             // pbTelefono
             // 
             this.pbTelefono.Image = ((System.Drawing.Image)(resources.GetObject("pbTelefono.Image")));
-            this.pbTelefono.Location = new System.Drawing.Point(481, 80);
+            this.pbTelefono.Location = new System.Drawing.Point(485, 75);
             this.pbTelefono.Name = "pbTelefono";
             this.pbTelefono.Size = new System.Drawing.Size(19, 19);
             this.pbTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -474,7 +475,7 @@
             // pbTelefonoError
             // 
             this.pbTelefonoError.Image = ((System.Drawing.Image)(resources.GetObject("pbTelefonoError.Image")));
-            this.pbTelefonoError.Location = new System.Drawing.Point(481, 80);
+            this.pbTelefonoError.Location = new System.Drawing.Point(485, 75);
             this.pbTelefonoError.Name = "pbTelefonoError";
             this.pbTelefonoError.Size = new System.Drawing.Size(19, 18);
             this.pbTelefonoError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -485,7 +486,7 @@
             // pbNacimientoError
             // 
             this.pbNacimientoError.Image = ((System.Drawing.Image)(resources.GetObject("pbNacimientoError.Image")));
-            this.pbNacimientoError.Location = new System.Drawing.Point(481, 114);
+            this.pbNacimientoError.Location = new System.Drawing.Point(485, 105);
             this.pbNacimientoError.Name = "pbNacimientoError";
             this.pbNacimientoError.Size = new System.Drawing.Size(19, 17);
             this.pbNacimientoError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -496,7 +497,7 @@
             // pbPerfilError
             // 
             this.pbPerfilError.Image = ((System.Drawing.Image)(resources.GetObject("pbPerfilError.Image")));
-            this.pbPerfilError.Location = new System.Drawing.Point(481, 153);
+            this.pbPerfilError.Location = new System.Drawing.Point(485, 135);
             this.pbPerfilError.Name = "pbPerfilError";
             this.pbPerfilError.Size = new System.Drawing.Size(19, 17);
             this.pbPerfilError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -508,7 +509,7 @@
             // lblNomUsuarioRegistrar
             // 
             this.lblNomUsuarioRegistrar.AutoSize = true;
-            this.lblNomUsuarioRegistrar.Location = new System.Drawing.Point(237, 267);
+            this.lblNomUsuarioRegistrar.Location = new System.Drawing.Point(240, 275);
             this.lblNomUsuarioRegistrar.Name = "lblNomUsuarioRegistrar";
             this.lblNomUsuarioRegistrar.Size = new System.Drawing.Size(196, 13);
             this.lblNomUsuarioRegistrar.TabIndex = 64;
@@ -518,7 +519,7 @@
             // lblApeUsuarioRegistrar
             // 
             this.lblApeUsuarioRegistrar.AutoSize = true;
-            this.lblApeUsuarioRegistrar.Location = new System.Drawing.Point(240, 292);
+            this.lblApeUsuarioRegistrar.Location = new System.Drawing.Point(240, 300);
             this.lblApeUsuarioRegistrar.Name = "lblApeUsuarioRegistrar";
             this.lblApeUsuarioRegistrar.Size = new System.Drawing.Size(207, 17);
             this.lblApeUsuarioRegistrar.TabIndex = 65;
@@ -528,11 +529,12 @@
             // cbPerfilUsuario
             // 
             this.cbPerfilUsuario.FormattingEnabled = true;
+            this.cbPerfilUsuario.IntegralHeight = false;
             this.cbPerfilUsuario.Items.AddRange(new object[] {
             "1 - Vendedor",
             "2 - Supervisor",
             "3 - Admin"});
-            this.cbPerfilUsuario.Location = new System.Drawing.Point(382, 150);
+            this.cbPerfilUsuario.Location = new System.Drawing.Point(380, 135);
             this.cbPerfilUsuario.Name = "cbPerfilUsuario";
             this.cbPerfilUsuario.Size = new System.Drawing.Size(94, 21);
             this.cbPerfilUsuario.TabIndex = 67;
@@ -541,7 +543,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 447);
+            this.ClientSize = new System.Drawing.Size(577, 334);
             this.Controls.Add(this.cbPerfilUsuario);
             this.Controls.Add(this.lblApeUsuarioRegistrar);
             this.Controls.Add(this.lblNomUsuarioRegistrar);
