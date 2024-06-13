@@ -22,6 +22,7 @@ namespace TPCAI
         public FormAltaCliente()
         {
             InitializeComponent();
+            dataGridView1.CellClick += dataGridView1_CellClick;
         }
 
 
@@ -37,29 +38,31 @@ namespace TPCAI
         {
             try
             {
+                // Recolectar y validar datos del formulario
                 string usuario = this.Usuario;
                 string idUsuario = negocioUsuario.BuscarId(usuario);
                 string nombre = ValidadorUsuario.ValidarNombre(txtNombre.Text);
                 string apellido = ValidadorUsuario.ValidarApellido(txtApellido.Text);
-                int dni =  ValidadorUsuario.ValidarDNI(txtDni.Text);
+                int dni = ValidadorUsuario.ValidarDNI(txtDni.Text);
                 string direccion = ValidadorUsuario.ValidarDireccion(txtDireccion.Text);
                 string telefono = ValidadorUsuario.ValidarTelefono(txtTelefono.Text);
-                string email = ValidadorUsuario.ValidarEmail (txtMail.Text);
+                string email = ValidadorUsuario.ValidarEmail(txtMail.Text);
                 DateTime fechaNacimiento = ValidadorUsuario.ValidarFechaNac(dtpFechaNacimiento.Value);
                 string host = "2";
 
-
+                // Crear y agregar cliente
                 clienteNegocio.agregarCliente(idUsuario, nombre, apellido, dni, direccion, telefono, email, fechaNacimiento, host);
 
-                
-
+                // Mensaje de éxito
                 MessageBox.Show("Cliente agregado con éxito.");
+
+                // Recargar clientes
+                cargarClientes();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al agregar el cliente: " + ex.Message);
             }
-            cargarClientes();
         }
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
@@ -83,28 +86,54 @@ namespace TPCAI
 
         private void btnModificarCliente_Click(object sender, EventArgs e)
         {
-            ClienteDTO clienteSeleccionado = (ClienteDTO)dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].DataBoundItem;
+            try
+            {
+                if (dataGridView1.CurrentCell != null)
+                {
+                    ClienteDTO clienteSeleccionado = (ClienteDTO)dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].DataBoundItem;
 
-            Guid idCliente = clienteSeleccionado.Id;
-            String direccion = ValidadorUsuario.ValidarDireccion(txtDireccion.Text);
-            String telefono = ValidadorUsuario.ValidarTelefono(txtTelefono.Text);
-            String email = ValidadorUsuario.ValidarEmail(txtMail.Text);
+                    // Recolectar y validar datos del formulario
+                    Guid idCliente = clienteSeleccionado.Id;
+                    string direccion = ValidadorUsuario.ValidarDireccion(txtDireccion.Text);
+                    string telefono = ValidadorUsuario.ValidarTelefono(txtTelefono.Text);
+                    string email = ValidadorUsuario.ValidarEmail(txtMail.Text);
 
-            clienteNegocio.modificarCliente(idCliente, direccion, telefono, email);
+                    // Modificar cliente
+                    clienteNegocio.modificarCliente(idCliente, direccion, telefono, email);
 
-            cargarClientes();
+                    // Mensaje de éxito
+                    MessageBox.Show("Cliente modificado con éxito.");
+
+                    // Recargar clientes
+                    cargarClientes();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar el cliente: " + ex.Message);
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            ClienteDTO clienteSeleccionado = (ClienteDTO)dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].DataBoundItem;
-            txtNombre.Text = clienteSeleccionado.Nombre;
-            txtApellido.Text = clienteSeleccionado.Apellido;
-            txtDni.Text = clienteSeleccionado.Dni.ToString();
-            txtDireccion.Text = clienteSeleccionado.Direccion;
-            txtTelefono.Text = clienteSeleccionado.Telefono;
-            txtMail.Text = clienteSeleccionado.Email;
-            dtpFechaNacimiento.Value = clienteSeleccionado.FechaNacimiento;
+            // Verificar que el índice de fila sea válido
+            if (e.RowIndex >= 0)
+            {
+                // Obtener el cliente seleccionado
+                ClienteDTO clienteSeleccionado = (ClienteDTO)dataGridView1.Rows[e.RowIndex].DataBoundItem;
+
+                if (clienteSeleccionado != null)
+                {
+                    // Rellenar los campos del formulario con la información del cliente seleccionado
+                    txtNombre.Text = clienteSeleccionado.Nombre;
+                    txtApellido.Text = clienteSeleccionado.Apellido;
+                    txtDni.Text = clienteSeleccionado.Dni.ToString();
+                    txtDireccion.Text = clienteSeleccionado.Direccion;
+                    txtTelefono.Text = clienteSeleccionado.Telefono;
+                    txtMail.Text = clienteSeleccionado.Email;
+                    dtpFechaNacimiento.Value = clienteSeleccionado.FechaNacimiento;
+                }
+            }
         }
 
 
@@ -129,11 +158,17 @@ namespace TPCAI
         {
             List<ClienteDTO> clientes = clienteNegocio.listarClientes();
 
+            if (clientes == null || clientes.Count == 0)
+            {
+                MessageBox.Show("No se encontraron clientes.");
+                return;
+            }
+
             var bindingList = new BindingList<ClienteDTO>(clientes);
             var source = new BindingSource(bindingList, null);
             dataGridView1.DataSource = source;
-            dataGridView1.Columns["id"].Visible = false;
-            dataGridView1.Columns["fechaBaja"].Visible = false;
+            dataGridView1.Columns["Id"].Visible = false;
+            dataGridView1.Columns["FechaBaja"].Visible = false;
         }
     }
 }

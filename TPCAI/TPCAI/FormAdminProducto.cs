@@ -22,6 +22,7 @@ namespace TPCAI
         public FormAdminProducto()
         {
             InitializeComponent();
+            dataGridView1.CellClick += dataGridView1_CellClick;
         }
 
         private void FormAltaCliente_Load(object sender, EventArgs e)
@@ -122,9 +123,16 @@ namespace TPCAI
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            ProductoDTO productoSeleccionado = (ProductoDTO)dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].DataBoundItem;
-            txtPrecio.Text = productoSeleccionado.Precio.ToString();
-            txtStock.Text = productoSeleccionado.Stock.ToString();
+            // Verificar que el índice de fila sea válido
+            if (e.RowIndex >= 0)
+            {
+                ProductoDTO productoSeleccionado = (ProductoDTO)dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].DataBoundItem;
+                if (productoSeleccionado != null)
+                {
+                    txtPrecio.Text = productoSeleccionado.Precio.ToString();
+                    txtStock.Text = productoSeleccionado.Stock.ToString();
+                }
+            }
         }
 
 
