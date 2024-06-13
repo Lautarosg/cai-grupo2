@@ -37,9 +37,10 @@ namespace TPCAI
             {
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
+                    string usuario = this.Usuario;
                     var selectedRow = dataGridView1.SelectedRows[0];
                     Guid id = Guid.Parse(selectedRow.Cells["Id"].Value.ToString());
-                    Guid idUsuario = new Guid(); // Utilizar el idUsuario del usuario actual
+                    string idUsuario = negocioUsuario.BuscarId(usuario); // Utilizar el idUsuario del usuario actual
 
                     await NegocioProducto.EliminarProducto(id, idUsuario);
 
@@ -63,8 +64,22 @@ namespace TPCAI
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormInicio formMenuVendedor = new FormInicio();
-            formMenuVendedor.ShowDialog();
+            //FormInicio formMenuVendedor = new FormInicio();
+            //formMenuVendedor.ShowDialog();
+            if (RolUsuario == 3)
+            {
+                FormMenuAdmin formAdministrador = new FormMenuAdmin();
+                formAdministrador.Usuario = Usuario;
+                formAdministrador.RolUsuario = RolUsuario;
+                formAdministrador.ShowDialog();
+            }
+            else if (RolUsuario == 2)
+            {
+                FormMenuSupervisor formSupervisor = new FormMenuSupervisor();
+                formSupervisor.Usuario = Usuario;
+                formSupervisor.RolUsuario = RolUsuario;
+                formSupervisor.ShowDialog();
+            }
         }
 
         private async void btnModificar_Click(object sender, EventArgs e)
@@ -73,9 +88,10 @@ namespace TPCAI
             {
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
+                    string usuario = this.Usuario;
                     var selectedRow = dataGridView1.SelectedRows[0];
                     Guid id = Guid.Parse(selectedRow.Cells["Id"].Value.ToString());
-                    Guid idUsuario = new Guid();
+                    string idUsuario = negocioUsuario.BuscarId(usuario);
                     int precio = int.Parse(txtPrecio.Text);
                     int stock = int.Parse(txtStock.Text);
 

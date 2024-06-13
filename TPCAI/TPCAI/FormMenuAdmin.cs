@@ -54,7 +54,11 @@ namespace TPCAI
         private void buttonAltaProd_Click(object sender, EventArgs e)
         {
             this.Hide();
+            string usuario = this.Usuario;
+            int rolUsuario = this.RolUsuario;
             FormNuevoProducto formNuevoProducto = new FormNuevoProducto();
+            formNuevoProducto.Usuario = usuario;
+            formNuevoProducto.RolUsuario = rolUsuario;
             formNuevoProducto.ShowDialog();
         }
 
@@ -109,6 +113,11 @@ namespace TPCAI
         }
 
         private void lblFechaAlta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBajaProd_Click(object sender, EventArgs e)
         {
 
         }

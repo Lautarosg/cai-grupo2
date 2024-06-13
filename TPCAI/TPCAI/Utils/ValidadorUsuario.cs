@@ -165,13 +165,14 @@ namespace TPCAI
             return CUIT;
         }
 
-        public bool ValidarPrecio(int precio)
+        public static string ValidarPrecio(decimal precio)
         {
+            string respuesta = "";
             // Verificar que el precio sea mayor a 0
             if (precio <= 0)
             {
-                Console.WriteLine("El precio debe ser mayor a 0.");
-                return false;
+                respuesta = "¡Error! El precio debe ser mayor a 0.";
+                return respuesta;
             }
 
             // Convertir el precio a cadena y verificar su longitud
@@ -180,11 +181,34 @@ namespace TPCAI
             // La longitud del string incluye los dígitos antes y después del punto decimal
             if (precioString.Length > 10)
             {
-                Console.WriteLine("El precio es muy grande");
-                return false;
+                respuesta = "¡Error! El precio es muy grande";
+                return respuesta;
             }
 
-            return true;
+            return respuesta;
+        }
+
+        public static string ValidarStock(int stock)
+        {
+            string respuesta = "";
+            // Verificar que el stock sea mayor a 0
+            if (stock <= 0)
+            {
+                respuesta = "¡Error! El stock debe ser mayor a 0.";
+                return respuesta;
+            }
+
+            // Convertir el stock a cadena y verificar su longitud
+            string precioString = stock.ToString();
+
+            // La longitud del string incluye los dígitos antes y después del punto decimal
+            if (precioString.Length > 10)
+            {
+                respuesta = "¡Error! El stock es muy grande";
+                return respuesta;
+            }
+
+            return respuesta;
         }
 
     }

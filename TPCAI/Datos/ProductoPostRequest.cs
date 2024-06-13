@@ -12,11 +12,11 @@ namespace Datos
         String _idUsuario;
         String _idProveedor;
         String _nombre;
-        int _precio;
+        decimal _precio;
         int _stock;
 
 
-        public ProductoPostRequest(int idCategoria, string idUsuario, string idProveedor, string nombre, int precio, int stock)
+        public ProductoPostRequest(int idCategoria, string idUsuario, string idProveedor, string nombre, decimal precio, int stock)
         {
             _idCategoria = idCategoria;
             _idUsuario = idUsuario;
@@ -30,7 +30,7 @@ namespace Datos
         public string IdUsuario { get => _idUsuario; set => _idUsuario = value; }
         public string IdProveedor { get => _idProveedor; set => _idProveedor = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }
-        public int Precio { get => _precio; set => _precio = value; }
+        public decimal Precio { get => _precio; set => _precio = value; }
         public int Stock { get => _stock; set => _stock = value; }
         
     }

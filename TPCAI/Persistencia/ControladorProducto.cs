@@ -112,7 +112,7 @@ namespace Persistencia
         }
 
 
-        public static async Task ModificarProducto(Guid id, Guid idUsuario, int precio, int stock)
+        public static async Task ModificarProducto(Guid id, string idUsuario, int precio, int stock)
         {
             string path = "/api/Producto/ModificarProducto";
             var patchData = new
@@ -131,7 +131,7 @@ namespace Persistencia
             }
         }
 
-        public static async Task EliminarProducto(Guid id, Guid idUsuario)
+        public static async Task EliminarProducto(Guid id, string idUsuario)
         {
             string path = "/api/Producto/BajaProducto";
             var productoDeleteRequest = new

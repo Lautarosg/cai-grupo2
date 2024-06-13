@@ -41,12 +41,12 @@ namespace Negocio
         }
 
 
-        public static async Task ModificarProducto(Guid id, Guid idUsuario, int precio, int stock)
+        public static async Task ModificarProducto(Guid id, string idUsuario, int precio, int stock)
         {
             await ControladorProducto.ModificarProducto(id, idUsuario, precio, stock);
         }
 
-        public static async Task EliminarProducto(Guid id, Guid idUsuario)
+        public static async Task EliminarProducto(Guid id, string idUsuario)
         {
             await ControladorProducto.EliminarProducto(id, idUsuario);
         }

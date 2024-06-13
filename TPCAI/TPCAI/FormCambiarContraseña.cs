@@ -33,7 +33,7 @@ namespace TPCAI
 
         private void btnConfCambio_Click(object sender, EventArgs e)
         {
-            string usuario = this.Usuario;
+            string usuario = this.Usuario;            
             string contraseña = txtContraseñaActual.Text;
             string contraseñaNueva = txtContraseñaRegistrar.Text;
             string contraseñaVerificar = txtVerificarRegistrar.Text;
