@@ -18,6 +18,8 @@ namespace TPCAI
 
         NegocioUsuario negocioUsuario = new NegocioUsuario();
 
+        NegocioProducto negocioProducto = new NegocioProducto();
+
         public FormMenuAdmin()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace TPCAI
 
         private void FormMenuAdmin_Load(object sender, EventArgs e)
         {
+            textBoxProdCritico.Text = (negocioProducto.ContarStockCritico()).ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -121,6 +124,16 @@ namespace TPCAI
         }
 
         private void buttonBajaProd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxProdCritico_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

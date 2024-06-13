@@ -51,6 +51,36 @@ namespace Negocio
             await ControladorProducto.EliminarProducto(id, idUsuario);
         }
 
+        public int ContarStockCritico()
+        {
+            // Devuelve una lista de todos los productos críticos
+            // ordenados con su categoría y dato de su nombre
+            Dictionary<int, List<(string Nombre, int Stock)>> productosAgrupados = new Dictionary<int, List<(string, int)>>();
+
+            string listaproductos = GetProductos();//traigo todos los productos
+            JArray arrayproductos = JArray.Parse(listaproductos);
+
+            int StockMaximo = 10; // Máximo supuesto para comparar
+            int contador = 0;
+            if (arrayproductos.Count > 0)
+            {
+                // Recorrer productos y agregarlos en productosAgrupados
+                foreach (JObject producto in arrayproductos)
+                {
+                    //string nombreProducto = producto["nombre"].Value<string>();
+                    //int idCategoria = producto["idCategoria"].Value<int>();
+                    int stock = producto["stock"].Value<int>(); // Corregido aquí
+
+                    if (stock < 0.25 * StockMaximo) // Comparo contra el máximo supuesto
+                    {
+                        contador++;
+                    }
+                }
+
+            }
+            return contador;
+        }
+
     }
 
 }

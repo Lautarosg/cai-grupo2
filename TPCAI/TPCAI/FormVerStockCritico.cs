@@ -25,6 +25,10 @@ namespace TPCAI
 
         }
 
+        private void verStockCritico()
+        {
+
+        }
 
         private void StockCritico()
         {

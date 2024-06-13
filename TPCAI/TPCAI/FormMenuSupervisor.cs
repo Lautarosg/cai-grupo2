@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace TPCAI
         public string Usuario { get; set; }
         public int RolUsuario { get; set; }
 
+        NegocioProducto negocioProducto = new NegocioProducto();
         public FormMenuSupervisor()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace TPCAI
 
         private void FormMenuSupervisor_Load(object sender, EventArgs e)
         {
-
+            textBoxProdCritico.Text = (negocioProducto.ContarStockCritico()).ToString();
         }
 
         private void btnCambiarContraseña_Click(object sender, EventArgs e)
@@ -82,6 +84,11 @@ namespace TPCAI
             formProducto.Usuario = usuario;
             formProducto.RolUsuario = RolUsuario;
             formProducto.ShowDialog();
+        }
+
+        private void textBoxProdCritico_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

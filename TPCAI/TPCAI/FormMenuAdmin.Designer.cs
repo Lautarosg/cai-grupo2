@@ -40,13 +40,13 @@
             this.buttonVtaProv = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAdminProv = new System.Windows.Forms.Button();
-            this.textBoxProdCritico = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonBajaSup = new System.Windows.Forms.Button();
             this.buttonAltaVend = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBoxProdCritico = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -67,7 +67,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(175, 20);
+            this.label2.Location = new System.Drawing.Point(158, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 13);
@@ -198,14 +198,6 @@
             this.btnAdminProv.UseVisualStyleBackColor = true;
             this.btnAdminProv.Click += new System.EventHandler(this.btnAdminProv_Click);
             // 
-            // textBoxProdCritico
-            // 
-            this.textBoxProdCritico.Location = new System.Drawing.Point(139, 16);
-            this.textBoxProdCritico.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxProdCritico.Name = "textBoxProdCritico";
-            this.textBoxProdCritico.Size = new System.Drawing.Size(34, 20);
-            this.textBoxProdCritico.TabIndex = 2;
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -278,12 +270,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // textBoxProdCritico
+            // 
+            this.textBoxProdCritico.AutoSize = true;
+            this.textBoxProdCritico.Location = new System.Drawing.Point(140, 20);
+            this.textBoxProdCritico.Name = "textBoxProdCritico";
+            this.textBoxProdCritico.Size = new System.Drawing.Size(10, 13);
+            this.textBoxProdCritico.TabIndex = 26;
+            this.textBoxProdCritico.Text = "-";
+            this.textBoxProdCritico.Click += new System.EventHandler(this.label4_Click);
+            // 
             // FormMenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(647, 528);
+            this.Controls.Add(this.textBoxProdCritico);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
@@ -292,7 +295,6 @@
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxProdCritico);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -322,12 +324,12 @@
         private System.Windows.Forms.Button buttonVtaProv;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAdminProv;
-        private System.Windows.Forms.TextBox textBoxProdCritico;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonBajaSup;
         private System.Windows.Forms.Button buttonAltaVend;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label textBoxProdCritico;
     }
 }

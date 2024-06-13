@@ -36,11 +36,11 @@
             this.buttonMasVendido = new System.Windows.Forms.Button();
             this.buttonVtaProv = new System.Windows.Forms.Button();
             this.buttonStockCritico = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxProdCritico = new System.Windows.Forms.TextBox();
             this.btnCambiarContraseña = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.textBoxProdCritico = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -151,34 +151,6 @@
             this.buttonStockCritico.UseVisualStyleBackColor = true;
             this.buttonStockCritico.Click += new System.EventHandler(this.buttonStockCritico_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(205, 21);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "productos con stock crítico!!!";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 21);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Bienvenido Supervisor, Hay";
-            // 
-            // textBoxProdCritico
-            // 
-            this.textBoxProdCritico.Location = new System.Drawing.Point(161, 17);
-            this.textBoxProdCritico.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxProdCritico.Name = "textBoxProdCritico";
-            this.textBoxProdCritico.Size = new System.Drawing.Size(41, 20);
-            this.textBoxProdCritico.TabIndex = 6;
-            // 
             // btnCambiarContraseña
             // 
             this.btnCambiarContraseña.Location = new System.Drawing.Point(539, 14);
@@ -200,16 +172,46 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
+            // textBoxProdCritico
+            // 
+            this.textBoxProdCritico.AutoSize = true;
+            this.textBoxProdCritico.Location = new System.Drawing.Point(138, 27);
+            this.textBoxProdCritico.Name = "textBoxProdCritico";
+            this.textBoxProdCritico.Size = new System.Drawing.Size(10, 13);
+            this.textBoxProdCritico.TabIndex = 29;
+            this.textBoxProdCritico.Text = "-";
+            this.textBoxProdCritico.Click += new System.EventHandler(this.textBoxProdCritico_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(153, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 13);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "productos con stock crítico!!!";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 13);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Hola Supervisor, Hay";
+            // 
             // FormMenuSupervisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 361);
+            this.Controls.Add(this.textBoxProdCritico);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnCambiarContraseña);
-            this.Controls.Add(this.textBoxProdCritico);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
@@ -233,10 +235,10 @@
         private System.Windows.Forms.Button buttonVtaProv;
         private System.Windows.Forms.Button buttonStockCritico;
         private System.Windows.Forms.Button buttonMasVendido;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxProdCritico;
         private System.Windows.Forms.Button btnCambiarContraseña;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Label textBoxProdCritico;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }
