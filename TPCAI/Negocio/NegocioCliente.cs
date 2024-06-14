@@ -36,15 +36,33 @@ namespace Negocio
 
         public void agregarCliente(string idUsuario, string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento, string host)
         {
-            ClientePostRequest altaCliente = new ClientePostRequest(idUsuario, nombre, apellido, dni, direccion, telefono, email, fechaNacimiento, host);
-            controladorCliente.AgregarCliente(altaCliente);
+            //ClientePostRequest altaCliente = new ClientePostRequest(idUsuario, nombre, apellido, dni, direccion, telefono, email, fechaNacimiento, host);
+            //controladorCliente.AgregarCliente(altaCliente);
+            try
+            {
+                ClientePostRequest altaCliente = new ClientePostRequest(idUsuario, nombre, apellido, dni, direccion, telefono, email, fechaNacimiento, host);
+                controladorCliente.AgregarCliente(altaCliente);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al agregar el cliente: " + ex.Message);
+                throw;
+            };
 
         }
 
         public void modificarCliente(Guid idCliente, string direccion, string telefono, string email)
         {
-            controladorCliente.ModificarCliente(idCliente, direccion, telefono, email);
-
+            //controladorCliente.ModificarCliente(idCliente, direccion, telefono, email);
+            try
+            {
+                controladorCliente.ModificarCliente(idCliente, direccion, telefono, email);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al modificar el cliente: " + ex.Message);
+                throw;
+            }
         }
 
         /*

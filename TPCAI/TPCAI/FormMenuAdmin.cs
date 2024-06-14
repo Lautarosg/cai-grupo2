@@ -86,6 +86,7 @@ namespace TPCAI
 
         private void buttonAltaVend_Click(object sender, EventArgs e)
         {
+            this.Hide();
             string usuario = this.Usuario;
             int rolUsuario = this.RolUsuario;
             FormAltaCliente formAdminCliente = new FormAltaCliente();
@@ -96,6 +97,7 @@ namespace TPCAI
 
         private void buttonModProd_Click(object sender, EventArgs e)
         {
+            this.Hide();
             string usuario = this.Usuario;
             int rolUsuario = this.RolUsuario;
             FormAdminProducto formAdminProducto = new FormAdminProducto();
@@ -106,6 +108,7 @@ namespace TPCAI
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             string usuario = this.Usuario;
             FormCambiarContraseña formContraseña = new FormCambiarContraseña();
             formContraseña.Usuario = usuario;

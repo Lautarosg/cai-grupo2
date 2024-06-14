@@ -16,6 +16,7 @@ namespace TPCAI
         public DateTime? FechaBaja { get; set; }
         public String Host { get; set; }
 
+        public ClienteDTO() { }
         public ClienteDTO(Guid id, string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento, string host)
         {
             Id = id;
