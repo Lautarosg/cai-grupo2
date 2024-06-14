@@ -13,11 +13,9 @@ using TPCAI;
 using Datos.Controller;
 using static Datos.Controller.UsuarioPostRequest;
 using Persistencia;
-using TPCAI;
 using System.Collections.Generic;
 using Microsoft.Win32;
 using System.Net;
-using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 namespace Negocio

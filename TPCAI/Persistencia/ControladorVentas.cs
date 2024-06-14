@@ -35,6 +35,7 @@ namespace Persistencia
             return content;
         }*/
 
+
         public string VentasByCliente(string idCliente)
         {
             // 
@@ -94,35 +95,45 @@ namespace Persistencia
             {
                 content = response.Content.ReadAsStringAsync().Result;
             }
-            return content;   
+            return content;
         }
-
-        public bool AgregarVenta(Guid idCliente, Guid idAdmin,Guid idProducto, int Cantidad)
+        public static class WebHelper2
         {
-            String path = "/api/Venta/AgregarVenta";
+            private static readonly HttpClient client = new HttpClient();
 
-            Dictionary<String, String> map = new Dictionary<String, String>();
-            map.Add("idCliente", idCliente.ToString());
-            map.Add("idUsuario", idAdmin.ToString());
-            map.Add("idProducto", idProducto.ToString());
-            map.Add("cantidad", Cantidad.ToString());
+            public static HttpResponseMessage PostWithBody(string url, string jsonContent)
+            {
+                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+                return client.PostAsync(url, content).Result;
+            }
 
+        }
+        private static readonly HttpClient client = new HttpClient();
 
-            var jsonRequest = JsonConvert.SerializeObject(map);
+        public bool AgregarVenta(Guid idCliente, Guid idAdmin, Guid idProducto, int Cantidad)
+        {
+            string path = "https://cai-tp.azurewebsites.net/api/Venta/AgregarVenta";
 
-            HttpResponseMessage response = WebHelper.DeleteWithBody(path, jsonRequest);
+            var payload = new
+            {
+                idCliente = idCliente.ToString(),
+                idUsuario = idAdmin.ToString(),
+                idProducto = idProducto.ToString(),
+                cantidad = Cantidad
+            };
+
+            var jsonRequest = JsonConvert.SerializeObject(payload);
+            var content = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = client.PostAsync(path, content).Result;
 
             if (!response.IsSuccessStatusCode)
             {
-                return false;
                 throw new Exception("Algo salio mal.");
             }
-            else
-            {
-                return true;
-               
-            }
-        }
 
+            return true;
+        }
     }
 }
+

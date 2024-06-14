@@ -1,0 +1,8 @@
+Electro Hogar SRL 
+{"id":"2a8bf138-132d-4941-a88e-4dd8c4eed48a","nombre":"Carlos","apellido":"García","dni":34567890,"direccion":"Calle Principal 789, Ciudad C\n","telefono":"3456789012","email":"carlos.garcia@mail.com","fechaNacimiento":"1978-11-10T00:00:00","fechaAlta":"2024-06-13T22:07:20.5851786","fechaBaja":null,"host":"5"}
+13/06/2024 10:18:35 p. m.
+
+
+ Descuento Primera Compra
+ descuento: 0
+ el total es :0

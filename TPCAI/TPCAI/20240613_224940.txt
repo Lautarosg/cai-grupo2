@@ -1,0 +1,9 @@
+Electro Hogar SRL 
+{"id":"2a8bf138-132d-4941-a88e-4dd8c4eed48a","nombre":"Carlos","apellido":"García","dni":34567890,"direccion":"Calle Principal 789, Ciudad C\n","telefono":"3456789012","email":"carlos.garcia@mail.com","fechaNacimiento":"1978-11-10T00:00:00","fechaAlta":"2024-06-13T22:07:20.5851786","fechaBaja":null,"host":"5"}
+13/06/2024 10:49:39 p. m.
+
+id producto:3c139191-4cc0-4071-b8f4-03e03fb9df7b  Tostadora Cuisinart - Cantidad: 1 - Precio unitario: 200000 - Monto :200000  
+ 
+ Descuento Hogar, Descuento Primera Compra
+ descuento : 20000
+ el total es :180000

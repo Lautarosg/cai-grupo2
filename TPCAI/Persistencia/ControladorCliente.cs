@@ -36,32 +36,25 @@ namespace Persistencia
             return content;
         }
 
-        public string ObtenerCliente(Guid clienteid)
-        {
-            // Trae todos los clientes activos
-            String path = $"/api/Cliente/GetCliente/GetCliente?id={clienteid.ToString()}";
+        private static readonly HttpClient client = new HttpClient();
 
-            string content = "";
-            HttpResponseMessage response = WebHelper.Get(path);
+        public string ObtenerCliente(Guid clientId)
+        {
+            string url = $"https://cai-tp.azurewebsites.net/api/Cliente/GetCliente?id={clientId}";
+
+            HttpResponseMessage response = client.GetAsync(url).Result;
+
             if (!response.IsSuccessStatusCode)
             {
-                throw new Exception("Verifique los datos ingresados");
+                throw new Exception("Algo salio mal.");
             }
-            else
-            {
-                content = response.Content.ReadAsStringAsync().Result;
 
-                ClienteDTO cliente = JsonConvert.DeserializeObject<ClienteDTO>(content);
-
-                return $"{cliente.Nombre} {cliente.Apellido} - DNI: {cliente.Dni}";
-
-
-
-            }
-            return content;
+            string result = response.Content.ReadAsStringAsync().Result;
+            return result;
         }
+    
 
-        public List<ClienteDTO> getClientes()
+    public List<ClienteDTO> getClientes()
         {
             String path = "/api/Cliente/GetClientes";
             List<ClienteDTO> clientes = new List<ClienteDTO>();

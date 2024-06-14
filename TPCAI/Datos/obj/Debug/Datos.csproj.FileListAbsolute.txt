@@ -260,3 +260,4 @@ C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\Datos\obj\Debug\Datos.csproj.CoreC
 C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\Datos\obj\Debug\Datos.dll
 C:\Users\Myrna\Desktop\CAI 2024\nuevo22\TPCAI\Datos\obj\Debug\Datos.pdb
+C:\Users\Usuario\Source\Repos\cai-grupo2\TPCAI\Datos\obj\Debug\Datos.csproj.CopyComplete

@@ -141,7 +141,9 @@ namespace Negocio
 
 
                 }
-                remito(idCliente, idusuario, a.totalTrunk, a.str);
+                string Comprobante=remito(idCliente, idusuario, a.totalTrunk, a.str);
+                Console.WriteLine(Comprobante);
+
                 return (true);
             }
             catch (Exception ex)
@@ -150,7 +152,7 @@ namespace Negocio
             }
         }
 
-        public void remito(Guid idCliente, Guid idusuario, decimal totalTrunk, string str)
+        public string remito(Guid idCliente, Guid idusuario, decimal totalTrunk, string str)
         {
             string comprobante = $"Electro Hogar SRL {Environment.NewLine}";
             DateTime localDate = DateTime.Now;
@@ -188,6 +190,9 @@ namespace Negocio
 
             Comprobante comprovante = new Comprobante();
             comprovante.CrearComprovante(comprobante);
+            comprovante.AddVenta(idusuario, totalTrunk);
+            return comprobante;
+
         }
 
     }
