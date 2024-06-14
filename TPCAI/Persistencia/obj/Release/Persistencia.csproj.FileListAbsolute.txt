@@ -1,0 +1,13 @@
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\bin\Release\Persistencia.dll.config
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\bin\Release\Persistencia.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\bin\Release\Persistencia.pdb
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\bin\Release\Datos.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\bin\Release\Newtonsoft.Json.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\bin\Release\Datos.pdb
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\bin\Release\Datos.dll.config
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\bin\Release\Newtonsoft.Json.xml
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\obj\Release\Persistencia.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\obj\Release\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\obj\Release\Persiste.7F7D6998.Up2Date
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\obj\Release\Persistencia.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Persistencia\obj\Release\Persistencia.pdb

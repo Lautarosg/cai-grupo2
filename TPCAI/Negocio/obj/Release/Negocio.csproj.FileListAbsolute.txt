@@ -1,0 +1,16 @@
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Release\Negocio.dll.config
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Release\Negocio.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Release\Negocio.pdb
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Release\Datos.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Release\Newtonsoft.Json.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Release\Persistencia.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Release\Datos.pdb
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Release\Datos.dll.config
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Release\Persistencia.pdb
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Release\Persistencia.dll.config
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\bin\Release\Newtonsoft.Json.xml
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\obj\Release\Negocio.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\obj\Release\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\obj\Release\Negocio.csproj.Up2Date
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\obj\Release\Negocio.dll
+C:\Users\Usuario\source\repos\cai-grupo2\TPCAI\Negocio\obj\Release\Negocio.pdb
